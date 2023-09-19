@@ -1,0 +1,16 @@
+query {
+  repository(owner: "meta-introspector", name: "meta-meme") {
+    discussion(number: 21) {
+      title
+      body
+      comments(first: 10) {
+        nodes {
+          author {
+            login
+          }
+          body
+        }
+      }
+    }
+  }
+}
