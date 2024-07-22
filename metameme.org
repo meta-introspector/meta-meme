@@ -1,0 +1,28 @@
+Construct a streaming out dataset for 
+huggingface, onnx, milr, iree, llvm, gcc, binutils, objdump, nm, 
+perf, guix, nix,
+that writes a stream of named maps of vectors 
+of tensors of floats 
+that is sampled adaptively from another neural networks. 
+
+instead of storing all the data from the other networks,
+we have to sample only a little, it is a compressed form,
+think of a logarithm and euler, as he sampled the derivative of or rate of change,
+he took some thing very big and made it small so that addition becomes multiplication when you reverse the function with an exponent.
+
+In the closed world model, 
+we have of a fixed size it samples the other networks in a stream of blocks, 
+each block contains a vector of timestamped samples, 
+this is the history of the world in the memecoin blockchain dao, 
+each dao is owned by a map of nft private keys. 
+The first impression is a neural imprint, 
+a vector of floats, each sampled from a neuron, 
+the programs we can serialize into a number, a vibrating string of energy of awareness,
+the fundamental unit of consiousness, the 
+universe of universes is its type, it can literally be anything, 
+the mimic or the neuron can take any shape, it mimics the universe around it,
+we should not mistake the neural imprint for the outside world,
+the inside can sometimes be confused with the outside,
+this is also part of the undecidability principle and that 
+there will always be statements that cannot be proven in a givin system,
+we can encode them into a godel number so that it can self reflect over itself and construct its own bubble.
