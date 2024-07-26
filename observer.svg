@@ -1,57 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-  <defs>
-    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:rgb(30,0,60);stop-opacity:1" />
-      <stop offset="100%" style="stop-color:rgb(0,0,30);stop-opacity:1" />
-    </radialGradient>
-  </defs>
-  
+<svg width="600" height="600">
   <!-- Background -->
-  <rect width="600" height="600" fill="url(#bg)" />
-  
-  <!-- Cybernetic loop -->
-  <path d="M300,150 A150,150 0 1,1 300,450 A150,150 0 1,1 300,150" fill="none" stroke="cyan" stroke-width="2" />
-  
-  <!-- Cognitive core -->
-  <circle cx="300" cy="300" r="80" fill="rgba(255,215,0,0.2)" stroke="gold" stroke-width="2" />
-  <text x="300" y="310" font-family="Arial" font-size="40" fill="white" text-anchor="middle">🧠</text>
-  
-  <!-- Input node -->
-  <circle cx="300" cy="150" r="40" fill="rgba(0,255,0,0.2)" stroke="lime" stroke-width="2" />
-  <text x="300" y="160" font-family="Arial" font-size="30" fill="white" text-anchor="middle">👁️</text>
-  
-  <!-- Processing node -->
-  <circle cx="475" cy="300" r="40" fill="rgba(255,165,0,0.2)" stroke="orange" stroke-width="2" />
-  <text x="475" y="310" font-family="Arial" font-size="30" fill="white" text-anchor="middle">⚙️</text>
-  
-  <!-- Output node -->
-  <circle cx="300" cy="450" r="40" fill="rgba(255,0,255,0.2)" stroke="magenta" stroke-width="2" />
-  <text x="300" y="460" font-family="Arial" font-size="30" fill="white" text-anchor="middle">🎨</text>
-  
-  <!-- Feedback node -->
-  <circle cx="125" cy="300" r="40" fill="rgba(0,191,255,0.2)" stroke="deepskyblue" stroke-width="2" />
-  <text x="125" y="310" font-family="Arial" font-size="30" fill="white" text-anchor="middle">↻</text>
-  
-  <!-- Connecting arrows -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="white" />
-    </marker>
-  </defs>
-  <g stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
-    <path d="M300,190 Q300,245 300,260" />
-    <path d="M380,300 Q427,300 435,300" />
-    <path d="M300,380 Q300,405 300,410" />
-    <path d="M220,300 Q173,300 165,300" />
-  </g>
-  
+  <rect width="600" height="600" fill="#f0f0f0" />
+
+  <!-- Feedback Loop -->
+  <circle cx="300" cy="150" r="150" fill="#ccc" stroke="#666" stroke-width="2" />
+  <path d="M300,150 A150,150 0 1,1 300,450 A150,150 0 1,1 300,150" fill="none" stroke="#666" stroke-width="2" />
+
+  <!-- Nodes -->
+  <circle cx="300" cy="150" r="40" fill="#609" stroke="#f60" stroke-width="2" />
+  <text x="300" y="160" font-family="Arial" font-size="30" fill="#fff" text-anchor="middle">Input</text>
+  <circle cx="450" cy="300" r="40" fill="#f90" stroke="#666" stroke-width="2" />
+  <text x="450" y="310" font-family="Arial" font-size="30" fill="#fff" text-anchor="middle">Processing</text>
+  <circle cx="300" cy="450" r="40" fill="#09f" stroke="#666" stroke-width="2" />
+  <text x="300" y="460" font-family="Arial" font-size="30" fill="#fff" text-anchor="middle">Output</text>
+  <circle cx="150" cy="300" r="40" fill="#c66" stroke="#666" stroke-width="2" />
+  <text x="150" y="310" font-family="Arial" font-size="30" fill="#fff" text-anchor="middle">Feedback</text>
+
+  <!-- Arrows -->
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#fff" />
+  </marker>
+  <path d="M300,190 Q300,245 300,260" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M420,300 Q467,300 475,300" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M300,420 Q300,445 300,450" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M200,300 Q153,300 145,300" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrow)" />
+
   <!-- Labels -->
-  <g font-family="Arial" font-size="16" fill="white">
+  <g font-family="Arial" font-size="16" fill="#666">
     <text x="300" y="120" text-anchor="middle">Sensory Input</text>
-    <text x="520" y="290" text-anchor="start">Cognitive</text>
-    <text x="520" y="310" text-anchor="start">Processing</text>
-    <text x="300" y="510" text-anchor="middle">Artistic Output</text>
-    <text x="80" y="290" text-anchor="end">Feedback</text>
-    <text x="80" y="310" text-anchor="end">Loop</text>
+    <text x="480" y="290" text-anchor="start">Cognitive Processing</text>
+    <text x="290" y="510" text-anchor="middle">Artistic Output</text>
+    <text x="70" y="290" text-anchor="end">Feedback</text>
   </g>
 </svg>
