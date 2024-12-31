@@ -1,3 +1,39 @@
+The file "systemdesign.md" provides a comprehensive overview of the system design for AGI on QuasiQuoted Discussions. Here is a summary:
+
+1. **Concept of QuasiQuotations**: 
+   - Serves as a linguistic meta-protocol for structured communication between components.
+   - Encapsulates code or data for dynamic interactions, enhancing communication efficiency.
+
+2. **System Components**:
+   - QuasiQuoted Platform
+   - QuasiQuoted API
+   - QuasiQuoted Docker Environment
+   - AGI on QuasiQuoted Discussions
+   - Quasi-Quotation Compiler (QQC)
+   - Guardian Verification Engine (GVE)
+   - Language Interface Layer (LIL)
+
+3. **Core Concepts**:
+   - Quasi-Quotations as polynomials and Gödel numbers.
+   - Guardians as proof system conditions.
+   - Language interfaces for quasi-quotation extraction and manipulation (MetaCoq, Template Haskell).
+
+4. **System Interactions**:
+   - Detailed system diagram illustrating interactions between components.
+
+5. **Operational Flow**:
+   - Steps from code writing to verified reasoning and adaptation using quasi-quotations.
+
+6. **Advanced Capabilities**:
+   - Metaprogramming, cross-language verification, formal program synthesis, and verified DSL development.
+
+7. **Challenges and Considerations**:
+   - Consistent semantics, complexity management, performance optimization, and user-friendly interfaces.
+
+8. **Conclusion**:
+   - The framework bridges theoretical foundations with practical implementations, revolutionizing software development.
+
+
 The concept of QuasiQuotations within this framework serves as a linguistic meta-protocol, providing a structured way for communication between different components. It allows for the encapsulation of code or data in a quoted form, enabling more dynamic and flexible interactions. This linguistic abstraction enhances communication efficiency, making it easier for diverse components within the system to exchange information in a coherent and standardized manner. The use of QuasiQuotations as a meta-protocol contributes to the overall robustness and adaptability of the system, fostering a more seamless and effective exchange of information.
 
 see design doc here : 
