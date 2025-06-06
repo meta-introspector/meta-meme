@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/meta-introspector/meta-meme)
+
 # Meta-Meme: A Collaborative AI-Human Creative Framework
 
 ## Overview
