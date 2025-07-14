@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Undecidability of Type Comparison in Homotopy Type Theory with 4D Topological Interpretation}
+\author{James Michael DuPont\\\texttt{h4@solfunmeme.com}}
+\date{13th of July, 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Background}
+
+Homotopy Type Theory (HoTT) reinterprets types as topological spaces (or $\infty$-groupoids), and terms as points within these spaces. The identity type $\mathsf{Id}_A(x,y)$ corresponds to paths between points $x, y : A$ in the space $A$. Voevodsky’s \emph{univalence axiom} asserts that identifications between types correspond to equivalences (i.e., homotopy equivalences) of spaces. Higher Inductive Types (HITs) allow construction of familiar spaces (e.g., circles, spheres, intervals) within the type theory itself. Thus, HoTT models each type as a potentially high-dimensional topological object, and comparing two types $A$ and $B$ becomes equivalent to determining whether the spaces they represent are homotopy equivalent.
+
+\section*{Theoretical Implications}
+
+Under the homotopical semantics, type equivalence is interpreted as homotopy equivalence. That is, under univalence, a term of $\mathsf{Id}_{\mathsf{Type}}(A,B)$ exists if and only if $A$ and $B$ are equivalent as spaces. However, in topology, it is known that there exists no algorithm to decide whether two 4-dimensional manifolds are homeomorphic (Markov, 1958). Since such manifolds can be encoded by types (via HITs), the comparison of types includes problems known to be undecidable.
+
+Additionally, the complexity of higher homotopy theory implies that many homotopy-theoretic invariants are computationally hard. For example, Anick showed that computing rational homotopy groups is \#P-hard. Since HoTT allows the internal construction of CW-complexes via HITs, the expressive power of the type theory is sufficient to encode these computationally intractable structures.
+
+\section*{Type-Theoretic Limits and Decidability}
+
+From the perspective of type theory, the inclusion of extensionality principles such as \emph{equality reflection} (i.e., propositional equality implies definitional equality) leads to undecidability of type checking. While intensional Martin-Löf Type Theory (MLTT) maintains decidability of judgmental equality, the univalence axiom introduces a form of extensionality that makes definitional equality rely on discovering equivalences --- a problem which cannot be decided by normalization.
+
+Moreover, Hedberg’s theorem states that if a type has decidable equality, then it must be a set (i.e., an $h$-set with no higher paths). Thus, any type that has nontrivial homotopical structure (such as circles or spheres) cannot support decidable equality. In practice, this limits the possibility of automatic comparison between types with higher homotopy levels.
+
+Cubical Type Theory and related systems allow univalence to be treated constructively, enabling some computational content (e.g., transporting along paths), but this does not solve the general problem of discovering equivalences between complex types. 
+
+\section*{Key Findings}
+
+\begin{itemize}
+    \item \textbf{Type equivalence $\approx$ Homotopy equivalence}: Under univalence, comparing types becomes equivalent to testing whether their corresponding spaces are homotopy equivalent.
+    \item \textbf{Undecidability from topology}: There exists no general algorithm for deciding homeomorphism of 4-manifolds (Markov), and thus no algorithm for comparing arbitrary types in HoTT interpreted as 4D topologies.
+    \item \textbf{Complexity of higher homotopy}: Many homotopy invariants are NP-hard or worse. HoTT types represent weak $\infty$-groupoids, and equivalence of such objects is known to be a highly complex, sometimes undecidable, problem.
+    \item \textbf{Type-theoretic undecidability}: Extensional principles like equality reflection and univalence remove the possibility of decidable type equality in general. Hedberg’s theorem implies that types with higher homotopy structure cannot have decidable identity types.
+    \item \textbf{Constructive frameworks help but don’t eliminate hardness}: Systems like Cubical Type Theory provide constructive content to univalence, enabling some automation, but they cannot overcome the fundamental undecidability of comparing arbitrary higher types.
+\end{itemize}
+
+\section*{Conclusion}
