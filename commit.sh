@@ -1,9 +1,12 @@
+source "$(dirname "$0")"/../../../../scripts/lib_git_submodule.sh
+
 #the commit loop
 
 while [ 1 ]
 do
-      git commit -m 'step' -a
+      git_add_all
+      git_commit_message "step"
 #      git push origin
-      git push --set-upstream origin docs
+      push_to_origin_branch "docs"
       sleep 10
 done
