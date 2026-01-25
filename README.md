@@ -206,3 +206,15 @@ A: Start by exploring the examples, join our Discord community, and try creating
 
 **Q: What makes this project unique?**
 A: Our focus on structured human-AI collaboration, self-evolving content, and community-driven development creates a unique platform for exploring the future of creative expression.
+
+## 🚀 Live Demo
+
+**Streamlit Dashboard**: Deploy at https://share.streamlit.io/
+
+```bash
+# Run locally
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+See [STREAMLIT_DEPLOY.md](STREAMLIT_DEPLOY.md) for deployment instructions.
