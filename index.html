@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MetaMeme zkWASM</title>
+</head>
+<body>
+    <h1>🔐 MetaMeme zkWASM</h1>
+    <div id="status">Loading...</div>
+    <button id="prove">Generate Proof</button>
+    <button id="verify">Verify Proof</button>
+    <pre id="output"></pre>
+
+    <script type="module">
+        import init, { ZKWasm, ProofShard } from './pkg/metameme_zkwasm.js';
+
+        async function run() {
+            await init();
+            
+            const zkwasm = new ZKWasm();
+            const proof = new ProofShard(1, "∀x. x = x", "reflexivity");
+            
+            zkwasm.add_proof(proof);
+            
+            document.getElementById('status').textContent = '✅ zkWASM Ready';
+            
+            document.getElementById('prove').onclick = () => {
+                const hash = zkwasm.prove("∀x. x = x");
+                document.getElementById('output').textContent = 
+                    `Proof hash: ${hash}\nURL: ${zkwasm.to_url('https://metameme.org')}`;
+            };
+            
+            document.getElementById('verify').onclick = () => {
+                const valid = zkwasm.verify(proof.hash);
+                document.getElementById('output').textContent = 
+                    `Verification: ${valid ? '✅ Valid' : '❌ Invalid'}`;
+            };
+        }
+
+        run();
+    </script>
+</body>
+</html>

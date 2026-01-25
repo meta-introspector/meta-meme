@@ -23,10 +23,22 @@ nix develop --command bash -c '
     lean src/DocumentProver.lean && echo "✅ Document prover verified!" || echo "❌ Document prover failed"
     
     echo ""
+    echo "🔐 Running zkWASM proofs..."
+    lean src/ZKWasm.lean && echo "✅ zkWASM proofs verified!" || echo "❌ zkWASM proofs failed"
+    
+    echo ""
     echo "📄 Ingesting documents..."
     for doc in *.md docs/*.md metameme/*.md; do
         [ -f "$doc" ] && echo "  → $doc"
     done
+    
+    echo ""
+    echo "🦀 Building zkWASM..."
+    if command -v wasm-pack &> /dev/null; then
+        wasm-pack build --target web --out-dir pkg && echo "✅ WASM built!" || echo "⚠️  WASM build skipped"
+    else
+        echo "⚠️  wasm-pack not found, skipping WASM build"
+    fi
 '
 
 echo "🎉 Bootstrap complete"
