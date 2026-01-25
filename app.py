@@ -3,7 +3,11 @@ Gradio Meta-Meme Dashboard for HuggingFace Spaces
 Loads JWT+RDFa encoded tasks with ZK witness and HME proofs
 """
 import gradio as gr
+import json
 from pathlib import Path
+
+# Load config
+config = json.loads(Path("config.json").read_text())
 
 # Load muse data
 MUSES = ["Calliope", "Clio", "Erato", "Euterpe", "Melpomene", 
@@ -69,10 +73,11 @@ def load_urls():
     
     stats = f"""📊 Compression Stats:
 Original: 2,110 bytes
-Compressed: 522 bytes
-Saved: 1,588 bytes (75.3% smaller)
+Compressed: 540 bytes
+Saved: 1,570 bytes (74.4% smaller)
 
-🔗 Solana App: https://solana.solfunmeme.com/app/
+🔗 App: {config['app_url']}
+🌐 Solana: {config['solana_app_url']}
 """
     
     return orig_text, comp_text, stats
@@ -123,7 +128,8 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.So
         with gr.Tab("🔗 RDFa Export"):
             gr.Markdown("### RDFa/Turtle URLs")
             
-            gr.Markdown("🔗 **Solana App**: https://solana.solfunmeme.com/app/")
+            gr.Markdown(f"🔗 **App**: {config['app_url']}")
+            gr.Markdown(f"🌐 **Solana**: {config['solana_app_url']}")
             
             load_btn = gr.Button("Load URLs", variant="primary")
             
@@ -133,7 +139,7 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.So
                     original_url = gr.Textbox(label="Original URL", lines=5, show_copy_button=True)
                 
                 with gr.Column():
-                    gr.Markdown("#### 🗜️ Compressed (522 bytes)")
+                    gr.Markdown("#### 🗜️ Compressed (540 bytes)")
                     compressed_url = gr.Textbox(label="Compressed URL", lines=5, show_copy_button=True)
             
             stats_output = gr.Textbox(label="Compression Stats", lines=5)
