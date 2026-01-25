@@ -6,8 +6,10 @@
 // Embedded config
 const CONFIG = {
   app_url: "https://huggingface.co/spaces/introspector/meta-meme",
+  cloudflare_url: "https://meta-meme.jmikedupont2.workers.dev",
   solana_app_url: "https://solana.solfunmeme.com/app/",
-  github_url: "https://github.com/meta-introspector/meta-meme"
+  github_url: "https://github.com/meta-introspector/meta-meme",
+  source_code: "https://github.com/meta-introspector/meta-meme/blob/unified-memes/worker.js"
 };
 
 // Embedded compressed data (base64)
@@ -54,9 +56,11 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
   </div>
 
   <div class="links" style="margin-top: 30px;">
+    <a href="${CONFIG.cloudflare_url}">⚡ Cloudflare (You are here!)</a>
     <a href="${CONFIG.app_url}">🤗 HuggingFace</a>
     <a href="${CONFIG.solana_app_url}">🌐 Solana App</a>
     <a href="${CONFIG.github_url}">💻 GitHub</a>
+    <a href="${CONFIG.source_code}">📄 Source Code</a>
   </div>
 
   <script>
