@@ -1,0 +1,22 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs": null,
+ "log":
+ [{"message": "Documentation indexing", "level": "info"},
+  {"message":
+   ".> /mnt/data1/time2/time/2023/07/30/meta-meme/.lake/packages/doc-gen4/.lake/build/bin/doc-gen4 index --build /mnt/data1/time2/time/2023/07/30/meta-meme/.lake/build",
+   "level": "trace"}],
+ "inputs":
+ [["/mnt/data1/time2/time/2023/07/30/meta-meme/.lake/packages/doc-gen4/.lake/build/bin/doc-gen4",
+   "4c7e186af4e616b7"],
+  ["<nil>", "7b9f5ff346c3f45f"],
+  ["<collection>",
+   [["/mnt/data1/time2/time/2023/07/30/meta-meme/.lake/build/doc/Master.html",
+     "3a8a7a665a75a2b1"],
+    ["/mnt/data1/time2/time/2023/07/30/meta-meme/.lake/build/doc/EigenvectorSharing.html",
+     "1490c087b30712e2"],
+    ["/mnt/data1/time2/time/2023/07/30/meta-meme/.lake/build/doc/ZKWitnessHME.html",
+     "349b559fbf43002a"],
+    ["/mnt/data1/time2/time/2023/07/30/meta-meme/.lake/build/doc/RDFaURL.html",
+     "d66c83508feca515"]]]],
+ "depHash": "53d028ec69458754"}
