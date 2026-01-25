@@ -1,0 +1,7 @@
+name = "meta-meme"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "meta-meme"
+route = "meta-meme.workers.dev"
