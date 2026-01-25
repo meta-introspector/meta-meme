@@ -1,0 +1,60 @@
+// Pipelight configuration for Meta-Meme documentation build
+{
+  "pipelines": {
+    "docs": {
+      "steps": [
+        {
+          "name": "checkout",
+          "commands": [
+            "echo '📦 Checking repository status'",
+            "git status --short"
+          ]
+        },
+        {
+          "name": "install_lean",
+          "commands": [
+            "echo '🔧 Verifying Lean installation'",
+            "which lean || (curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y)",
+            "lean --version"
+          ]
+        },
+        {
+          "name": "build_docs",
+          "commands": [
+            "echo '📚 Building Lean documentation'",
+            "lake update",
+            "lake build MetaMeme:docs"
+          ]
+        },
+        {
+          "name": "create_static",
+          "commands": [
+            "echo '🏗️  Creating static site'",
+            "mkdir -p static",
+            "cp -r .lake/build/doc/* static/ 2>/dev/null || echo 'No doc output yet'",
+            "cp README.md PROOFS.md shareable_url.txt static/",
+            "ls -lh static/"
+          ]
+        },
+        {
+          "name": "test_site",
+          "commands": [
+            "echo '🧪 Testing static site'",
+            "test -f static/README.md && echo '✅ README.md present'",
+            "test -f static/PROOFS.md && echo '✅ PROOFS.md present'",
+            "test -f static/shareable_url.txt && echo '✅ shareable_url.txt present'"
+          ]
+        },
+        {
+          "name": "commit_and_push",
+          "commands": [
+            "echo '📤 Committing and pushing to git'",
+            "git add -A",
+            "git diff --cached --quiet || git commit -m 'Build documentation via Pipelight'",
+            "git push origin unified-memes"
+          ]
+        }
+      ]
+    }
+  }
+}
