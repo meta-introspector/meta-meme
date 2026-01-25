@@ -93,7 +93,12 @@ with tab3:
         if url_file.exists():
             original_url = url_file.read_text()
             st.text_area("Full URL", original_url, height=150)
-            st.download_button("Download Original", original_url, "shareable_url.txt")
+            
+            if st.button("📋 Copy Original URL"):
+                st.code(original_url, language=None)
+                st.success("✅ Copy the URL above!")
+            
+            st.download_button("📥 Download Original", original_url, "shareable_url.txt")
         else:
             st.warning("Run `lean src/RDFaURL.lean` to generate")
     
@@ -103,27 +108,13 @@ with tab3:
         if compressed_file.exists():
             compressed_url = compressed_file.read_text()
             st.success("✅ 75.6% smaller!")
+            st.text_area("Compressed URL", compressed_url, height=150)
             
-            # Show the Streamlit app URL with anchor
-            streamlit_share_url = "https://meta-meme.streamlit.app/#compressed-515-bytes"
-            st.info(f"🔗 **Live Demo**: {streamlit_share_url}")
-            
-            # Copy Streamlit URL button
-            if st.button("📋 Copy Streamlit Share Link"):
-                st.code(streamlit_share_url, language=None)
+            if st.button("📋 Copy Compressed URL"):
+                st.code(compressed_url, language=None)
                 st.success("✅ Copy the URL above!")
             
-            # Show compressed data URL
-            st.text_area("Compressed Data URL", compressed_url, height=100)
-            
-            # Download button
-            st.download_button(
-                "📥 Download Compressed", 
-                compressed_url, 
-                "shareable_url_compressed.txt",
-                help="Download compressed RDFa URL"
-            )
-            
+            st.download_button("📥 Download Compressed", compressed_url, "shareable_url_compressed.txt")
             st.metric("Compression Ratio", "24.4%", "-1,595 bytes")
         else:
             if st.button("🗜️ Compress Now"):
