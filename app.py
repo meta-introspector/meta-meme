@@ -123,18 +123,20 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.So
         with gr.Tab("🔗 RDFa Export"):
             gr.Markdown("### RDFa/Turtle URLs")
             
+            gr.Markdown("🔗 **Permalink**: https://huggingface.co/spaces/introspector/meta-meme")
+            
             load_btn = gr.Button("Load URLs", variant="primary")
             
             with gr.Row():
                 with gr.Column():
                     gr.Markdown("#### 📦 Original (2,110 bytes)")
-                    original_url = gr.Textbox(label="Original URL", lines=5)
+                    original_url = gr.Textbox(label="Original URL", lines=5, show_copy_button=True)
                 
                 with gr.Column():
-                    gr.Markdown("#### 🗜️ Compressed (520 bytes)")
-                    compressed_url = gr.Textbox(label="Compressed URL", lines=5)
+                    gr.Markdown("#### 🗜️ Compressed (540 bytes)")
+                    compressed_url = gr.Textbox(label="Compressed URL", lines=5, show_copy_button=True)
             
-            stats_output = gr.Textbox(label="Compression Stats", lines=4)
+            stats_output = gr.Textbox(label="Compression Stats", lines=5)
             
             load_btn.click(
                 load_urls,
