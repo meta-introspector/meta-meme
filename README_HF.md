@@ -3,9 +3,9 @@ title: Meta-Meme Formally Verified AI Muses
 emoji: 🎭
 colorFrom: purple
 colorTo: blue
-sdk: streamlit
-sdk_version: "1.30.0"
-app_file: streamlit_app.py
+sdk: gradio
+sdk_version: "4.0.0"
+app_file: app.py
 pinned: false
 license: mit
 ---
