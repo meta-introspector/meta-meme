@@ -14,4 +14,5 @@ require «doc-gen4» from git
 
 @[default_target]
 lean_lib MetaMeme where
+  srcDir := "src"
   roots := #[`Master, `EigenvectorSharing, `ZKWitnessHME, `RDFaURL]
