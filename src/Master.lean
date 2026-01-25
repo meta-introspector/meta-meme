@@ -1,4 +1,22 @@
--- Meta-Meme Master: Unified system including all 16 Lean files
+-- Meta-Meme Master: Unified system including all 17 Lean files
+
+-- Streamlit Hackathon Integration (inline)
+structure HackathonTask where
+  id : String
+  description : String
+  complexity : Nat
+  deriving Repr
+
+def hackathonTasks : List HackathonTask := [
+  ⟨"TASK1", "Summarize Text", 1⟩,
+  ⟨"TASK2", "Classify Image", 2⟩,
+  ⟨"TASK3", "Extract Sentences", 1⟩,
+  ⟨"TASK4", "Translate Text", 2⟩,
+  ⟨"TASK5", "Answer Questions", 3⟩,
+  ⟨"TASK6", "Chatbot Response", 3⟩
+]
+
+theorem hackathon_tasks_count : hackathonTasks.length = 6 := by rfl
 
 -- Working symbolic translators
 def metamemeSymbols : List String := [
