@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-01-25T20:03:11.644535",
+  "space_id": "introspector/meta-meme",
+  "stage": "RUNTIME_ERROR",
+  "error_message": "Exit code: 1. Reason: Traceback (most recent call last):\n  File \"/app/app.py\", line 156, in <module>\n    demo.launch(theme=gr.themes.Soft())\nTypeError: Blocks.launch() got an unexpected keyword argument 'theme'\nIMPORTANT: You are using gradio version 4.0.0, however version 4.44.1 is available, please upgrade.\n--------\n",
+  "live_logs": [
+    "Error fetching logs: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out."
+  ],
+  "runtime": {
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "storage": {
+      "current": null,
+      "requested": null
+    },
+    "gcTimeout": 172800,
+    "errorMessage": "Exit code: 1. Reason: Traceback (most recent call last):\n  File \"/app/app.py\", line 156, in <module>\n    demo.launch(theme=gr.themes.Soft())\nTypeError: Blocks.launch() got an unexpected keyword argument 'theme'\nIMPORTANT: You are using gradio version 4.0.0, however version 4.44.1 is available, please upgrade.\n--------\n",
+    "replicas": {
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "introspector-meta-meme.hf.space",
+        "stage": "READY"
+      }
+    ]
+  }
+}
