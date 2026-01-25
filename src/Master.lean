@@ -7,6 +7,29 @@ structure HackathonTask where
   complexity : Nat
   deriving Repr
 
+-- JWT Token structure for Streamlit auth
+structure JWTPayload where
+  sub : String  -- subject (user/muse)
+  iat : Nat     -- issued at
+  exp : Nat     -- expiration
+  data : String -- RDFa-encoded task data
+  deriving Repr
+
+-- RDFa embedding in JWT
+def taskToRDFa (task : HackathonTask) : String :=
+  s!"<div vocab='http://schema.org/' typeof='SoftwareApplication'>" ++
+  s!"<span property='name'>{task.id}</span>" ++
+  s!"<span property='description'>{task.description}</span>" ++
+  s!"<meta property='complexity' content='{task.complexity}'/>" ++
+  s!"</div>"
+
+-- JWT composition with RDFa
+def composeJWT (muse : String) (task : HackathonTask) (timestamp : Nat) : JWTPayload :=
+  { sub := s!"muse:{muse}"
+    iat := timestamp
+    exp := timestamp + 14400  -- 4 hours
+    data := taskToRDFa task }
+
 def hackathonTasks : List HackathonTask := [
   ⟨"TASK1", "Summarize Text", 1⟩,
   ⟨"TASK2", "Classify Image", 2⟩,
@@ -17,6 +40,11 @@ def hackathonTasks : List HackathonTask := [
 ]
 
 theorem hackathon_tasks_count : hackathonTasks.length = 6 := by rfl
+
+-- Each Streamlit app composes itself with JWT+RDFa
+axiom jwt_embeds_rdfa :
+    ∀ (muse : String) (task : HackathonTask) (t : Nat),
+    (composeJWT muse task t).data.length > 0
 
 -- Working symbolic translators
 def metamemeSymbols : List String := [

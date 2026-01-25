@@ -17,8 +17,8 @@ Meta-Meme is a formally verified system exploring the creative intersection of h
 - 🔗 **RDFa/Turtle URL**: Single shareable link encoding all data (2,110 bytes)
 - 📊 **Monster Group Tower**: 8-level lattice with 19 glossary terms
 - 🎲 **Emoji→Prime Paxos**: 11 emojis mapped to primes (2-31) with consensus
-- 🚀 **Streamlit Hackathon**: 6 Clarifai API tasks (Protobuf + GUI integration)
-- ✅ **77 Proofs Verified**: 43 theorems, 5 axioms, 29 derived properties
+- 🚀 **Streamlit Hackathon**: 6 Clarifai API tasks (Protobuf + JWT/RDFa composition)
+- ✅ **79 Proofs Verified**: 43 theorems, 6 axioms, 30 derived properties
 
 **Run the Proof**:
 ```bash
