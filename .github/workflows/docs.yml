@@ -1,0 +1,52 @@
+name: Build and Deploy Documentation
+
+on:
+  push:
+    branches: [ main, unified-memes ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: meta-introspector/meta-meme
+
+      - name: Install Lean
+        run: |
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+
+      - name: Build docs
+        run: |
+          lake update
+          lake build MetaMeme:docs
+
+      - name: Create static site
+        run: |
+          mkdir -p static
+          cp -r .lake/build/doc/* static/
+          cp README.md static/
+          cp PROOFS.md static/
+          cp shareable_url.txt static/
+
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'static'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
