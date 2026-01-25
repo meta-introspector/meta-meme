@@ -69,10 +69,10 @@ def load_urls():
     
     stats = f"""📊 Compression Stats:
 Original: 2,110 bytes
-Compressed: 540 bytes
-Saved: 1,570 bytes (74.4% smaller)
+Compressed: 522 bytes
+Saved: 1,588 bytes (75.3% smaller)
 
-🔗 Permalink: https://huggingface.co/spaces/introspector/meta-meme
+🔗 Solana App: https://solana.solfunmeme.com/app/
 """
     
     return orig_text, comp_text, stats
@@ -123,7 +123,7 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.So
         with gr.Tab("🔗 RDFa Export"):
             gr.Markdown("### RDFa/Turtle URLs")
             
-            gr.Markdown("🔗 **Permalink**: https://huggingface.co/spaces/introspector/meta-meme")
+            gr.Markdown("🔗 **Solana App**: https://solana.solfunmeme.com/app/")
             
             load_btn = gr.Button("Load URLs", variant="primary")
             
@@ -133,7 +133,7 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.So
                     original_url = gr.Textbox(label="Original URL", lines=5, show_copy_button=True)
                 
                 with gr.Column():
-                    gr.Markdown("#### 🗜️ Compressed (540 bytes)")
+                    gr.Markdown("#### 🗜️ Compressed (522 bytes)")
                     compressed_url = gr.Textbox(label="Compressed URL", lines=5, show_copy_button=True)
             
             stats_output = gr.Textbox(label="Compression Stats", lines=5)
