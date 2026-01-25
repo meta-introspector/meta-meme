@@ -104,7 +104,20 @@ with tab3:
             compressed_url = compressed_file.read_text()
             st.success("✅ 75.6% smaller!")
             st.text_area("Compressed URL", compressed_url, height=150)
-            st.download_button("Download Compressed", compressed_url, "shareable_url_compressed.txt")
+            
+            # Share button with copy functionality
+            st.download_button(
+                "📥 Download Compressed", 
+                compressed_url, 
+                "shareable_url_compressed.txt",
+                help="Download compressed RDFa URL"
+            )
+            
+            # Copy to clipboard button
+            if st.button("📋 Copy Compressed URL to Clipboard"):
+                st.code(compressed_url, language=None)
+                st.success("✅ URL displayed above - copy it!")
+            
             st.metric("Compression Ratio", "24.4%", "-1,595 bytes")
         else:
             if st.button("🗜️ Compress Now"):
