@@ -29,6 +29,43 @@ lean --run src/RDFaURL.lean         # URL encoding
 
 **Shareable Proof**: [shareable_url.txt](shareable_url.txt) - Complete system state in one URL
 
+**Proof Witness**:
+```turtle
+@prefix muse: <http://meta-meme.org/muse#> .
+@prefix zk: <http://meta-meme.org/zk#> .
+@prefix hme: <http://meta-meme.org/hme#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+muse:Calliope zk:commitment "2249895"^^xsd:integer .
+muse:Calliope zk:proof "38248215"^^xsd:integer .
+muse:Calliope hme:encrypted "642451826"^^xsd:integer .
+muse:Clio zk:commitment "2249895"^^xsd:integer .
+muse:Clio zk:proof "38248215"^^xsd:integer .
+muse:Clio hme:encrypted "642451826"^^xsd:integer .
+muse:Erato zk:commitment "2249895"^^xsd:integer .
+muse:Erato zk:proof "38248215"^^xsd:integer .
+muse:Erato hme:encrypted "642451826"^^xsd:integer .
+muse:Euterpe zk:commitment "2249895"^^xsd:integer .
+muse:Euterpe zk:proof "38248215"^^xsd:integer .
+muse:Euterpe hme:encrypted "642451826"^^xsd:integer .
+muse:Melpomene zk:commitment "2249895"^^xsd:integer .
+muse:Melpomene zk:proof "38248215"^^xsd:integer .
+muse:Melpomene hme:encrypted "642451826"^^xsd:integer .
+muse:Polyhymnia zk:commitment "2249895"^^xsd:integer .
+muse:Polyhymnia zk:proof "38248215"^^xsd:integer .
+muse:Polyhymnia hme:encrypted "642451826"^^xsd:integer .
+muse:Terpsichore zk:commitment "2249895"^^xsd:integer .
+muse:Terpsichore zk:proof "38248215"^^xsd:integer .
+muse:Terpsichore hme:encrypted "642451826"^^xsd:integer .
+muse:Thalia zk:commitment "2249895"^^xsd:integer .
+muse:Thalia zk:proof "38248215"^^xsd:integer .
+muse:Thalia hme:encrypted "642451826"^^xsd:integer .
+muse:Urania hme:aggregate "139614573"^^xsd:integer .
+muse:Urania hme:publicKey "65537"^^xsd:integer .
+```
+
+**Documentation**: [API Docs](https://meta-introspector.github.io/meta-meme/) - Generated with doc-gen4
+
 ## Core Concepts
 
 - **Human-AI Collaboration**: Creating new ideas through structured dialogue between humans and Language Models (LLMs)
