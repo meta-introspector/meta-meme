@@ -8,6 +8,7 @@ sdk_version: "4.0.0"
 app_file: app.py
 pinned: false
 license: mit
+python_version: "3.11"
 ---
 
 # Meta-Meme: Formally Verified AI-Human Creative Framework
@@ -17,7 +18,7 @@ license: mit
 ## Features
 
 - **9 AI Muses**: Distributed agents processing 162 files, 490K lines, 35M tokens
-- **JWT+RDFa Composition**: Self-composing Streamlit apps with semantic tokens
+- **JWT+RDFa Composition**: Self-composing apps with semantic tokens
 - **Zero-Knowledge Witness**: Cryptographic proofs with homomorphic encryption
 - **Hackathon Tasks**: 6 Clarifai API tasks with Protobuf integration
 
@@ -25,7 +26,7 @@ license: mit
 
 - [GitHub Repository](https://github.com/meta-introspector/meta-meme)
 - [API Documentation](https://meta-introspector.github.io/meta-meme/)
-- [Deployment Guide](https://github.com/meta-introspector/meta-meme/blob/unified-memes/STREAMLIT_DEPLOY.md)
+- [Streamlit App](https://meta-meme.streamlit.app)
 
 ## Verified Properties
 
