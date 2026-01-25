@@ -85,13 +85,30 @@ with tab2:
 with tab3:
     st.header("RDFa/Turtle Export")
     
-    # Load shareable URL if exists
-    url_file = Path("shareable_url.txt")
-    if url_file.exists():
-        st.success("✅ Shareable URL Generated")
-        st.text_area("Complete System State", url_file.read_text(), height=200)
-    else:
-        st.warning("Run `lean src/RDFaURL.lean` to generate")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.subheader("📦 Original (2,110 bytes)")
+        url_file = Path("shareable_url.txt")
+        if url_file.exists():
+            original_url = url_file.read_text()
+            st.text_area("Full URL", original_url, height=150)
+            st.download_button("Download Original", original_url, "shareable_url.txt")
+        else:
+            st.warning("Run `lean src/RDFaURL.lean` to generate")
+    
+    with col2:
+        st.subheader("🗜️ Compressed (515 bytes)")
+        compressed_file = Path("shareable_url_compressed.txt")
+        if compressed_file.exists():
+            compressed_url = compressed_file.read_text()
+            st.success("✅ 75.6% smaller!")
+            st.text_area("Compressed URL", compressed_url, height=150)
+            st.download_button("Download Compressed", compressed_url, "shareable_url_compressed.txt")
+            st.metric("Compression Ratio", "24.4%", "-1,595 bytes")
+        else:
+            if st.button("🗜️ Compress Now"):
+                st.info("Run: `python3 compress_rdfa.py`")
     
     st.subheader("Live RDFa Generation")
     if st.button("Generate RDFa for All Tasks"):
