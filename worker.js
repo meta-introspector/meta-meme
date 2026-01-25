@@ -326,16 +326,36 @@ Based on your expertise and the 79 formally verified proofs in our system, provi
 
 Your response:\`;
 
-      // Download as llm.txt
-      const blob = new Blob([prompt], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = \`llm-\${selectedMuse}-\${Date.now()}.txt\`;
-      a.click();
-      URL.revokeObjectURL(url);
+      // Create shareable URL with LLM prompt
+      const llmData = {
+        muse: selectedMuse,
+        tool: 'llm',
+        query: query || 'General consultation',
+        context: context || 'Meta-Meme formally verified system',
+        prompt: prompt,
+        timestamp: Date.now(),
+        type: 'llm-prompt'
+      };
 
-      alert(\`✅ LLM prompt generated and downloaded as llm-\${selectedMuse}-\${Date.now()}.txt\`);
+      const compressed = btoa(JSON.stringify(llmData));
+      const shareUrl = \`${CONFIG.cloudflare_url}?llm=\${compressed}\`;
+      
+      // Display in result box
+      const resultBox = document.getElementById('result-box');
+      const resultContent = document.getElementById('result-content');
+      
+      resultContent.innerHTML = \`
+        <p><strong>🤖 LLM Prompt Generated</strong></p>
+        <p><strong>Muse:</strong> \${selectedMuse}</p>
+        <p><strong>Query:</strong> \${query || 'General consultation'}</p>
+        <hr>
+        <pre style="white-space: pre-wrap; max-height: 300px; overflow-y: auto;">\${prompt}</pre>
+        <p><em>Share this URL with any LLM to get \${selectedMuse}'s perspective!</em></p>
+      \`;
+
+      document.getElementById('share-url').textContent = shareUrl;
+      resultBox.classList.add('show');
+      resultBox.scrollIntoView({ behavior: 'smooth' });
     }
 
     function getMuseRole(muse) {
@@ -395,12 +415,34 @@ Your response:\`;
     // Load consultation from URL if present
     const urlParams = new URLSearchParams(window.location.search);
     const consultData = urlParams.get('consult');
+    const llmData = urlParams.get('llm');
+    
     if (consultData) {
       try {
         const result = JSON.parse(atob(consultData));
         displayResult(result);
       } catch (e) {
         console.error('Failed to load consultation:', e);
+      }
+    } else if (llmData) {
+      try {
+        const data = JSON.parse(atob(llmData));
+        const resultBox = document.getElementById('result-box');
+        const resultContent = document.getElementById('result-content');
+        
+        resultContent.innerHTML = \`
+          <p><strong>🤖 LLM Prompt for \${data.muse}</strong></p>
+          <p><strong>Query:</strong> \${data.query}</p>
+          <p><strong>Context:</strong> \${data.context}</p>
+          <hr>
+          <pre style="white-space: pre-wrap; max-height: 400px; overflow-y: auto;">\${data.prompt}</pre>
+          <p><em>Copy this prompt and paste it into any LLM!</em></p>
+        \`;
+        
+        document.getElementById('share-url').textContent = window.location.href;
+        resultBox.classList.add('show');
+      } catch (e) {
+        console.error('Failed to load LLM prompt:', e);
       }
     }
   </script>
