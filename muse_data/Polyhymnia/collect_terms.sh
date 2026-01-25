@@ -1,0 +1,1 @@
+/mnt/data1/time2/time/2023/07/30/meta-meme/collect_terms.sh
