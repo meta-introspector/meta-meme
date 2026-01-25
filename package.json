@@ -1,0 +1,23 @@
+{
+  "name": "@metameme/lattice",
+  "version": "0.1.0",
+  "description": "Pure function lattice with proofs encoded in URLs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && wasm-pack build --target web",
+    "test": "jest",
+    "prove": "lean --make src/"
+  },
+  "keywords": ["lattice", "proof", "url", "shard", "pure-functions"],
+  "author": "Meta-Meme",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "base64-url": "^2.3.3",
+    "msgpack-lite": "^0.1.26"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "wasm-pack": "^0.12.0"
+  }
+}
