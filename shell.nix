@@ -2,12 +2,13 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    lean4
-    elan
+    python3
+    python3Packages.gradio
+    python3Packages.pip
   ];
-
+  
   shellHook = ''
-    echo "Lean4 environment ready"
-    lean --version
+    echo "🎭 Meta-Meme Gradio Test Environment"
+    echo "Run: python app.py"
   '';
 }

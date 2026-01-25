@@ -76,7 +76,7 @@ Saved: 1,590 bytes (75.4% smaller)
     return orig_text, comp_text, stats
 
 # Create Gradio interface
-with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses") as demo:
     gr.Markdown("""
     # 🎭 Meta-Meme: Formally Verified AI Muses
     **79 Proofs Verified** | **8! Eigenvector Convergence** | **ZK+HME**
@@ -153,4 +153,4 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.So
     """)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=gr.themes.Soft())
