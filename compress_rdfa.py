@@ -21,8 +21,8 @@ compressed = gzip.compress(data_part.encode('utf-8'), compresslevel=9)
 # Encode as base64 (URL-safe)
 b64_compressed = base64.urlsafe_b64encode(compressed).decode('ascii')
 
-# Create compressed URL
-compressed_url = f"https://meta-meme.org/share?compressed={b64_compressed}"
+# Create compressed URL pointing to Streamlit app
+compressed_url = f"https://meta-meme.streamlit.app/?compressed={b64_compressed}"
 
 # Save compressed version
 Path("shareable_url_compressed.txt").write_text(compressed_url)

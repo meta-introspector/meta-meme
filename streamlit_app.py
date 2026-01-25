@@ -103,11 +103,11 @@ with tab3:
             st.warning("Run `lean src/RDFaURL.lean` to generate")
     
     with col2:
-        st.subheader("🗜️ Compressed (515 bytes)")
+        st.subheader("🗜️ Compressed (520 bytes)")
         compressed_file = Path("shareable_url_compressed.txt")
         if compressed_file.exists():
             compressed_url = compressed_file.read_text()
-            st.success("✅ 75.6% smaller!")
+            st.success("✅ 75.4% smaller!")
             st.text_area("Compressed URL", compressed_url, height=150)
             
             if st.button("📋 Copy Compressed URL"):
@@ -115,7 +115,7 @@ with tab3:
                 st.success("✅ Copy the URL above!")
             
             st.download_button("📥 Download Compressed", compressed_url, "shareable_url_compressed.txt")
-            st.metric("Compression Ratio", "24.4%", "-1,595 bytes")
+            st.metric("Compression Ratio", "24.6%", "-1,590 bytes")
         else:
             if st.button("🗜️ Compress Now"):
                 st.info("Run: `python3 compress_rdfa.py`")
