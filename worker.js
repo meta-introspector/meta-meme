@@ -65,7 +65,7 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
 
   <script>
     const compressedData = "${COMPRESSED_DATA}";
-    const fullUrl = "${CONFIG.app_url}?compressed=" + compressedData;
+    const fullUrl = "${CONFIG.cloudflare_url}?compressed=" + compressedData;
     document.getElementById('compressed-url').textContent = fullUrl;
 
     function copyUrl() {
@@ -103,7 +103,7 @@ export default {
     if (url.pathname === '/api/compressed') {
       return new Response(JSON.stringify({
         compressed: COMPRESSED_DATA,
-        url: `${CONFIG.app_url}?compressed=${COMPRESSED_DATA}`,
+        url: `${CONFIG.cloudflare_url}?compressed=${COMPRESSED_DATA}`,
         size: 540,
         original_size: 2110
       }), {
