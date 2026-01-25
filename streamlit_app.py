@@ -85,6 +85,9 @@ with tab2:
 with tab3:
     st.header("RDFa/Turtle Export")
     
+    # Permalink
+    st.info("🔗 **Permalink**: https://huggingface.co/spaces/introspector/meta-meme")
+    
     col1, col2 = st.columns(2)
     
     with col1:
@@ -103,11 +106,11 @@ with tab3:
             st.warning("Run `lean src/RDFaURL.lean` to generate")
     
     with col2:
-        st.subheader("🗜️ Compressed (520 bytes)")
+        st.subheader("🗜️ Compressed (540 bytes)")
         compressed_file = Path("shareable_url_compressed.txt")
         if compressed_file.exists():
             compressed_url = compressed_file.read_text()
-            st.success("✅ 75.4% smaller!")
+            st.success("✅ 74.4% smaller!")
             st.text_area("Compressed URL", compressed_url, height=150)
             
             if st.button("📋 Copy Compressed URL"):
@@ -115,7 +118,7 @@ with tab3:
                 st.success("✅ Copy the URL above!")
             
             st.download_button("📥 Download Compressed", compressed_url, "shareable_url_compressed.txt")
-            st.metric("Compression Ratio", "24.6%", "-1,590 bytes")
+            st.metric("Compression Ratio", "25.6%", "-1,570 bytes")
         else:
             if st.button("🗜️ Compress Now"):
                 st.info("Run: `python3 compress_rdfa.py`")

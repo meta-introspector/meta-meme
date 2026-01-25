@@ -69,14 +69,16 @@ def load_urls():
     
     stats = f"""📊 Compression Stats:
 Original: 2,110 bytes
-Compressed: 520 bytes
-Saved: 1,590 bytes (75.4% smaller)
+Compressed: 540 bytes
+Saved: 1,570 bytes (74.4% smaller)
+
+🔗 Permalink: https://huggingface.co/spaces/introspector/meta-meme
 """
     
     return orig_text, comp_text, stats
 
 # Create Gradio interface
-with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses") as demo:
+with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses", theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
     # 🎭 Meta-Meme: Formally Verified AI Muses
     **79 Proofs Verified** | **8! Eigenvector Convergence** | **ZK+HME**
@@ -153,4 +155,4 @@ with gr.Blocks(title="Meta-Meme: Formally Verified AI Muses") as demo:
     """)
 
 if __name__ == "__main__":
-    demo.launch(theme=gr.themes.Soft())
+    demo.launch()
