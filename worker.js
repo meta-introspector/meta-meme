@@ -420,6 +420,12 @@ Your response:\`;
     if (consultData) {
       try {
         const result = JSON.parse(atob(consultData));
+        // Auto-fill form
+        selectMuse(result.muse);
+        selectTool(result.tool);
+        document.getElementById('query').value = result.query;
+        document.getElementById('context').value = result.context || '';
+        // Display result
         displayResult(result);
       } catch (e) {
         console.error('Failed to load consultation:', e);
@@ -427,6 +433,13 @@ Your response:\`;
     } else if (llmData) {
       try {
         const data = JSON.parse(atob(llmData));
+        // Auto-fill form
+        selectMuse(data.muse);
+        selectTool('llm');
+        document.getElementById('query').value = data.query;
+        document.getElementById('context').value = data.context || '';
+        
+        // Display LLM prompt
         const resultBox = document.getElementById('result-box');
         const resultContent = document.getElementById('result-content');
         
