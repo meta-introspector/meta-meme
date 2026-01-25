@@ -103,20 +103,26 @@ with tab3:
         if compressed_file.exists():
             compressed_url = compressed_file.read_text()
             st.success("✅ 75.6% smaller!")
-            st.text_area("Compressed URL", compressed_url, height=150)
             
-            # Share button with copy functionality
+            # Show the Streamlit app URL with anchor
+            streamlit_share_url = "https://meta-meme.streamlit.app/#compressed-515-bytes"
+            st.info(f"🔗 **Live Demo**: {streamlit_share_url}")
+            
+            # Copy Streamlit URL button
+            if st.button("📋 Copy Streamlit Share Link"):
+                st.code(streamlit_share_url, language=None)
+                st.success("✅ Copy the URL above!")
+            
+            # Show compressed data URL
+            st.text_area("Compressed Data URL", compressed_url, height=100)
+            
+            # Download button
             st.download_button(
                 "📥 Download Compressed", 
                 compressed_url, 
                 "shareable_url_compressed.txt",
                 help="Download compressed RDFa URL"
             )
-            
-            # Copy to clipboard button
-            if st.button("📋 Copy Compressed URL to Clipboard"):
-                st.code(compressed_url, language=None)
-                st.success("✅ URL displayed above - copy it!")
             
             st.metric("Compression Ratio", "24.4%", "-1,595 bytes")
         else:
