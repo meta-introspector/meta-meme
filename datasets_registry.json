@@ -1,0 +1,32 @@
+{
+  "meta_datasets": {
+    "name": "Meta-Meme Datasets Registry",
+    "version": "1.0.0",
+    "datasets": [
+      {
+        "id": "meta-meme-consultations",
+        "org": "introspector",
+        "repo": "meta-meme",
+        "type": "dataset",
+        "url": "https://huggingface.co/datasets/introspector/meta-meme",
+        "git_url": "https://huggingface.co/datasets/introspector/meta-meme.git",
+        "files": ["meta-meme-consultations.parquet"],
+        "size_mb": 0.78,
+        "rows": 2177,
+        "purpose": "Muse consultation URLs",
+        "required": true
+      },
+      {
+        "id": "parquet-schema-index",
+        "org": "local",
+        "repo": "meta-meme",
+        "type": "local",
+        "path": "./parquet_schema_index.parquet",
+        "size_mb": 9.6,
+        "rows": 423925,
+        "purpose": "Schema complexity index",
+        "required": true
+      }
+    ]
+  }
+}
