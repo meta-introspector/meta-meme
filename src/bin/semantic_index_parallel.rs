@@ -2,8 +2,7 @@
 // Indexes entire system and proves Monster group properties
 
 use crossbeam::channel::{bounded, Sender, Receiver};
-use std::fs::{File, metadata};
-use std::io::{BufRead, BufReader};
+use std::fs::{metadata, File};
 use std::path::Path;
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::Arc;
@@ -186,24 +185,51 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         println!("    {}", f.path);
     }
     
-    // Save to CSV (Parquet would need arrow crate)
-    println!("\n📊 Saving index...");
-    let output_file = "/mnt/data1/time2/time/2023/07/30/meta-meme/semantic_index.csv";
-    let mut wtr = csv::Writer::from_path(output_file)?;
+    // Save to Parquet
+    println!("\n📊 Saving to Parquet...");
+    use arrow::array::{UInt64Array, StringArray, BooleanArray};
+    use arrow::datatypes::{Schema, Field, DataType};
+    use arrow::record_batch::RecordBatch;
+    use parquet::arrow::ArrowWriter;
+    use parquet::file::properties::WriterProperties;
     
-    wtr.write_record(&["level", "path", "size", "conductor", "weight", "resonates", "lmfdb_label"])?;
-    for f in &results {
-        wtr.write_record(&[
-            f.level.to_string(),
-            f.path.clone(),
-            f.size.to_string(),
-            f.conductor.to_string(),
-            f.weight.to_string(),
-            if f.resonates { "1" } else { "0" }.to_string(),
-            f.lmfdb_label(),
-        ])?;
-    }
-    wtr.flush()?;
+    let schema = Schema::new(vec![
+        Field::new("level", DataType::UInt64, false),
+        Field::new("path", DataType::Utf8, false),
+        Field::new("size", DataType::UInt64, false),
+        Field::new("conductor", DataType::UInt64, false),
+        Field::new("weight", DataType::UInt64, false),
+        Field::new("resonates", DataType::Boolean, false),
+    ]);
+    
+    let level_array = UInt64Array::from(results.iter().map(|f| f.level).collect::<Vec<_>>());
+    let path_array = StringArray::from(results.iter().map(|f| f.path.as_str()).collect::<Vec<_>>());
+    let size_array = UInt64Array::from(results.iter().map(|f| f.size).collect::<Vec<_>>());
+    let conductor_array = UInt64Array::from(results.iter().map(|f| f.conductor).collect::<Vec<_>>());
+    let weight_array = UInt64Array::from(results.iter().map(|f| f.weight).collect::<Vec<_>>());
+    let resonates_array = BooleanArray::from(results.iter().map(|f| f.resonates).collect::<Vec<_>>());
+    
+    let batch = RecordBatch::try_new(
+        Arc::new(schema),
+        vec![
+            Arc::new(level_array),
+            Arc::new(path_array),
+            Arc::new(size_array),
+            Arc::new(conductor_array),
+            Arc::new(weight_array),
+            Arc::new(resonates_array),
+        ],
+    )?;
+    
+    let output_file = "/mnt/data1/time2/time/2023/07/30/meta-meme/semantic_index.parquet";
+    let file = File::create(output_file)?;
+    let props = WriterProperties::builder()
+        .set_compression(parquet::basic::Compression::SNAPPY)
+        .build();
+    
+    let mut writer = ArrowWriter::try_new(file, batch.schema(), Some(props))?;
+    writer.write(&batch)?;
+    writer.close()?;
     
     println!("{}", "=".repeat(60));
     println!("✅ SEMANTIC INDEX COMPLETE");

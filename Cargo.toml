@@ -17,6 +17,7 @@ required-features = ["wasm"]
 
 [features]
 wasm = ["wasm-bindgen"]
+wasm-bindgen = ["dep:wasm-bindgen"]
 
 [dependencies]
 wasm-bindgen = { version = "0.2", optional = true }
@@ -28,6 +29,9 @@ walkdir = "2"
 dirs = "5"
 crossbeam = "0.8.4"
 csv = "1.4.0"
+console_error_panic_hook = "0.1.7"
+parquet = { version = "57.2.0", features = ["snap"] }
+arrow = "57.2.0"
 
 [profile.release]
 opt-level = "z"
