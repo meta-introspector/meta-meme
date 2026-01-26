@@ -6,7 +6,8 @@ on:
       - unified-memes
       - main
     paths:
-      - 'worker.js'
+      - 'src/index.js'
+      - 'public/**'
       - 'wrangler.toml'
       - '.github/workflows/cloudflare.yml'
 
