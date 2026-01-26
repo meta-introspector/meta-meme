@@ -1,0 +1,35 @@
+{
+  "examples": [
+    {
+      "name": "Query encrypted muse data",
+      "pattern": "?muse erdfa:encrypted ?data",
+      "sources": [
+        {
+          "url": "https://meta-meme.jmikedupont2.workers.dev/rdfa",
+          "format": "erdfa",
+          "acl": "public",
+          "encrypted": false
+        }
+      ],
+      "description": "Find all encrypted data from muses"
+    },
+    {
+      "name": "Query with ACL",
+      "pattern": "?muse zk:commitment ?value",
+      "sources": [
+        {
+          "url": "https://meta-meme.jmikedupont2.workers.dev/rdfa",
+          "format": "erdfa",
+          "acl": "holder",
+          "encrypted": true
+        }
+      ],
+      "description": "Query ZK commitments (holder access only)"
+    },
+    {
+      "name": "Escaped RDFa attributes",
+      "html": "<div data-erdfa-vocab=\"http://purl.org/ontology/mo/\" \n     data-erdfa-typeof=\"mo:Recording\">\n  <meta data-erdfa-property=\"dc:title\" content=\"Meta-Meme Symphony\" />\n  <meta data-erdfa-property=\"erdfa:encrypted\" content=\"aGVsbG8gd29ybGQ=\" />\n  <meta data-erdfa-property=\"erdfa:acl\" content=\"public\" />\n</div>",
+      "description": "Escaped RDFa in hostile environment (Blogger, WordPress)"
+    }
+  ]
+}
