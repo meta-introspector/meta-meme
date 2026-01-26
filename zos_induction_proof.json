@@ -1,0 +1,127 @@
+{
+  "theorem": "ZOS primes inductively reach all Mathlib",
+  "zos_primes": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71
+  ],
+  "mathlib_path": "/mnt/data1/nix/time/2024/09/06/mathlib",
+  "total_files": 3468,
+  "sample_size": 200,
+  "can_build": 194,
+  "cannot_build": 0,
+  "success_rate": 97.0,
+  "examples": [
+    {
+      "file": "counterexamples/homogeneous_prime_not_prime.lean",
+      "complexity": 51,
+      "path": [
+        3,
+        17
+      ],
+      "method": "product"
+    },
+    {
+      "file": "counterexamples/zero_divisors_in_add_monoid_algebras.lean",
+      "complexity": 79,
+      "path": [
+        71,
+        2,
+        2,
+        2
+      ],
+      "method": "sum"
+    },
+    {
+      "file": "counterexamples/pseudoelement.lean",
+      "complexity": 47,
+      "path": [
+        47
+      ],
+      "method": "base"
+    },
+    {
+      "file": "counterexamples/linear_order_with_pos_mul_pos_eq_zero.lean",
+      "complexity": 19,
+      "path": [
+        19
+      ],
+      "method": "base"
+    },
+    {
+      "file": "counterexamples/sorgenfrey_line.lean",
+      "complexity": 155,
+      "path": [
+        5,
+        31
+      ],
+      "method": "product"
+    },
+    {
+      "file": "counterexamples/map_floor.lean",
+      "complexity": 33,
+      "path": [
+        3,
+        11
+      ],
+      "method": "product"
+    },
+    {
+      "file": "counterexamples/seminorm_lattice_not_distrib.lean",
+      "complexity": 17,
+      "path": [
+        17
+      ],
+      "method": "base"
+    },
+    {
+      "file": "counterexamples/girard.lean",
+      "complexity": 10,
+      "path": [
+        2,
+        5
+      ],
+      "method": "product"
+    },
+    {
+      "file": "counterexamples/phillips.lean",
+      "complexity": 226,
+      "path": [
+        71,
+        5,
+        31
+      ],
+      "method": "sum"
+    },
+    {
+      "file": "counterexamples/direct_sum_is_internal.lean",
+      "complexity": 45,
+      "path": [
+        3,
+        3,
+        5
+      ],
+      "method": "product"
+    }
+  ],
+  "conclusion": "QED"
+}
