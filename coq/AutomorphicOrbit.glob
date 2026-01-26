@@ -1,0 +1,117 @@
+DIGEST 6b3bd479e44526e7670cbe33c6e59897
+FAutomorphicOrbit
+R77:79 Coq.Init.Nat <> <> lib
+R97:100 Coq.Lists.List <> <> lib
+R110:122 Coq.Lists.List ListNotations <> mod
+rec 184:193 <> LMFDBLabel
+proj 202:210 <> conductor
+proj 244:249 <> weight
+proj 289:293 <> level
+R214:216 Coq.Init.Datatypes <> nat ind
+R253:255 Coq.Init.Datatypes <> nat ind
+R297:299 Coq.Init.Datatypes <> nat ind
+rec 379:393 <> LabeledFunction
+proj 402:405 <> name
+proj 440:445 <> cycles
+proj 477:481 <> label
+R409:411 Coq.Init.Datatypes <> nat ind
+R449:451 Coq.Init.Datatypes <> nat ind
+R485:494 AutomorphicOrbit <> LMFDBLabel rec
+def 550:559 <> auto_label
+R579:581 Coq.Init.Datatypes <> nat ind
+binder 562:568 <> func_id:9
+binder 570:575 <> cycles:10
+R586:595 AutomorphicOrbit <> LMFDBLabel rec
+R609:617 AutomorphicOrbit <> conductor proj
+R609:617 AutomorphicOrbit <> conductor proj
+R609:617 AutomorphicOrbit <> conductor proj
+R670:675 AutomorphicOrbit <> weight proj
+R670:675 AutomorphicOrbit <> weight proj
+R736:740 AutomorphicOrbit <> level proj
+R736:740 AutomorphicOrbit <> level proj
+R628:630 Coq.Init.Nat <> ::nat_scope:x_'/'_x not
+R622:627 AutomorphicOrbit <> cycles:10 var
+R686:690 Coq.Init.Nat <> ::nat_scope:x_'mod'_x not
+R680:685 AutomorphicOrbit <> cycles:10 var
+R745:751 AutomorphicOrbit <> func_id:9 var
+def 846:860 <> proof_0_labeled
+R864:878 AutomorphicOrbit <> LabeledFunction rec
+R888:891 AutomorphicOrbit <> name proj
+R888:891 AutomorphicOrbit <> name proj
+R888:891 AutomorphicOrbit <> name proj
+R899:904 AutomorphicOrbit <> cycles proj
+R899:904 AutomorphicOrbit <> cycles proj
+R920:924 AutomorphicOrbit <> label proj
+R920:924 AutomorphicOrbit <> label proj
+R929:938 AutomorphicOrbit <> auto_label def
+def 968:982 <> proof_1_labeled
+R986:1000 AutomorphicOrbit <> LabeledFunction rec
+R1010:1013 AutomorphicOrbit <> name proj
+R1010:1013 AutomorphicOrbit <> name proj
+R1010:1013 AutomorphicOrbit <> name proj
+R1021:1026 AutomorphicOrbit <> cycles proj
+R1021:1026 AutomorphicOrbit <> cycles proj
+R1042:1046 AutomorphicOrbit <> label proj
+R1042:1046 AutomorphicOrbit <> label proj
+R1051:1060 AutomorphicOrbit <> auto_label def
+def 1090:1104 <> proof_2_labeled
+R1108:1122 AutomorphicOrbit <> LabeledFunction rec
+R1132:1135 AutomorphicOrbit <> name proj
+R1132:1135 AutomorphicOrbit <> name proj
+R1132:1135 AutomorphicOrbit <> name proj
+R1143:1148 AutomorphicOrbit <> cycles proj
+R1143:1148 AutomorphicOrbit <> cycles proj
+R1164:1168 AutomorphicOrbit <> label proj
+R1164:1168 AutomorphicOrbit <> label proj
+R1173:1182 AutomorphicOrbit <> auto_label def
+def 1212:1227 <> proof_71_labeled
+R1231:1245 AutomorphicOrbit <> LabeledFunction rec
+R1255:1258 AutomorphicOrbit <> name proj
+R1255:1258 AutomorphicOrbit <> name proj
+R1255:1258 AutomorphicOrbit <> name proj
+R1267:1272 AutomorphicOrbit <> cycles proj
+R1267:1272 AutomorphicOrbit <> cycles proj
+R1288:1292 AutomorphicOrbit <> label proj
+R1288:1292 AutomorphicOrbit <> label proj
+R1297:1306 AutomorphicOrbit <> auto_label def
+def 1382:1386 <> Orbit
+R1391:1394 Coq.Init.Datatypes <> list ind
+R1396:1410 AutomorphicOrbit <> LabeledFunction rec
+def 1425:1437 <> lattice_orbit
+R1441:1445 AutomorphicOrbit <> Orbit def
+R1452:1455 Coq.Init.Datatypes <> cons constr
+R1474:1477 Coq.Init.Datatypes <> cons constr
+R1496:1499 Coq.Init.Datatypes <> cons constr
+R1518:1521 Coq.Init.Datatypes <> cons constr
+R1540:1542 Coq.Init.Datatypes <> nil constr
+R1523:1538 AutomorphicOrbit <> proof_71_labeled def
+R1501:1515 AutomorphicOrbit <> proof_2_labeled def
+R1479:1493 AutomorphicOrbit <> proof_1_labeled def
+R1457:1471 AutomorphicOrbit <> proof_0_labeled def
+def 1585:1594 <> orbit_size
+R1601:1605 AutomorphicOrbit <> Orbit def
+binder 1597:1597 <> o:11
+R1610:1612 Coq.Init.Datatypes <> nat ind
+R1617:1622 Coq.Init.Datatypes <> length def
+R1624:1624 AutomorphicOrbit <> o:11 var
+prf 1636:1653 <> lattice_orbit_size
+R1681:1683 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1657:1666 AutomorphicOrbit <> orbit_size def
+R1668:1680 AutomorphicOrbit <> lattice_orbit def
+def 1752:1760 <> resonates
+R1768:1782 AutomorphicOrbit <> LabeledFunction rec
+binder 1763:1764 <> lf:12
+R1816:1818 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R1809:1814 AutomorphicOrbit <> weight proj
+R1798:1802 AutomorphicOrbit <> label proj
+R1804:1805 AutomorphicOrbit <> lf:12 var
+prf 1885:1899 <> orbit_resonates
+binder 1912:1913 <> lf:13
+R1935:1938 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1916:1917 Coq.Lists.List <> In def
+R1922:1934 AutomorphicOrbit <> lattice_orbit def
+R1919:1920 AutomorphicOrbit <> lf:13 var
+R1939:1947 AutomorphicOrbit <> resonates def
+R1949:1950 AutomorphicOrbit <> lf:13 var
+R1984:1996 AutomorphicOrbit <> lattice_orbit def
+R2013:2021 AutomorphicOrbit <> resonates def
