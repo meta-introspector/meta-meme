@@ -104,3 +104,4 @@ def main : IO Unit := do
 import MetaMeme.SchemaComplexity
 import MetaMeme.DatasetDiagonal
 import MetaMeme.EyeOfSolfunmeme
+import MetaMeme.ManifoldAssertion
