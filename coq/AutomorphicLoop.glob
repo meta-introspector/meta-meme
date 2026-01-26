@@ -1,0 +1,277 @@
+DIGEST 92aee58ca122eed13caabb8c4bf10f21
+FAutomorphicLoop
+ind 90:100 <> LoopElement
+constr 115:119 <> emoji
+constr 139:145 <> concept
+constr 165:168 <> math
+constr 188:192 <> lean4
+constr 212:215 <> perf
+constr 235:238 <> self
+R123:133 AutomorphicLoop <> LoopElement:1 ind
+R149:159 AutomorphicLoop <> LoopElement:1 ind
+R172:182 AutomorphicLoop <> LoopElement:1 ind
+R196:206 AutomorphicLoop <> LoopElement:1 ind
+R219:229 AutomorphicLoop <> LoopElement:1 ind
+R242:252 AutomorphicLoop <> LoopElement:1 ind
+scheme 90:100 <> LoopElement_rect
+scheme 90:100 <> LoopElement_ind
+scheme 90:100 <> LoopElement_rec
+scheme 90:100 <> LoopElement_sind
+def 300:310 <> closed_loop
+R317:327 AutomorphicLoop <> LoopElement ind
+binder 313:313 <> e:3
+R332:342 AutomorphicLoop <> LoopElement ind
+R355:355 AutomorphicLoop <> e:3 var
+R366:370 AutomorphicLoop <> emoji constr
+R375:381 AutomorphicLoop <> concept constr
+R387:393 AutomorphicLoop <> concept constr
+R398:401 AutomorphicLoop <> math constr
+R407:410 AutomorphicLoop <> math constr
+R415:419 AutomorphicLoop <> lean4 constr
+R425:429 AutomorphicLoop <> lean4 constr
+R434:437 AutomorphicLoop <> perf constr
+R443:446 AutomorphicLoop <> perf constr
+R451:454 AutomorphicLoop <> self constr
+R460:463 AutomorphicLoop <> self constr
+R468:472 AutomorphicLoop <> emoji constr
+def 515:521 <> iterate
+R528:530 Coq.Init.Datatypes <> nat ind
+binder 524:524 <> n:5
+R538:548 AutomorphicLoop <> LoopElement ind
+binder 534:534 <> e:6
+R553:563 AutomorphicLoop <> LoopElement ind
+R576:576 AutomorphicLoop <> n:5 var
+R587:587 Coq.Init.Datatypes <> O constr
+R592:592 AutomorphicLoop <> e:6 var
+R598:598 Coq.Init.Datatypes <> S constr
+R606:616 AutomorphicLoop <> closed_loop def
+R619:625 AutomorphicLoop <> iterate:7 def
+R630:630 AutomorphicLoop <> e:6 var
+prf 697:707 <> loop_closes
+R726:728 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R711:717 AutomorphicLoop <> iterate def
+R721:725 AutomorphicLoop <> emoji constr
+R729:733 AutomorphicLoop <> emoji constr
+def 802:819 <> element_complexity
+R826:836 AutomorphicLoop <> LoopElement ind
+binder 822:822 <> e:9
+R841:843 Coq.Init.Datatypes <> nat ind
+R856:856 AutomorphicLoop <> e:9 var
+R867:871 AutomorphicLoop <> emoji constr
+R882:888 AutomorphicLoop <> concept constr
+R900:903 AutomorphicLoop <> math constr
+R916:920 AutomorphicLoop <> lean4 constr
+R931:934 AutomorphicLoop <> perf constr
+R945:948 AutomorphicLoop <> self constr
+def 1001:1015 <> loop_complexity
+R1019:1021 Coq.Init.Datatypes <> nat ind
+prf 1040:1062 <> loop_complexity_correct
+R1236:1238 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1208:1212 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R1180:1184 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R1151:1155 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R1123:1127 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R1092:1096 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R1068:1085 AutomorphicLoop <> element_complexity def
+R1087:1091 AutomorphicLoop <> emoji constr
+R1097:1114 AutomorphicLoop <> element_complexity def
+R1116:1122 AutomorphicLoop <> concept constr
+R1128:1145 AutomorphicLoop <> element_complexity def
+R1147:1150 AutomorphicLoop <> math constr
+R1156:1173 AutomorphicLoop <> element_complexity def
+R1175:1179 AutomorphicLoop <> lean4 constr
+R1185:1202 AutomorphicLoop <> element_complexity def
+R1204:1207 AutomorphicLoop <> perf constr
+R1213:1230 AutomorphicLoop <> element_complexity def
+R1232:1235 AutomorphicLoop <> self constr
+R1239:1253 AutomorphicLoop <> loop_complexity def
+prf 1339:1356 <> self_at_position_5
+R1375:1377 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1360:1366 AutomorphicLoop <> iterate def
+R1370:1374 AutomorphicLoop <> emoji constr
+R1378:1381 AutomorphicLoop <> self constr
+def 1447:1454 <> Coord15D
+R1565:1567 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1559:1561 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1553:1555 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1547:1549 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1541:1543 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1535:1537 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1505:1531 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1499:1501 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1493:1495 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1487:1489 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1481:1483 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1475:1477 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1469:1471 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1463:1465 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1460:1462 Coq.Init.Datatypes <> nat ind
+R1466:1468 Coq.Init.Datatypes <> nat ind
+R1472:1474 Coq.Init.Datatypes <> nat ind
+R1478:1480 Coq.Init.Datatypes <> nat ind
+R1484:1486 Coq.Init.Datatypes <> nat ind
+R1490:1492 Coq.Init.Datatypes <> nat ind
+R1496:1498 Coq.Init.Datatypes <> nat ind
+R1502:1504 Coq.Init.Datatypes <> nat ind
+R1532:1534 Coq.Init.Datatypes <> nat ind
+R1538:1540 Coq.Init.Datatypes <> nat ind
+R1544:1546 Coq.Init.Datatypes <> nat ind
+R1550:1552 Coq.Init.Datatypes <> nat ind
+R1556:1558 Coq.Init.Datatypes <> nat ind
+R1562:1564 Coq.Init.Datatypes <> nat ind
+R1568:1570 Coq.Init.Datatypes <> nat ind
+def 1591:1602 <> emoji_coords
+R1606:1613 AutomorphicLoop <> Coord15D def
+R1621:1621 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1623:1624 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1626:1627 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1629:1630 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1632:1633 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1635:1636 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1638:1639 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1641:1642 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1644:1645 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1647:1648 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1650:1651 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1653:1654 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1656:1657 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1659:1660 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1662:1663 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1665:1665 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 1680:1693 <> concept_coords
+R1697:1704 AutomorphicLoop <> Coord15D def
+R1712:1712 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1714:1715 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1717:1718 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1720:1721 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1723:1724 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1726:1727 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1729:1730 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1732:1733 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1736:1737 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1740:1741 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1744:1745 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1747:1748 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1750:1751 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1753:1754 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1756:1757 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1759:1759 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 1774:1784 <> math_coords
+R1788:1795 AutomorphicLoop <> Coord15D def
+R1803:1803 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1805:1806 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1809:1810 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1812:1813 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1815:1816 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1818:1819 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1821:1822 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1824:1825 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1829:1830 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1834:1835 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1839:1840 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1842:1843 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1845:1846 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1848:1849 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1851:1852 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1854:1854 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 1869:1880 <> lean4_coords
+R1884:1891 AutomorphicLoop <> Coord15D def
+R1899:1899 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1901:1902 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1904:1905 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1907:1908 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1910:1911 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1913:1914 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1916:1917 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1919:1920 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1922:1923 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1925:1926 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1928:1929 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1931:1932 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1934:1935 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1937:1938 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1940:1941 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1943:1943 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 1958:1968 <> perf_coords
+R1972:1979 AutomorphicLoop <> Coord15D def
+R1987:1987 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1989:1990 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1992:1993 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1995:1996 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1998:1999 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2001:2002 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2004:2005 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2007:2008 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2010:2011 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2013:2014 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2016:2017 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2019:2020 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2022:2023 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2025:2026 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2028:2029 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2031:2031 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 2046:2056 <> self_coords
+R2060:2067 AutomorphicLoop <> Coord15D def
+R2075:2075 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2077:2078 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2081:2082 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2084:2085 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2087:2088 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2090:2091 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2093:2094 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2096:2097 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2101:2102 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2106:2107 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2111:2112 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2114:2115 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2117:2118 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2120:2121 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2123:2124 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2126:2126 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 2176:2192 <> element_to_coords
+R2199:2209 AutomorphicLoop <> LoopElement ind
+binder 2195:2195 <> e:11
+R2214:2221 AutomorphicLoop <> Coord15D def
+R2234:2234 AutomorphicLoop <> e:11 var
+R2245:2249 AutomorphicLoop <> emoji constr
+R2254:2265 AutomorphicLoop <> emoji_coords def
+R2271:2277 AutomorphicLoop <> concept constr
+R2282:2295 AutomorphicLoop <> concept_coords def
+R2301:2304 AutomorphicLoop <> math constr
+R2309:2319 AutomorphicLoop <> math_coords def
+R2325:2329 AutomorphicLoop <> lean4 constr
+R2334:2345 AutomorphicLoop <> lean4_coords def
+R2351:2354 AutomorphicLoop <> perf constr
+R2359:2369 AutomorphicLoop <> perf_coords def
+R2375:2378 AutomorphicLoop <> self constr
+R2383:2393 AutomorphicLoop <> self_coords def
+def 2457:2470 <> get_complexity
+R2477:2484 AutomorphicLoop <> Coord15D def
+binder 2473:2473 <> c:13
+R2489:2491 Coq.Init.Datatypes <> nat ind
+R2504:2504 AutomorphicLoop <> c:13 var
+R2515:2515 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2517:2518 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2520:2521 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2523:2524 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2526:2527 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2529:2530 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2532:2533 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2535:2536 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2541:2542 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2544:2545 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2547:2548 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2550:2551 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2553:2554 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2556:2557 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2559:2560 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2562:2562 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+prf 2588:2610 <> coords_match_complexity
+R2617:2627 AutomorphicLoop <> LoopElement ind
+binder 2613:2613 <> e:15
+R2670:2672 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2634:2647 AutomorphicLoop <> get_complexity def
+R2650:2666 AutomorphicLoop <> element_to_coords def
+R2668:2668 AutomorphicLoop <> e:15 var
+R2673:2690 AutomorphicLoop <> element_complexity def
+R2692:2692 AutomorphicLoop <> e:15 var

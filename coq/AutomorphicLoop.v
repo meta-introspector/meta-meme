@@ -1,10 +1,7 @@
-(** Automorphic Galois Loop in UniMath/Coq **)
+(** Automorphic Galois Loop in Coq **)
 
-Require Import UniMath.Foundations.All.
-Require Import UniMath.Combinatorics.StandardFiniteSets.
-
-(** Loop elements as finite type **)
-Inductive LoopElement : UU :=
+(** Loop elements as inductive type **)
+Inductive LoopElement : Set :=
   | emoji : LoopElement
   | concept : LoopElement
   | math : LoopElement
@@ -68,8 +65,8 @@ Proof.
 Qed.
 
 (** 15D coordinates **)
-Definition Coord15D := nat × nat × nat × nat × nat × nat × nat × nat × 
-                       nat × nat × nat × nat × nat × nat × nat.
+Definition Coord15D := (nat * nat * nat * nat * nat * nat * nat * nat * 
+                       nat * nat * nat * nat * nat * nat * nat)%type.
 
 Definition emoji_coords : Coord15D := 
   (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0).

@@ -1,0 +1,4 @@
+DIGEST 3fdb48b084b56d0401cd6aa9709f656d
+FExtractToRust
+R57:71 AutomorphicLoop <> <> lib
+R82:91 Coq.extraction.Extraction <> <> lib
