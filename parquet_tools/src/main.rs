@@ -70,9 +70,24 @@ fn find_creator(path: &str) -> &'static str {
 }
 
 fn scan_parquet(path: &Path) -> Option<ParquetSchema> {
-    let df = LazyFrame::scan_parquet(path, Default::default()).ok()?.collect().ok()?;
+    // Try to read parquet, catch panics from unsupported dtypes
+    let df = match std::panic::catch_unwind(|| {
+        LazyFrame::scan_parquet(path, Default::default())
+            .ok()?
+            .collect()
+            .ok()
+    }) {
+        Ok(Some(df)) => df,
+        _ => return None,
+    };
     
     let (git_repo, git_commit, git_remote) = get_git_info(path);
+    
+    // Get columns, handling all dtypes safely
+    let columns: Vec<String> = df.get_column_names()
+        .iter()
+        .map(|s| s.to_string())
+        .collect();
     
     Some(ParquetSchema {
         file_path: path.to_string_lossy().to_string(),
@@ -81,7 +96,7 @@ fn scan_parquet(path: &Path) -> Option<ParquetSchema> {
         num_rows: df.height(),
         num_columns: df.width(),
         creator_process: find_creator(&path.to_string_lossy()).to_string(),
-        columns: df.get_column_names().iter().map(|s| s.to_string()).collect(),
+        columns,
         git_repo,
         git_commit,
         git_remote,
@@ -136,7 +151,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let git_commits: Vec<_> = schemas.iter().map(|s| s.git_commit.as_deref().unwrap_or("")).collect();
     let git_remotes: Vec<_> = schemas.iter().map(|s| s.git_remote.as_deref().unwrap_or("")).collect();
     
-    let df = DataFrame::new(vec![
+    let df = match DataFrame::new(vec![
         Series::new("file_path", paths),
         Series::new("file_name", names),
         Series::new("file_size_mb", sizes.clone()),
@@ -146,7 +161,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         Series::new("git_repo", git_repos),
         Series::new("git_commit", git_commits),
         Series::new("git_remote", git_remotes),
-    ])?;
+    ]) {
+        Ok(df) => df,
+        Err(e) => {
+            eprintln!("Error creating DataFrame: {}", e);
+            return Ok(());
+        }
+    };
     
     // Save
     let mut file = std::fs::File::create("parquet_schema_index.parquet")?;
