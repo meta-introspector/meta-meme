@@ -101,9 +101,3 @@ def main : IO Unit := do
   IO.println s!"Symbols: {metamemeSymbols.length}"
   IO.println "✅ All 16 components unified"
   IO.println "✅ System proven sound"
-import MetaMeme.SchemaComplexity
-import MetaMeme.DatasetDiagonal
-import MetaMeme.EyeOfSolfunmeme
-import MetaMeme.ManifoldAssertion
-import MetaMeme.MathlibMonsterResonance
-import MetaMeme.AutomorphicGaloisLoop
