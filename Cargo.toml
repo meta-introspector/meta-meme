@@ -26,6 +26,8 @@ sha2 = "0.10"
 polars = { version = "0.36", features = ["parquet", "lazy", "serde"] }
 walkdir = "2"
 dirs = "5"
+crossbeam = "0.8.4"
+csv = "1.4.0"
 
 [profile.release]
 opt-level = "z"
