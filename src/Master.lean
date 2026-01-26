@@ -103,3 +103,4 @@ def main : IO Unit := do
   IO.println "✅ System proven sound"
 import MetaMeme.SchemaComplexity
 import MetaMeme.DatasetDiagonal
+import MetaMeme.EyeOfSolfunmeme

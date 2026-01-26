@@ -2,6 +2,16 @@
   "meta_datasets": {
     "name": "Meta-Meme Datasets Registry",
     "version": "1.0.0",
+    "solfunmeme_integration": {
+      "dao_address": "SoLFuNMeMeDAo1111111111111111111111111111",
+      "eye_structure": {
+        "pupil": "datasets-registry",
+        "iris": ["meta-meme-consultations", "parquet-schema-index", "solana-token-holders"],
+        "observation_power": 423925,
+        "self_reference": true
+      },
+      "diagonal_property": "The datasets-registry references itself, forming the pupil of the DAO's eye"
+    },
     "datasets": [
       {
         "id": "meta-meme-consultations",
@@ -14,7 +24,8 @@
         "size_mb": 0.78,
         "rows": 2177,
         "purpose": "Muse consultation URLs",
-        "required": true
+        "required": true,
+        "eye_position": "iris"
       },
       {
         "id": "parquet-schema-index",
@@ -25,7 +36,22 @@
         "size_mb": 9.6,
         "rows": 423925,
         "purpose": "Schema complexity index",
-        "required": true
+        "required": true,
+        "eye_position": "iris"
+      },
+      {
+        "id": "datasets-registry",
+        "org": "local",
+        "repo": "meta-meme",
+        "type": "meta",
+        "path": "./datasets_registry.json",
+        "size_mb": 0.001,
+        "rows": 2,
+        "purpose": "Dataset of datasets (diagonal fixed point)",
+        "required": true,
+        "eye_position": "pupil",
+        "self_reference": true,
+        "references": ["meta-meme-consultations", "parquet-schema-index", "datasets-registry"]
       }
     ]
   }
