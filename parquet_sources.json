@@ -1,0 +1,33 @@
+{
+  "parquet_index": {
+    "version": "1.0.0",
+    "total_files": 15,
+    "sources": [
+      {
+        "path": "~/meta-introspector/bash_bootstrap_perf.parquet",
+        "category": "performance",
+        "description": "Bash bootstrap performance metrics"
+      },
+      {
+        "path": "~/meta-introspector/coq_perf.parquet",
+        "category": "performance", 
+        "description": "Coq proof assistant performance"
+      },
+      {
+        "path": "~/meta-introspector/nix_build_logs.parquet",
+        "category": "nix_builds",
+        "description": "Nix build logs and metrics"
+      },
+      {
+        "path": "~/meta-introspector/markov_symbol_scores.parquet",
+        "category": "markov_chains",
+        "description": "Markov chain symbol scoring"
+      },
+      {
+        "path": "./meta-meme-consultations.parquet",
+        "category": "consultations",
+        "description": "2,177 muse consultation URLs"
+      }
+    ]
+  }
+}
