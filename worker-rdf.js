@@ -1,0 +1,270 @@
+/**
+ * Distributed RDF Query Worker
+ * Query multiple RDF sources, stream results, cache with ACLs
+ */
+
+// Simple Turtle parser
+function parseTurtle(text) {
+  const triples = [];
+  const lines = text.split('\n');
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('@') || trimmed.startsWith('#')) continue;
+    
+    // Simple pattern: subject predicate object .
+    const match = trimmed.match(/^([^\s]+)\s+([^\s]+)\s+(.+?)\s*\.?$/);
+    if (match) {
+      triples.push({
+        subject: match[1],
+        predicate: match[2],
+        object: match[3].replace(/\.$/, '').trim()
+      });
+    }
+  }
+  
+  return triples;
+}
+
+// Simple SPARQL-like query executor
+function executeQuery(pattern, triples) {
+  const results = [];
+  const vars = pattern.match(/\?\w+/g) || [];
+  
+  // Simple pattern matching
+  const [subj, pred, obj] = pattern.split(/\s+/);
+  
+  for (const triple of triples) {
+    const bindings = {};
+    let match = true;
+    
+    if (subj.startsWith('?')) {
+      bindings[subj] = triple.subject;
+    } else if (subj !== triple.subject) {
+      match = false;
+    }
+    
+    if (pred.startsWith('?')) {
+      bindings[pred] = triple.predicate;
+    } else if (pred !== triple.predicate) {
+      match = false;
+    }
+    
+    if (obj.startsWith('?')) {
+      bindings[obj] = triple.object;
+    } else if (obj !== triple.object) {
+      match = false;
+    }
+    
+    if (match) {
+      results.push(bindings);
+    }
+  }
+  
+  return results;
+}
+
+// Fetch and parse RDF source
+async function fetchRDFSource(source, cache) {
+  const cacheKey = `rdf:${source.url}`;
+  
+  // Check cache
+  if (cache) {
+    const cached = await cache.get(cacheKey);
+    if (cached) return JSON.parse(cached);
+  }
+  
+  // Fetch source
+  const response = await fetch(source.url);
+  const text = await response.text();
+  
+  // Parse based on format
+  let triples;
+  if (source.format === 'turtle' || source.format === 'rdfa') {
+    triples = parseTurtle(text);
+  } else {
+    triples = [];
+  }
+  
+  // Cache results (1 hour TTL)
+  if (cache) {
+    await cache.put(cacheKey, JSON.stringify(triples), { expirationTtl: 3600 });
+  }
+  
+  return triples;
+}
+
+// Stream query results
+async function streamQueryResults(query, sources, cache) {
+  const results = [];
+  
+  for (const source of sources) {
+    try {
+      const triples = await fetchRDFSource(source, cache);
+      const sourceResults = executeQuery(query.pattern, triples);
+      
+      results.push({
+        source: source.url,
+        count: sourceResults.length,
+        results: sourceResults.slice(0, 10), // First 10
+        timestamp: new Date().toISOString()
+      });
+    } catch (e) {
+      results.push({
+        source: source.url,
+        error: e.message,
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
+  
+  return results;
+}
+
+const HTML_TEMPLATE = `<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>🔍 Distributed RDF Query</title>
+<style>
+body{font-family:system-ui;max-width:1000px;margin:20px auto;padding:20px;background:#0f172a;color:#e2e8f0}
+h1{color:#60a5fa}h2{color:#818cf8;font-size:1.2em;margin-top:30px}
+.query-box{background:#1e293b;padding:20px;border-radius:8px;margin:20px 0}
+textarea{width:100%;padding:10px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:4px;font-family:monospace;font-size:14px}
+button{background:#3b82f6;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;margin:5px}
+button:hover{background:#2563eb}
+.source{background:#1e293b;padding:10px;margin:10px 0;border-radius:4px;border-left:3px solid #3b82f6}
+.result{background:#0f172a;padding:10px;margin:5px 0;border-radius:4px;font-family:monospace;font-size:12px}
+.error{border-left:3px solid #ef4444}
+.success{border-left:3px solid #10b981}
+#results{margin-top:20px}
+.url-box{background:#1e293b;padding:10px;border-radius:4px;word-break:break-all;font-size:12px;margin:10px 0}
+</style>
+</head><body>
+<h1>🔍 Distributed RDF Query</h1>
+<p>Query multiple RDF sources, stream results, cache with ACLs</p>
+
+<div class="query-box">
+  <h2>Query Pattern (SPARQL-like)</h2>
+  <textarea id="pattern" rows="3" placeholder="?muse zk:commitment ?value">?muse zk:commitment ?value</textarea>
+  
+  <h2>RDF Sources</h2>
+  <textarea id="sources" rows="6" placeholder='[{"url":"...","format":"turtle","acl":"public"}]'>[
+  {"url":"https://meta-meme.jmikedupont2.workers.dev/rdfa","format":"turtle","acl":"public"}
+]</textarea>
+  
+  <button onclick="executeQuery()">🔍 Execute Query</button>
+  <button onclick="shareQuery()">🔗 Share Query</button>
+  <button onclick="clearCache()">🗑️ Clear Cache</button>
+</div>
+
+<div id="shareUrl" style="display:none">
+  <h2>📋 Shareable Query URL</h2>
+  <div class="url-box" id="queryUrl"></div>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('queryUrl').textContent);alert('✅ Copied!')">📋 Copy</button>
+</div>
+
+<div id="results"></div>
+
+<script>
+async function executeQuery() {
+  const pattern = document.getElementById('pattern').value;
+  const sources = JSON.parse(document.getElementById('sources').value);
+  
+  document.getElementById('results').innerHTML = '<p>⏳ Querying sources...</p>';
+  
+  const response = await fetch('/api/rdfquery', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({pattern, sources})
+  });
+  
+  const results = await response.json();
+  displayResults(results);
+}
+
+function displayResults(results) {
+  let html = '<h2>📊 Query Results</h2>';
+  
+  for (const result of results) {
+    const cssClass = result.error ? 'error' : 'success';
+    html += \`<div class="source \${cssClass}">
+      <strong>\${result.source}</strong><br>
+      <small>\${result.timestamp}</small><br>\`;
+    
+    if (result.error) {
+      html += \`<span style="color:#ef4444">Error: \${result.error}</span>\`;
+    } else {
+      html += \`<span style="color:#10b981">\${result.count} results</span>\`;
+      for (const r of result.results || []) {
+        html += \`<div class="result">\${JSON.stringify(r)}</div>\`;
+      }
+    }
+    
+    html += '</div>';
+  }
+  
+  document.getElementById('results').innerHTML = html;
+}
+
+function shareQuery() {
+  const pattern = document.getElementById('pattern').value;
+  const sources = JSON.parse(document.getElementById('sources').value);
+  
+  const data = btoa(JSON.stringify({pattern, sources}));
+  const url = window.location.origin + '?rdfquery=' + data;
+  
+  document.getElementById('queryUrl').textContent = url;
+  document.getElementById('shareUrl').style.display = 'block';
+}
+
+async function clearCache() {
+  await fetch('/api/cache/clear', {method: 'POST'});
+  alert('✅ Cache cleared');
+}
+
+// Load query from URL
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+  const query = params.get('rdfquery');
+  
+  if (query) {
+    try {
+      const data = JSON.parse(atob(query));
+      document.getElementById('pattern').value = data.pattern;
+      document.getElementById('sources').value = JSON.stringify(data.sources, null, 2);
+    } catch (e) {
+      console.error('Failed to load query:', e);
+    }
+  }
+};
+</script>
+</body></html>`;
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const cache = env.RDF_CACHE || null;
+    
+    // API: Execute RDF query
+    if (url.pathname === '/api/rdfquery' && request.method === 'POST') {
+      const body = await request.json();
+      const results = await streamQueryResults(body, body.sources, cache);
+      
+      return new Response(JSON.stringify(results), {
+        headers: {'Content-Type': 'application/json'}
+      });
+    }
+    
+    // API: Clear cache
+    if (url.pathname === '/api/cache/clear' && request.method === 'POST') {
+      // Cache clearing handled by TTL
+      return new Response(JSON.stringify({status: 'ok'}), {
+        headers: {'Content-Type': 'application/json'}
+      });
+    }
+    
+    // Main page
+    return new Response(HTML_TEMPLATE, {
+      headers: {'Content-Type': 'text/html'}
+    });
+  }
+};

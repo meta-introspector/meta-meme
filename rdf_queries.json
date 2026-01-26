@@ -1,0 +1,19 @@
+{
+  "queries": [
+    {
+      "name": "Find all muses",
+      "pattern": "?muse a muse:Muse",
+      "url": "https://meta-meme.jmikedupont2.workers.dev?rdfquery=eyJwYXR0ZXJuIjogIj9tdXNlIGEgbXVzZTpNdXNlIiwgInNvdXJjZXMiOiBbeyJ1cmwiOiAiaHR0cHM6Ly9tZXRhLW1lbWUuam1pa2VkdXBvbnQyLndvcmtlcnMuZGV2P2NvbXByZXNzZWQ9SDRzSUFOZUFkbWtDXy4uLiIsICJmb3JtYXQiOiAidHVydGxlIiwgImFjbCI6ICJwdWJsaWMifV19"
+    },
+    {
+      "name": "Find ZK commitments",
+      "pattern": "?muse zk:commitment ?value",
+      "url": "https://meta-meme.jmikedupont2.workers.dev?rdfquery=eyJwYXR0ZXJuIjogIj9tdXNlIHprOmNvbW1pdG1lbnQgP3ZhbHVlIiwgInNvdXJjZXMiOiBbeyJ1cmwiOiAiaHR0cHM6Ly9tZXRhLW1lbWUuam1pa2VkdXBvbnQyLndvcmtlcnMuZGV2P2NvbXByZXNzZWQ9SDRzSUFOZUFkbWtDXy4uLiIsICJmb3JtYXQiOiAidHVydGxlIiwgImFjbCI6ICJwdWJsaWMifSwgeyJ1cmwiOiAiaHR0cHM6Ly9tZXRhLW1lbWUuam1pa2VkdXBvbnQyLndvcmtlcnMuZGV2L3JkZmEiLCAiZm9ybWF0IjogInJkZmEiLCAiYWNsIjogInB1YmxpYyJ9XX0="
+    },
+    {
+      "name": "Find HME encrypted data",
+      "pattern": "?muse hme:encrypted ?cipher",
+      "url": "https://meta-meme.jmikedupont2.workers.dev?rdfquery=eyJwYXR0ZXJuIjogIj9tdXNlIGhtZTplbmNyeXB0ZWQgP2NpcGhlciIsICJzb3VyY2VzIjogW3sidXJsIjogImh0dHBzOi8vbWV0YS1tZW1lLmptaWtlZHVwb250Mi53b3JrZXJzLmRldj9jb21wcmVzc2VkPUg0c0lBTmVBZG1rQ18uLi4iLCAiZm9ybWF0IjogInR1cnRsZSIsICJhY2wiOiAicHVibGljIn0sIHsidXJsIjogImh0dHBzOi8vbWV0YS1tZW1lLmptaWtlZHVwb250Mi53b3JrZXJzLmRldi9yZGZhIiwgImZvcm1hdCI6ICJyZGZhIiwgImFjbCI6ICJwdWJsaWMifV19"
+    }
+  ]
+}
