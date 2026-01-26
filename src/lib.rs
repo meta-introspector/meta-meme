@@ -2,6 +2,8 @@ use wasm_bindgen::prelude::*;
 use serde::{Deserialize, Serialize};
 use sha2::{Sha256, Digest};
 
+pub mod automorphic_loop;
+
 #[derive(Serialize, Deserialize)]
 #[wasm_bindgen]
 pub struct ProofShard {
