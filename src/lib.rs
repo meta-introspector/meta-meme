@@ -5,6 +5,9 @@ use sha2::{Sha256, Digest};
 
 #[cfg(feature = "wasm")]
 pub mod automorphic_loop;
+pub mod monster_gpu;
+pub mod automorphic_eigenvector;
+pub mod perf2emoji_game;
 
 #[cfg(feature = "wasm")]
 #[derive(Serialize, Deserialize)]
