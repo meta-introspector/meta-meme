@@ -22,9 +22,7 @@ const TOOLS = {
 // Old RDFa compressed data for backward compatibility
 const COMPRESSED_RDFA = "H4sIANeAdmkC_6WS0WqDMBSG7_ceXq5ootbCGC1ju9kKg22wq0JmTzXMmJBGrHv6pdMWXR1rcyTgUc7_JZ_HudKw4TuP-KLagkcXtrrJjVE_5YNdAgy7FiBgInW2f973EXprGyeev5gfAV-f58Rt11g4F2dtvm8bi--267F4XdeTmnZZ4vuBvb0vn17SHATrgezq9O9YUXCp4OCTSiG4EVAa-8Yj9gpnySyy1WrVbspLAxnojvQHRmkpNy2BJiRMSHAJov04UKa6UQbWLScOSRgFCYn_BVkMVqeHcFFp4ziNe80M1mPAcBA55JEmlQGN_sV-UVxsjgSczxIKJe35sUYnHAenPgNn9SyLJm9EyRlS6xTk4DWA4MRe7dC3PM2lxg5shOSgNqQg3XJWoAc2hLgYHQA4mTfN-vNmWaYhYwZaTEBncRBGU3ohRlUfBU8foelOE0V0Oo64-gazriywHQgAAA==";
 
-function getRDFaPage() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const compressed = urlParams.get('compressed') || COMPRESSED_RDFA;
+function getRDFaPage(compressed = COMPRESSED_RDFA) {
   return `<!DOCTYPE html>
 <html><head><meta charset="UTF-8"><title>🎭 Meta-Meme: RDFa Data</title>
 <style>body{font-family:system-ui;max-width:800px;margin:50px auto;padding:20px}h1{color:#6b46c1}.url-box{background:#1f2937;color:#10b981;padding:15px;border-radius:8px;font-family:monospace;font-size:12px;word-break:break-all}button{background:#6b46c1;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;margin:5px}button:hover{background:#553c9a}pre{background:#f3f4f6;padding:15px;border-radius:8px;overflow-x:auto}</style>
@@ -493,7 +491,8 @@ export default {
     // Route to appropriate page based on URL parameters
     if (url.searchParams.has('compressed')) {
       // Old RDFa compressed data page
-      return new Response(getRDFaPage(), {
+      const compressed = url.searchParams.get('compressed');
+      return new Response(getRDFaPage(compressed), {
         headers: { 'Content-Type': 'text/html' }
       });
     } else if (url.searchParams.has('consult') || url.searchParams.has('llm')) {
