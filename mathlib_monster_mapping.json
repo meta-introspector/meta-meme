@@ -1,0 +1,445 @@
+{
+  "mathlib_path": "/mnt/data1/nix/time/2024/09/06/mathlib",
+  "total_files": 3468,
+  "analyzed_files": 100,
+  "top_10_complex": [
+    {
+      "file": "test/induction.lean",
+      "lines": 1476,
+      "theorems": 0,
+      "lemmas": 38,
+      "defs": 9,
+      "structures": 1,
+      "inductives": 35,
+      "complexity": 498.6,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 49.86000000000001,
+          "weight": 98,
+          "level": 4,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 498.6
+        },
+        "monster_7d": {
+          "m1": 498,
+          "m2": 498,
+          "m3": 498,
+          "m4": 498,
+          "m5": 498,
+          "m6": 498,
+          "m7": 498
+        }
+      }
+    },
+    {
+      "file": "test/simps.lean",
+      "lines": 1054,
+      "theorems": 0,
+      "lemmas": 8,
+      "defs": 102,
+      "structures": 28,
+      "inductives": 0,
+      "complexity": 433.4,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 43.34,
+          "weight": 33,
+          "level": 4,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 433.4
+        },
+        "monster_7d": {
+          "m1": 433,
+          "m2": 433,
+          "m3": 433,
+          "m4": 433,
+          "m5": 433,
+          "m6": 433,
+          "m7": 433
+        }
+      }
+    },
+    {
+      "file": "counterexamples/phillips.lean",
+      "lines": 616,
+      "theorems": 3,
+      "lemmas": 30,
+      "defs": 12,
+      "structures": 1,
+      "inductives": 2,
+      "complexity": 261.6,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 26.160000000000004,
+          "weight": 61,
+          "level": 2,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 261.6
+        },
+        "monster_7d": {
+          "m1": 261,
+          "m2": 261,
+          "m3": 261,
+          "m4": 261,
+          "m5": 261,
+          "m6": 261,
+          "m7": 261
+        }
+      }
+    },
+    {
+      "file": "test/local_cache.lean",
+      "lines": 509,
+      "theorems": 0,
+      "lemmas": 20,
+      "defs": 38,
+      "structures": 2,
+      "inductives": 0,
+      "complexity": 232.9,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 23.290000000000003,
+          "weight": 32,
+          "level": 2,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 232.9
+        },
+        "monster_7d": {
+          "m1": 232,
+          "m2": 232,
+          "m3": 232,
+          "m4": 232,
+          "m5": 232,
+          "m6": 232,
+          "m7": 232
+        }
+      }
+    },
+    {
+      "file": "counterexamples/sorgenfrey_line.lean",
+      "lines": 304,
+      "theorems": 0,
+      "lemmas": 25,
+      "defs": 2,
+      "structures": 2,
+      "inductives": 0,
+      "complexity": 165.4,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 16.540000000000003,
+          "weight": 65,
+          "level": 1,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 165.4
+        },
+        "monster_7d": {
+          "m1": 165,
+          "m2": 165,
+          "m3": 165,
+          "m4": 165,
+          "m5": 165,
+          "m6": 165,
+          "m7": 165
+        }
+      }
+    },
+    {
+      "file": "counterexamples/canonically_ordered_comm_semiring_two_mul.lean",
+      "lines": 275,
+      "theorems": 0,
+      "lemmas": 14,
+      "defs": 4,
+      "structures": 0,
+      "inductives": 0,
+      "complexity": 105.5,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 10.55,
+          "weight": 5,
+          "level": 1,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 105.5
+        },
+        "monster_7d": {
+          "m1": 105,
+          "m2": 105,
+          "m3": 105,
+          "m4": 105,
+          "m5": 105,
+          "m6": 105,
+          "m7": 105
+        }
+      }
+    },
+    {
+      "file": "test/polyrith.lean",
+      "lines": 716,
+      "theorems": 0,
+      "lemmas": 0,
+      "defs": 15,
+      "structures": 0,
+      "inductives": 0,
+      "complexity": 101.60000000000001,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 10.160000000000002,
+          "weight": 1,
+          "level": 1,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 101.60000000000001
+        },
+        "monster_7d": {
+          "m1": 101,
+          "m2": 101,
+          "m3": 101,
+          "m4": 101,
+          "m5": 101,
+          "m6": 101,
+          "m7": 101
+        }
+      }
+    },
+    {
+      "file": "docs/tutorial/Zmod37.lean",
+      "lines": 211,
+      "theorems": 6,
+      "lemmas": 8,
+      "defs": 2,
+      "structures": 2,
+      "inductives": 0,
+      "complexity": 101.1,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 10.11,
+          "weight": 1,
+          "level": 1,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 101.1
+        },
+        "monster_7d": {
+          "m1": 101,
+          "m2": 101,
+          "m3": 101,
+          "m4": 101,
+          "m5": 101,
+          "m6": 101,
+          "m7": 101
+        }
+      }
+    },
+    {
+      "file": "counterexamples/zero_divisors_in_add_monoid_algebras.lean",
+      "lines": 240,
+      "theorems": 0,
+      "lemmas": 11,
+      "defs": 4,
+      "structures": 0,
+      "inductives": 1,
+      "complexity": 91.0,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 9.1,
+          "weight": 91,
+          "level": 0,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 91.0
+        },
+        "monster_7d": {
+          "m1": 91,
+          "m2": 91,
+          "m3": 91,
+          "m4": 91,
+          "m5": 91,
+          "m6": 91,
+          "m7": 91
+        }
+      }
+    },
+    {
+      "file": "test/where.lean",
+      "lines": 288,
+      "theorems": 0,
+      "lemmas": 0,
+      "defs": 27,
+      "structures": 0,
+      "inductives": 0,
+      "complexity": 82.8,
+      "monster_coords": {
+        "base_8d": {
+          "conductor": 8.28,
+          "weight": 82,
+          "level": 0,
+          "traits": 0,
+          "key_primes": 0,
+          "git_depth": 0,
+          "muse_count": 9,
+          "complexity": 82.8
+        },
+        "monster_7d": {
+          "m1": 82,
+          "m2": 82,
+          "m3": 82,
+          "m4": 82,
+          "m5": 82,
+          "m6": 82,
+          "m7": 82
+        }
+      }
+    }
+  ],
+  "monster_resonances": [
+    {
+      "file": "counterexamples/zero_divisors_in_add_monoid_algebras.lean",
+      "complexity": 91,
+      "resonates_with": 196883,
+      "distance": 91
+    },
+    {
+      "file": "counterexamples/zero_divisors_in_add_monoid_algebras.lean",
+      "complexity": 91,
+      "resonates_with": 21493760,
+      "distance": 91
+    },
+    {
+      "file": "counterexamples/zero_divisors_in_add_monoid_algebras.lean",
+      "complexity": 91,
+      "resonates_with": 864299970,
+      "distance": 91
+    },
+    {
+      "file": "test/where.lean",
+      "complexity": 82,
+      "resonates_with": 196883,
+      "distance": 82
+    },
+    {
+      "file": "test/where.lean",
+      "complexity": 82,
+      "resonates_with": 21493760,
+      "distance": 82
+    },
+    {
+      "file": "test/where.lean",
+      "complexity": 82,
+      "resonates_with": 864299970,
+      "distance": 82
+    },
+    {
+      "file": "counterexamples/cyclotomic_105.lean",
+      "complexity": 81,
+      "resonates_with": 196883,
+      "distance": 81
+    },
+    {
+      "file": "counterexamples/cyclotomic_105.lean",
+      "complexity": 81,
+      "resonates_with": 21493760,
+      "distance": 81
+    },
+    {
+      "file": "counterexamples/cyclotomic_105.lean",
+      "complexity": 81,
+      "resonates_with": 864299970,
+      "distance": 81
+    },
+    {
+      "file": "counterexamples/homogeneous_prime_not_prime.lean",
+      "complexity": 64,
+      "resonates_with": 196883,
+      "distance": 64
+    },
+    {
+      "file": "counterexamples/homogeneous_prime_not_prime.lean",
+      "complexity": 64,
+      "resonates_with": 21493760,
+      "distance": 64
+    },
+    {
+      "file": "counterexamples/homogeneous_prime_not_prime.lean",
+      "complexity": 64,
+      "resonates_with": 864299970,
+      "distance": 64
+    },
+    {
+      "file": "test/rcases.lean",
+      "complexity": 52,
+      "resonates_with": 196883,
+      "distance": 52
+    },
+    {
+      "file": "test/rcases.lean",
+      "complexity": 52,
+      "resonates_with": 21493760,
+      "distance": 52
+    },
+    {
+      "file": "test/rcases.lean",
+      "complexity": 52,
+      "resonates_with": 864299970,
+      "distance": 52
+    },
+    {
+      "file": "counterexamples/pseudoelement.lean",
+      "complexity": 51,
+      "resonates_with": 196883,
+      "distance": 51
+    },
+    {
+      "file": "counterexamples/pseudoelement.lean",
+      "complexity": 51,
+      "resonates_with": 21493760,
+      "distance": 51
+    },
+    {
+      "file": "counterexamples/pseudoelement.lean",
+      "complexity": 51,
+      "resonates_with": 864299970,
+      "distance": 51
+    },
+    {
+      "file": "counterexamples/direct_sum_is_internal.lean",
+      "complexity": 49,
+      "resonates_with": 196883,
+      "distance": 49
+    },
+    {
+      "file": "counterexamples/direct_sum_is_internal.lean",
+      "complexity": 49,
+      "resonates_with": 21493760,
+      "distance": 49
+    }
+  ],
+  "summary": {
+    "mean_complexity": 37.279,
+    "max_complexity": 498.6,
+    "total_theorems": 15,
+    "total_lemmas": 241
+  }
+}
