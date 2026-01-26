@@ -1,0 +1,11 @@
+[package]
+name = "parquet-tools"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+polars = { version = "0.36", features = ["parquet", "lazy", "serde"] }
+walkdir = "2"
+dirs = "5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
