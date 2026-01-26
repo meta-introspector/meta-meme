@@ -1,0 +1,85 @@
+name: Hermetic Build with Nix + HuggingFace
+
+on:
+  push:
+    branches: [ unified-memes ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Nix
+      uses: cachix/install-nix-action@v22
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+    
+    - name: Setup Cachix
+      uses: cachix/cachix-action@v12
+      with:
+        name: meta-meme
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+    
+    - name: Download HuggingFace datasets
+      run: |
+        nix-shell -p python3 python3Packages.huggingface-hub --run "
+          python3 << 'PYTHON'
+import os
+from huggingface_hub import hf_hub_download
+
+# Download meta-meme consultation dataset
+file = hf_hub_download(
+    repo_id='introspector/meta-meme',
+    filename='meta-meme-consultations.parquet',
+    repo_type='dataset'
+)
+print(f'Downloaded: {file}')
+PYTHON
+        "
+    
+    - name: Build Lean4 proofs
+      run: |
+        nix-shell -p lean4 --run "
+          lake build
+        "
+    
+    - name: Run MiniZinc models
+      run: |
+        nix-shell -p minizinc --run "
+          minizinc minizinc/schema_orbit.mzn > orbit_results.txt
+          minizinc minizinc/schema_equivalence.mzn > equivalence_results.txt
+        "
+    
+    - name: Generate parquet schema index
+      run: |
+        nix-shell -p cargo rustc --run "
+          cd parquet_tools
+          cargo build --release
+          cargo run --release > schema_index.txt
+        "
+    
+    - name: Validate HuggingFace datasets
+      run: |
+        nix-shell -p python3 python3Packages.datasets --run "
+          python3 << 'PYTHON'
+from datasets import load_dataset
+
+# Validate meta-meme dataset
+ds = load_dataset('introspector/meta-meme', split='train')
+print(f'Dataset valid: {len(ds)} rows')
+print(f'Columns: {ds.column_names}')
+PYTHON
+        "
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: hermetic-build-results
+        path: |
+          orbit_results.txt
+          equivalence_results.txt
+          schema_index.txt
+          parquet_tools/parquet_schema_index.parquet
