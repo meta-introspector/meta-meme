@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>8D Perf Emoji Flying Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #0f0;
+            font-family: monospace;
+            overflow: hidden;
+        }
+        #canvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        #hud {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border: 1px solid #0f0;
+        }
+        #controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border: 1px solid #0f0;
+        }
+        .emoji-particle {
+            font-size: 32px;
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <div id="hud">
+        <div>🎮 8D PERF EMOJI FLYING GAME</div>
+        <div>Traces: <span id="trace-count">0</span></div>
+        <div>Camera: <span id="camera-pos">0,0,0,0,0,0,0,0</span></div>
+        <div>FPS: <span id="fps">0</span></div>
+        <div>Resonance: <span id="resonance">0%</span></div>
+    </div>
+    
+    <div id="controls">
+        <div>🎯 CONTROLS:</div>
+        <div>WASD: Move in XY</div>
+        <div>QE: Move in Z</div>
+        <div>RF: Move in dimension 4</div>
+        <div>TG: Move in dimension 5</div>
+        <div>YH: Move in dimension 6</div>
+        <div>UJ: Move in dimension 7</div>
+        <div>IK: Move in dimension 8</div>
+        <div>SPACE: Generate trace</div>
+    </div>
+    
+    <script type="module">
+        // WebGPU 8D Flying Game
+        
+        class Perf2EmojiGame {
+            constructor() {
+                this.canvas = document.getElementById('canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.traces = [];
+                this.camera = new Array(8).fill(0);
+                this.velocity = new Array(8).fill(0);
+                this.keys = {};
+                this.lastTime = performance.now();
+                this.fps = 0;
+                
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+                window.addEventListener('keydown', (e) => this.keys[e.key.toLowerCase()] = true);
+                window.addEventListener('keyup', (e) => this.keys[e.key.toLowerCase()] = false);
+                
+                this.init();
+            }
+            
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            
+            init() {
+                // Load real perf traces from API
+                fetch('/api/traces')
+                    .then(r => r.json())
+                    .then(traces => {
+                        this.traces = traces;
+                        console.log(`Loaded ${traces.length} real perf traces`);
+                    })
+                    .catch(err => {
+                        console.error('Failed to load traces, generating random:', err);
+                        // Fallback to random generation
+                        for (let i = 0; i < 50; i++) {
+                            this.generateTrace();
+                        }
+                    });
+                
+                this.animate();
+            }
+            
+            generateTrace() {
+                const cycles = Math.floor(Math.random() * 50000) + 1000;
+                const instructions = Math.floor(Math.random() * 30000);
+                const cache_misses = Math.floor(Math.random() * 1000);
+                
+                const weight = (cycles + instructions + cache_misses) % 196883;
+                const resonates = weight < 10000;
+                
+                const emoji = this.weightToEmoji(weight);
+                
+                // 8D coordinates
+                const coords = [
+                    Math.random() * 10 - 5,  // conductor
+                    Math.random() * 10 - 5,  // weight
+                    Math.random() * 10 - 5,  // level
+                    resonates ? 1 : 0,       // traits
+                    Math.random() * 2 - 1,   // key_primes
+                    Math.random() * 2 - 1,   // git_depth
+                    1,                        // muse_count
+                    Math.random() * 2 - 1,   // complexity
+                ];
+                
+                this.traces.push({
+                    cycles,
+                    weight,
+                    emoji,
+                    resonates,
+                    coords,
+                });
+            }
+            
+            weightToEmoji(weight) {
+                if (weight < 3000) return '⚡';
+                if (weight < 5000) return '🚀';
+                if (weight < 7000) return '🔥';
+                if (weight < 10000) return '💎';
+                if (weight < 50000) return '🌊';
+                return '🌀';
+            }
+            
+            update(dt) {
+                // Update velocity from keys
+                const speed = 2.0;
+                
+                this.velocity[0] = (this.keys['d'] ? 1 : 0) - (this.keys['a'] ? 1 : 0);
+                this.velocity[1] = (this.keys['w'] ? 1 : 0) - (this.keys['s'] ? 1 : 0);
+                this.velocity[2] = (this.keys['e'] ? 1 : 0) - (this.keys['q'] ? 1 : 0);
+                this.velocity[3] = (this.keys['r'] ? 1 : 0) - (this.keys['f'] ? 1 : 0);
+                this.velocity[4] = (this.keys['t'] ? 1 : 0) - (this.keys['g'] ? 1 : 0);
+                this.velocity[5] = (this.keys['y'] ? 1 : 0) - (this.keys['h'] ? 1 : 0);
+                this.velocity[6] = (this.keys['u'] ? 1 : 0) - (this.keys['j'] ? 1 : 0);
+                this.velocity[7] = (this.keys['i'] ? 1 : 0) - (this.keys['k'] ? 1 : 0);
+                
+                // Update camera
+                for (let i = 0; i < 8; i++) {
+                    this.camera[i] += this.velocity[i] * speed * dt;
+                }
+                
+                // Generate trace on space
+                if (this.keys[' ']) {
+                    this.generateTrace();
+                    this.keys[' '] = false;
+                }
+            }
+            
+            render() {
+                const ctx = this.ctx;
+                const w = this.canvas.width;
+                const h = this.canvas.height;
+                
+                // Clear
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, w, h);
+                
+                // Draw 8D grid (projected to 2D)
+                ctx.strokeStyle = '#003300';
+                ctx.lineWidth = 1;
+                
+                for (let i = -10; i <= 10; i++) {
+                    const x = w/2 + (i - this.camera[0]) * 50;
+                    ctx.beginPath();
+                    ctx.moveTo(x, 0);
+                    ctx.lineTo(x, h);
+                    ctx.stroke();
+                    
+                    const y = h/2 + (i - this.camera[1]) * 50;
+                    ctx.beginPath();
+                    ctx.moveTo(0, y);
+                    ctx.lineTo(w, y);
+                    ctx.stroke();
+                }
+                
+                // Draw traces
+                ctx.font = '32px monospace';
+                
+                for (const trace of this.traces) {
+                    // Project 8D → 2D
+                    const x = w/2 + (trace.coords[0] - this.camera[0]) * 50;
+                    const y = h/2 + (trace.coords[1] - this.camera[1]) * 50;
+                    const z = trace.coords[2] - this.camera[2];
+                    
+                    // Depth scaling
+                    const scale = 1.0 / (1.0 + Math.abs(z) * 0.1);
+                    const size = 32 * scale;
+                    
+                    // Skip if too far
+                    if (scale < 0.1) continue;
+                    
+                    // Draw emoji
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.scale(scale, scale);
+                    ctx.fillStyle = trace.resonates ? '#0f0' : '#f00';
+                    ctx.fillText(trace.emoji, -16, 16);
+                    ctx.restore();
+                    
+                    // Draw connection to origin
+                    if (trace.resonates) {
+                        ctx.strokeStyle = 'rgba(0, 255, 0, 0.2)';
+                        ctx.beginPath();
+                        ctx.moveTo(w/2, h/2);
+                        ctx.lineTo(x, y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            
+            updateHUD() {
+                document.getElementById('trace-count').textContent = this.traces.length;
+                document.getElementById('camera-pos').textContent = 
+                    this.camera.map(v => v.toFixed(1)).join(',');
+                document.getElementById('fps').textContent = Math.round(this.fps);
+                
+                const resonant = this.traces.filter(t => t.resonates).length;
+                const pct = (resonant / this.traces.length * 100).toFixed(1);
+                document.getElementById('resonance').textContent = `${pct}%`;
+            }
+            
+            animate() {
+                const now = performance.now();
+                const dt = (now - this.lastTime) / 1000;
+                this.lastTime = now;
+                
+                this.fps = 1 / dt;
+                
+                this.update(dt);
+                this.render();
+                this.updateHUD();
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        
+        // Start game
+        const game = new Perf2EmojiGame();
+        
+        console.log('🎮 8D Perf Emoji Flying Game started!');
+    </script>
+</body>
+</html>

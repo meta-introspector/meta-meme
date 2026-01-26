@@ -1,24 +1,13 @@
 {
-  "name": "@metameme/lattice",
-  "version": "0.1.0",
-  "description": "Pure function lattice with proofs encoded in URLs",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "name": "perf-emoji-game",
+  "version": "1.0.0",
+  "description": "8D Perf Emoji Flying Game",
+  "main": "src/index.js",
   "scripts": {
-    "build": "tsc && wasm-pack build --target web",
-    "build:wasm": "wasm-pack build --target web --out-dir pkg",
-    "test": "jest",
-    "prove": "lean --make src/"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
-  "keywords": ["lattice", "proof", "url", "shard", "pure-functions"],
-  "author": "Meta-Meme",
-  "license": "AGPL-3.0",
-  "dependencies": {
-    "base64-url": "^2.3.3",
-    "msgpack-lite": "^0.1.26"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0",
-    "wasm-pack": "^0.12.0"
-  }
+  "keywords": ["perf", "emoji", "8d", "webgpu", "game"],
+  "author": "meta-meme",
+  "license": "MIT"
 }

@@ -1,10 +1,10 @@
-name = "meta-meme-dev"
-main = "worker.js"
+name = "perf-emoji-game"
+main = "src/index.js"
 compatibility_date = "2024-01-01"
 
-[env.production]
-name = "meta-meme"
-route = "meta-meme.workers.dev"
+[site]
+bucket = "./public"
 
-[env.dev]
-name = "meta-meme-dev"
+[[kv_namespaces]]
+binding = "PERF_DATA"
+id = "perf_traces_kv"
