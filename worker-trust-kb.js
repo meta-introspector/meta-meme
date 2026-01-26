@@ -11,6 +11,7 @@ const TRUST_KB = {
       "github_orgs": [
         "https://github.com/meta-introspector",
         "https://github.com/jmikedupont2",
+        "https://github.com/h4ck3rm1k3",
         "https://github.com/Escaped-RDFa"
       ],
       "huggingface": [
@@ -40,6 +41,13 @@ const TRUST_KB = {
     },
     {
       "url": "https://github.com/jmikedupont2",
+      "category": "github_orgs",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://github.com/h4ck3rm1k3",
       "category": "github_orgs",
       "format": "turtle",
       "acl": "public",

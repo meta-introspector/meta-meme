@@ -11,6 +11,7 @@ TRUSTED_SOURCES = {
     "github_orgs": [
         "https://github.com/meta-introspector",
         "https://github.com/jmikedupont2",
+        "https://github.com/h4ck3rm1k3",
         "https://github.com/Escaped-RDFa"
     ],
     "huggingface": [
