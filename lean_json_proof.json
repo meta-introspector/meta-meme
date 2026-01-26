@@ -1,0 +1,68 @@
+{
+  "theorem": "Lean4 JSON exports map to Monster lattice",
+  "microlean_path": "/mnt/data1/nix/time/2025/08/07/ragit/vendor/meta-introspector/solfunmeme-dioxus/hg_datasets/microlean4",
+  "total_files": 234,
+  "analyzed": 10,
+  "results": [
+    {
+      "file": "QuotKind.recOn_5b768541be6c865f10ba23edeb046b5aeca9957be06aa1cff7a5c74553331400.json",
+      "foralls": 1,
+      "levels": 1,
+      "complexity": 7
+    },
+    {
+      "file": "ExposeEnvironment.mk._flat_ctor_f782e4b9f56b8690947ada0b9e876ad0029089a01ffc488cbda45bf0dadccba9.json",
+      "foralls": 1,
+      "levels": 2,
+      "complexity": 9
+    },
+    {
+      "file": "SimpleString.recOn_536d25c26f3c473406a92c7283256322367decd52565a2cba02aa4b38560b9e7.json",
+      "foralls": 1,
+      "levels": 6,
+      "complexity": 17
+    },
+    {
+      "file": "ReducibilityHints.abbrev_4aa948065ae40c19a37c386721bb4ce67a6b0a8d0f2fbb35fc5c51f3dd2e4a9f.json",
+      "foralls": 0,
+      "levels": 1,
+      "complexity": 2
+    },
+    {
+      "file": "LLM.recOn_b267e287701a509597b51323813b59e92689cf0649472b6530db7f6ad95218ff.json",
+      "foralls": 1,
+      "levels": 5,
+      "complexity": 15
+    },
+    {
+      "file": "DefinitionSafety.rec_0ea9bc230f46bbdd1033d4f63ff5473aa39f8fe12371de5e7d815f9a25b77d28.json",
+      "foralls": 5,
+      "levels": 5,
+      "complexity": 35
+    },
+    {
+      "file": "LevelMVarId.mk_28c5dab39801271fe9f252f5c175bd62634c3cb3e2cc040e38dfc41866632ce1.json",
+      "foralls": 1,
+      "levels": 2,
+      "complexity": 9
+    },
+    {
+      "file": "SimpleOrdering.lt_daf9082c170597afe6e1a1ae1cdcb12d080c71d92d96f356cc9eebfe5a686695.json",
+      "foralls": 0,
+      "levels": 0,
+      "complexity": 0
+    },
+    {
+      "file": "Level_82ad63a13c002a8f46424dc1c06b50c72b01b5ae6189700e965a0efbb10b4520.json",
+      "foralls": 0,
+      "levels": 1,
+      "complexity": 2
+    },
+    {
+      "file": "SimpleBitVec_08f40ac0db2bccb4e70b5079636b4324d30808aa6ed9f68c809e8749ed4eda19.json",
+      "foralls": 1,
+      "levels": 1,
+      "complexity": 7
+    }
+  ]
+}
