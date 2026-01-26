@@ -1,0 +1,9 @@
+{
+  "theorem": "All Lean4 JSON exports map to Monster manifold",
+  "total_files": 234,
+  "resonating": 190,
+  "resonance_rate": 81.19658119658119,
+  "mean_complexity": 100.78632478632478,
+  "max_complexity": 3524,
+  "status": "Partial"
+}
