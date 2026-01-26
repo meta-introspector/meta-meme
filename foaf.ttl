@@ -1,0 +1,10 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<#me> a foaf:Person ;
+  foaf:name "James Michael DuPont" ;
+  foaf:nick "jmikedupont2" ;
+  foaf:homepage <https://github.com/jmikedupont2> ;
+  foaf:account <https://github.com/meta-introspector> ;
+  foaf:account <https://huggingface.co/introspector> ;
+  foaf:workplaceHomepage <https://meta-meme.jmikedupont2.workers.dev> .

@@ -1,0 +1,27 @@
+# Meta-Meme Trust Network - LLM Context
+
+## Overview
+Trusted repositories for Meta-Meme RDF queries and semantic web applications.
+
+## Repositories
+
+### meta-introspector/meta-meme
+- URL: https://github.com/meta-introspector/meta-meme
+- Description: Formally verified AI-human creative framework
+- Maintainer: James Michael DuPont
+
+### jmikedupont2/Escaped-RDFa
+- URL: https://github.com/Escaped-RDFa/namespace
+- Description: Cryptographically secure semantic web
+- Maintainer: James Michael DuPont
+
+### introspector/solfunmeme
+- URL: https://github.com/meta-introspector/SOLFUNMEME
+- Description: Solana meme token framework
+- Maintainer: James Michael DuPont
+
+## FOAF Profile
+See foaf.ttl for machine-readable profile.
+
+## RDF Sources
+All repos available as RDF sources for distributed queries.

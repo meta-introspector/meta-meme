@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Find all trusted sources",
+    "pattern": "?source trust:verified true",
+    "description": "List all verified trusted sources"
+  },
+  {
+    "name": "Query GitHub orgs",
+    "pattern": "?repo trust:category 'github_orgs'",
+    "description": "Find all GitHub organization repositories"
+  },
+  {
+    "name": "Query HuggingFace spaces",
+    "pattern": "?space trust:category 'huggingface'",
+    "description": "Find all HuggingFace spaces and datasets"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "trust_network": {
+    "version": "1.0.0",
+    "created": "2026-01-26",
+    "sources": {
+      "github_orgs": [
+        "https://github.com/meta-introspector",
+        "https://github.com/jmikedupont2",
+        "https://github.com/Escaped-RDFa"
+      ],
+      "huggingface": [
+        "https://huggingface.co/introspector",
+        "https://huggingface.co/spaces/introspector/meta-meme",
+        "https://huggingface.co/datasets/introspector/meta-meme"
+      ],
+      "cloudflare": [
+        "https://meta-meme.jmikedupont2.workers.dev",
+        "https://meta-meme-dev.jmikedupont2.workers.dev"
+      ],
+      "local_repos": [
+        "/mnt/data1/time2/time/2023/07/30/meta-meme",
+        "/mnt/data1/nix/source/github/jmikedupont2/orgs/Escaped-RDFa/namespace"
+      ]
+    },
+    "trust_level": "verified",
+    "acl": "public"
+  },
+  "rdf_sources": [
+    {
+      "url": "https://github.com/meta-introspector",
+      "category": "github_orgs",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://github.com/jmikedupont2",
+      "category": "github_orgs",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://github.com/Escaped-RDFa",
+      "category": "github_orgs",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://huggingface.co/introspector",
+      "category": "huggingface",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/introspector/meta-meme",
+      "category": "huggingface",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/introspector/meta-meme",
+      "category": "huggingface",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://meta-meme.jmikedupont2.workers.dev/rdfa",
+      "category": "cloudflare",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    },
+    {
+      "url": "https://meta-meme-dev.jmikedupont2.workers.dev/rdfa",
+      "category": "cloudflare",
+      "format": "turtle",
+      "acl": "public",
+      "trusted": true
+    }
+  ]
+}
