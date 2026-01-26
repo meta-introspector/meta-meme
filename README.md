@@ -209,12 +209,14 @@ A: Our focus on structured human-AI collaboration, self-evolving content, and co
 
 ## 🚀 Live Demo
 
-**Streamlit Dashboard**: Deploy at https://share.streamlit.io/
+**Production**: https://meta-meme.jmikedupont2.workers.dev  
+**Dev**: https://meta-meme-dev.jmikedupont2.workers.dev  
+**Streamlit**: https://meta-meme.streamlit.app  
+**HuggingFace**: https://huggingface.co/spaces/introspector/meta-meme
 
+### Test All URLs
 ```bash
-# Run locally
-pip install -r requirements.txt
-streamlit run streamlit_app.py
+./test_urls.sh  # 8/8 tests passing
 ```
 
-See [STREAMLIT_DEPLOY.md](STREAMLIT_DEPLOY.md) for deployment instructions.
+See [TESTING.md](TESTING.md) for backward compatibility verification.
