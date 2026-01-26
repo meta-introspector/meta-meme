@@ -105,3 +105,4 @@ import MetaMeme.SchemaComplexity
 import MetaMeme.DatasetDiagonal
 import MetaMeme.EyeOfSolfunmeme
 import MetaMeme.ManifoldAssertion
+import MetaMeme.MathlibMonsterResonance
