@@ -1,0 +1,178 @@
+[
+  {
+    "level": 0,
+    "cycles": 177863303,
+    "instructions": 300570841,
+    "cache_misses": 1194349,
+    "fingerprint": "585bd7ab9193e639",
+    "complexity": 0
+  },
+  {
+    "level": 1,
+    "cycles": 176980825,
+    "instructions": 300862753,
+    "cache_misses": 1268862,
+    "fingerprint": "9c6230e1c6e74ef8",
+    "complexity": 1
+  },
+  {
+    "level": 2,
+    "cycles": 179618319,
+    "instructions": 311426036,
+    "cache_misses": 1257256,
+    "fingerprint": "92796aaf13d12a49",
+    "complexity": 2
+  },
+  {
+    "level": 3,
+    "cycles": 175414260,
+    "instructions": 301649471,
+    "cache_misses": 1236902,
+    "fingerprint": "7ba29e91d2fb37a1",
+    "complexity": 3
+  },
+  {
+    "level": 5,
+    "cycles": 177173944,
+    "instructions": 301859598,
+    "cache_misses": 1174223,
+    "fingerprint": "2f03eb9bd4563fbb",
+    "complexity": 5
+  },
+  {
+    "level": 7,
+    "cycles": 173674999,
+    "instructions": 302054367,
+    "cache_misses": 1199089,
+    "fingerprint": "9f23fcce47bf3521",
+    "complexity": 7
+  },
+  {
+    "level": 11,
+    "cycles": 181474363,
+    "instructions": 302436413,
+    "cache_misses": 1183093,
+    "fingerprint": "a5f277c9b5b63e4b",
+    "complexity": 11
+  },
+  {
+    "level": 13,
+    "cycles": 175774719,
+    "instructions": 307301970,
+    "cache_misses": 1201080,
+    "fingerprint": "dcae3c5301bfc416",
+    "complexity": 13
+  },
+  {
+    "level": 17,
+    "cycles": 176879364,
+    "instructions": 304471479,
+    "cache_misses": 1201957,
+    "fingerprint": "315c137e09527872",
+    "complexity": 17
+  },
+  {
+    "level": 19,
+    "cycles": 180600635,
+    "instructions": 303254132,
+    "cache_misses": 1225627,
+    "fingerprint": "c715c913612b3eb4",
+    "complexity": 19
+  },
+  {
+    "level": 23,
+    "cycles": 185016570,
+    "instructions": 306050783,
+    "cache_misses": 1341793,
+    "fingerprint": "e40a345ddb7a3ca8",
+    "complexity": 23
+  },
+  {
+    "level": 29,
+    "cycles": 180865795,
+    "instructions": 304851307,
+    "cache_misses": 1285665,
+    "fingerprint": "fdd0ffd35d35a527",
+    "complexity": 29
+  },
+  {
+    "level": 31,
+    "cycles": 189906632,
+    "instructions": 327608185,
+    "cache_misses": 1204779,
+    "fingerprint": "f5431c686478c3ba",
+    "complexity": 31
+  },
+  {
+    "level": 37,
+    "cycles": 181705151,
+    "instructions": 304531375,
+    "cache_misses": 1189686,
+    "fingerprint": "4450c1e219faf2a7",
+    "complexity": 37
+  },
+  {
+    "level": 41,
+    "cycles": 174040516,
+    "instructions": 305159630,
+    "cache_misses": 1215329,
+    "fingerprint": "08e5df87e1e6121d",
+    "complexity": 41
+  },
+  {
+    "level": 43,
+    "cycles": 181451880,
+    "instructions": 305651040,
+    "cache_misses": 1220773,
+    "fingerprint": "96fdc9ade04ea1ac",
+    "complexity": 43
+  },
+  {
+    "level": 47,
+    "cycles": 183166631,
+    "instructions": 306002853,
+    "cache_misses": 1251615,
+    "fingerprint": "ce7181124ccf9dce",
+    "complexity": 47
+  },
+  {
+    "level": 53,
+    "cycles": 180524491,
+    "instructions": 307914128,
+    "cache_misses": 1219328,
+    "fingerprint": "88945f4f34698908",
+    "complexity": 53
+  },
+  {
+    "level": 59,
+    "cycles": 184797281,
+    "instructions": 306758028,
+    "cache_misses": 1174089,
+    "fingerprint": "e3023bff23646a48",
+    "complexity": 59
+  },
+  {
+    "level": 61,
+    "cycles": 179102417,
+    "instructions": 308977202,
+    "cache_misses": 1270088,
+    "fingerprint": "71d3c3aca382b974",
+    "complexity": 61
+  },
+  {
+    "level": 67,
+    "cycles": 181590667,
+    "instructions": 314096115,
+    "cache_misses": 1156209,
+    "fingerprint": "0131aa4bc68811d4",
+    "complexity": 67
+  },
+  {
+    "level": 71,
+    "cycles": 180249802,
+    "instructions": 308809833,
+    "cache_misses": 1303321,
+    "fingerprint": "fb66ecc04c0fbdb5",
+    "complexity": 71
+  }
+]
