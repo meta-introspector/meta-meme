@@ -1,0 +1,170 @@
+DIGEST e8628c827ea907d71602de2a750d4ec0
+FProofLattice
+R75:77 Coq.Init.Nat <> <> lib
+def 119:125 <> proof_0
+R129:131 Coq.Init.Datatypes <> nat ind
+prf 147:159 <> proof_0_valid
+R170:172 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R163:169 ProofLattice <> proof_0 def
+def 234:240 <> proof_1
+R244:246 Coq.Init.Datatypes <> nat ind
+prf 262:274 <> proof_1_valid
+R285:287 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R278:284 ProofLattice <> proof_1 def
+def 349:355 <> proof_2
+R359:361 Coq.Init.Datatypes <> nat ind
+prf 377:389 <> proof_2_valid
+R400:402 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R393:399 ProofLattice <> proof_2 def
+def 464:470 <> proof_3
+R474:476 Coq.Init.Datatypes <> nat ind
+prf 492:504 <> proof_3_valid
+R515:517 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R508:514 ProofLattice <> proof_3 def
+R519:521 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 583:589 <> proof_5
+R593:595 Coq.Init.Datatypes <> nat ind
+prf 611:623 <> proof_5_valid
+R634:636 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R627:633 ProofLattice <> proof_5 def
+R638:640 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 702:708 <> proof_7
+R712:714 Coq.Init.Datatypes <> nat ind
+prf 730:742 <> proof_7_valid
+R753:755 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R746:752 ProofLattice <> proof_7 def
+R757:759 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 822:829 <> proof_11
+R833:835 Coq.Init.Datatypes <> nat ind
+prf 852:865 <> proof_11_valid
+R877:879 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R869:876 ProofLattice <> proof_11 def
+R885:887 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R881:883 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 950:957 <> proof_13
+R961:963 Coq.Init.Datatypes <> nat ind
+prf 980:993 <> proof_13_valid
+R1005:1007 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R997:1004 ProofLattice <> proof_13 def
+R1009:1011 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1075:1082 <> proof_17
+R1086:1088 Coq.Init.Datatypes <> nat ind
+prf 1105:1118 <> proof_17_valid
+R1130:1132 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1122:1129 ProofLattice <> proof_17 def
+R1138:1140 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1134:1136 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1204:1211 <> proof_19
+R1215:1217 Coq.Init.Datatypes <> nat ind
+prf 1234:1247 <> proof_19_valid
+R1259:1261 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1251:1258 ProofLattice <> proof_19 def
+R1263:1265 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1329:1336 <> proof_23
+R1340:1342 Coq.Init.Datatypes <> nat ind
+prf 1359:1372 <> proof_23_valid
+R1384:1386 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1376:1383 ProofLattice <> proof_23 def
+R1392:1394 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1388:1390 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1458:1465 <> proof_29
+R1469:1471 Coq.Init.Datatypes <> nat ind
+prf 1488:1501 <> proof_29_valid
+R1513:1515 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1505:1512 ProofLattice <> proof_29 def
+R1525:1527 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1521:1523 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1517:1519 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1591:1598 <> proof_31
+R1602:1604 Coq.Init.Datatypes <> nat ind
+prf 1621:1634 <> proof_31_valid
+R1646:1648 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1638:1645 ProofLattice <> proof_31 def
+R1650:1652 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1716:1723 <> proof_37
+R1727:1729 Coq.Init.Datatypes <> nat ind
+prf 1746:1759 <> proof_37_valid
+R1771:1773 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1763:1770 ProofLattice <> proof_37 def
+R1783:1785 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1779:1781 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1775:1777 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1849:1856 <> proof_41
+R1860:1862 Coq.Init.Datatypes <> nat ind
+prf 1879:1892 <> proof_41_valid
+R1904:1906 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1896:1903 ProofLattice <> proof_41 def
+R1912:1914 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R1908:1910 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 1978:1985 <> proof_43
+R1989:1991 Coq.Init.Datatypes <> nat ind
+prf 2008:2021 <> proof_43_valid
+R2033:2035 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2025:2032 ProofLattice <> proof_43 def
+R2037:2039 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 2103:2110 <> proof_47
+R2114:2116 Coq.Init.Datatypes <> nat ind
+prf 2133:2146 <> proof_47_valid
+R2158:2160 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2150:2157 ProofLattice <> proof_47 def
+R2166:2168 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2162:2164 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 2232:2239 <> proof_53
+R2243:2245 Coq.Init.Datatypes <> nat ind
+prf 2262:2275 <> proof_53_valid
+R2287:2289 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2279:2286 ProofLattice <> proof_53 def
+R2299:2301 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2295:2297 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2291:2293 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 2365:2372 <> proof_59
+R2376:2378 Coq.Init.Datatypes <> nat ind
+prf 2395:2408 <> proof_59_valid
+R2420:2422 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2412:2419 ProofLattice <> proof_59 def
+R2432:2434 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2428:2430 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2424:2426 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 2498:2505 <> proof_61
+R2509:2511 Coq.Init.Datatypes <> nat ind
+prf 2528:2541 <> proof_61_valid
+R2553:2555 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2545:2552 ProofLattice <> proof_61 def
+R2557:2559 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 2623:2630 <> proof_67
+R2634:2636 Coq.Init.Datatypes <> nat ind
+prf 2653:2666 <> proof_67_valid
+R2678:2680 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2670:2677 ProofLattice <> proof_67 def
+R2690:2692 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2686:2688 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2682:2684 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+def 2756:2763 <> proof_71
+R2767:2769 Coq.Init.Datatypes <> nat ind
+prf 2786:2799 <> proof_71_valid
+R2811:2813 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2803:2810 ProofLattice <> proof_71 def
+R2819:2821 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R2815:2817 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+prf 2917:2933 <> lattice_order_0_1
+R2944:2946 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R2937:2943 ProofLattice <> proof_0 def
+R2947:2953 ProofLattice <> proof_1 def
+R2970:2976 ProofLattice <> proof_0 def
+R2979:2985 ProofLattice <> proof_1 def
+prf 3008:3024 <> lattice_order_1_2
+R3035:3037 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R3028:3034 ProofLattice <> proof_1 def
+R3038:3044 ProofLattice <> proof_2 def
+R3061:3067 ProofLattice <> proof_1 def
+R3070:3076 ProofLattice <> proof_2 def
+prf 3099:3115 <> lattice_order_2_3
+R3126:3128 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R3119:3125 ProofLattice <> proof_2 def
+R3129:3135 ProofLattice <> proof_3 def
+R3152:3158 ProofLattice <> proof_2 def
+R3161:3167 ProofLattice <> proof_3 def
+prf 3190:3205 <> lattice_complete
+R3216:3218 Coq.Init.Peano <> ::nat_scope:x_'<'_x not
+R3209:3215 ProofLattice <> proof_0 def
+R3219:3226 ProofLattice <> proof_71 def
