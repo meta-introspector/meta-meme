@@ -1,10 +1,14 @@
+#[cfg(feature = "wasm")]
 use wasm_bindgen::prelude::*;
 use serde::{Deserialize, Serialize};
 use sha2::{Sha256, Digest};
 
+#[cfg(feature = "wasm")]
 pub mod automorphic_loop;
 
+#[cfg(feature = "wasm")]
 #[derive(Serialize, Deserialize)]
+#[cfg(feature = "wasm")]
 #[wasm_bindgen]
 pub struct ProofShard {
     id: u32,
@@ -13,6 +17,7 @@ pub struct ProofShard {
     hash: String,
 }
 
+#[cfg(feature = "wasm")]
 #[wasm_bindgen]
 impl ProofShard {
     #[wasm_bindgen(constructor)]
@@ -34,11 +39,13 @@ impl ProofShard {
     }
 }
 
+#[cfg(feature = "wasm")]
 #[wasm_bindgen]
 pub struct ZKWasm {
     proofs: Vec<ProofShard>,
 }
 
+#[cfg(feature = "wasm")]
 #[wasm_bindgen]
 impl ZKWasm {
     #[wasm_bindgen(constructor)]
@@ -66,6 +73,7 @@ impl ZKWasm {
     }
 }
 
+#[cfg(feature = "wasm")]
 #[wasm_bindgen]
 pub fn init() {
     console_error_panic_hook::set_once();
