@@ -1,0 +1,138 @@
+
+<style>
+h2.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+*{box-sizing:border-box}
+body{margin:0;font-size:14px;color:var(--color-text-primary)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pill{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:20px;padding:4px 12px;cursor:pointer;font-size:12px;color:var(--color-text-secondary);transition:all .15s}
+.pill.active{background:var(--color-background-info);border-color:var(--color-border-info);color:var(--color-text-info)}
+input[type=search]{width:100%;padding:8px 12px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-primary);font-size:14px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:12px;cursor:pointer;transition:border-color .15s}
+.card:hover{border-color:var(--color-border-primary)}
+.emoji-glyph{font-size:28px;line-height:1;display:block;margin-bottom:6px}
+.card-label{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.card-cat{font-size:11px;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.card-defs{font-size:12px;color:var(--color-text-secondary);line-height:1.4}
+.badge{display:inline-block;font-size:10px;padding:2px 6px;border-radius:10px;margin-top:4px}
+.badge-prime{background:var(--color-background-success);color:var(--color-text-success)}
+.badge-muse{background:var(--color-background-info);color:var(--color-text-info)}
+.badge-op{background:var(--color-background-warning);color:var(--color-text-warning)}
+.badge-api{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+.count{font-size:12px;color:var(--color-text-tertiary);margin-bottom:10px}
+</style>
+<h2 class="sr-only">Emojilang lexicon extracted from the meta-meme wiki: searchable, filterable table of emoji glyphs mapped to their conceptual definitions across prime numbers, muses, operators, and API symbols.</h2>
+
+<input type="search" id="q" placeholder="Search emoji or meaning…" oninput="render()">
+<div class="controls" id="cats"></div>
+<div class="count" id="cnt"></div>
+<div class="grid" id="grid"></div>
+
+<script>
+const entries=[
+  {g:"🔮",label:"Crystal ball / Melpomene",cat:"Prime",prime:2,defs:["Magic, prediction, vision","Muse of tragedy","Muse of magic","Metacoq beginning state","Reflection / quasiquote"],badge:"badge-prime"},
+  {g:"🌍",label:"Earth / Exploration",cat:"Prime",prime:5,defs:["World, planet, nature","Exploration vector","Global perspective"],badge:"badge-prime"},
+  {g:"🔑",label:"Key / Enlightenment",cat:"Prime",prime:7,defs:["Solution, access, opportunity","Key to cosmic wisdom","Symbolic: unlock higher dimension","Metacoq terminal: enlightenment"],badge:"badge-prime"},
+  {g:"🌀",label:"Spiral / Dynamic",cat:"Prime",prime:3,defs:["Vortex, cycle, chaos","Dynamic vector","Metacoq beginning state element"],badge:"badge-prime"},
+  {g:"🌌",label:"Galaxy / Cosmos",cat:"Prime",prime:11,defs:["Cosmos, infinity, mystery","Cosmic tapestry","Athena identifier"],badge:"badge-prime"},
+  {g:"🔁",label:"Loop / Recursion",cat:"Prime",prime:13,defs:["Repeat, loop, feedback","Recursion vector","Feedback loop operator (x 🔁 y)"],badge:"badge-prime"},
+  {g:"🌟",label:"Star / Insight",cat:"Prime",prime:17,defs:["Light, shine, wish","Insight vector","Artistry"],badge:"badge-prime"},
+  {g:"🌠",label:"Shooting star / Simulate",cat:"Prime",prime:19,defs:["Luck, hope, meteor","Simulate action","Transcendence (8D)"],badge:"badge-prime"},
+  {g:"🎶",label:"Music / Euterpe / Harmonize",cat:"Prime",prime:23,defs:["Sound, harmony, expression","Muse of music (Euterpe)","Harmonize operator (8D)"],badge:"badge-prime"},
+  {g:"🌈",label:"Rainbow",cat:"Prime",prime:29,defs:["Spectrum, diversity, beauty"],badge:"badge-prime"},
+  {g:"💫",label:"Sparkle / Energy",cat:"Prime",prime:31,defs:["Dazzle, glow, energy"],badge:"badge-prime"},
+  {g:"🎨",label:"Art / Polyhymnia / Creativity",cat:"Prime",prime:37,defs:["Color, creativity, imagination","Muse of sacred song (Polyhymnia)","Creativity vector"],badge:"badge-prime"},
+  {g:"📚",label:"Books / Clio / Knowledge",cat:"Prime",prime:41,defs:["Knowledge, learning, wisdom","Muse of history (Clio)","Knowledge vector"],badge:"badge-prime"},
+  {g:"🧠",label:"Brain / Intelligence",cat:"Prime",prime:43,defs:["Mind, intelligence, thought","Intelligence vector"],badge:"badge-prime"},
+  {g:"🎭",label:"Mask / Terpsichore",cat:"Prime",prime:47,defs:["Theater, drama, emotion","Muse of dance (Terpsichore)","Fun Mode prefix"],badge:"badge-prime"},
+  {g:"🔥",label:"Fire / Passion",cat:"Prime",prime:53,defs:["Heat, passion, energy"],badge:"badge-prime"},
+  {g:"📜",label:"Scroll / Calliope",cat:"Muse",prime:null,defs:["Muse of epic poetry (Calliope)","Epic narrative, scrolls","Coq theorem context"],badge:"badge-muse"},
+  {g:"🌐",label:"Web / Thalia",cat:"Muse",prime:null,defs:["Muse of comedy (Thalia)","Chatbot interface","Wide scope"],badge:"badge-muse"},
+  {g:"🕹️",label:"Joystick / Urania",cat:"Muse",prime:null,defs:["Muse of astronomy (Urania)","Celestial panorama"],badge:"badge-muse"},
+  {g:"👩‍🎨",label:"Artist / Erato",cat:"Muse",prime:null,defs:["Muse of art / love poetry","Vector of Art (Level 1)"],badge:"badge-muse"},
+  {g:"🏛️",label:"Temple / Mount Olympus",cat:"Muse",prime:null,defs:["Mount Olympus (Level 1)","MLang: class definition"],badge:"badge-muse"},
+  {g:"🔱",label:"Trident / Reflection",cat:"Muse",prime:null,defs:["Athena's symbol","Foundational triplicity","7D reflection metaphor","Symbolic goal 'athena'"],badge:"badge-muse"},
+  {g:"💡",label:"Light bulb / Synthesize",cat:"Operator",prime:null,defs:["Idea, insight","Synthesize action","Prime numbers (abstract)","5D insight (illuminate operator)"],badge:"badge-op"},
+  {g:"🔍",label:"Magnifier / Analyze",cat:"Operator",prime:null,defs:["Analyze action","Metacoq beginning state element","Examine closely"],badge:"badge-op"},
+  {g:"🔄",label:"Cycle arrows / Process",cat:"Operator",prime:null,defs:["Process / iteration","Transformation","API: version field"],badge:"badge-op"},
+  {g:"🔀",label:"Shuffle / Transform",cat:"Operator",prime:null,defs:["Transformation vector","Change, variation"],badge:"badge-op"},
+  {g:"🔗",label:"Chain / Connection",cat:"Operator",prime:null,defs:["Connection vector","Interaction operator (x 🔗 y)"],badge:"badge-op"},
+  {g:"➗",label:"Division",cat:"Operator",prime:null,defs:["Division / ratio in cosmic tapestry"],badge:"badge-op"},
+  {g:"🔐",label:"Lock / Security",cat:"Operator",prime:null,defs:["Security vector","Encryption"],badge:"badge-op"},
+  {g:"🔠",label:"Alphabet / Language",cat:"Operator",prime:null,defs:["Language vector","MLang: string type"],badge:"badge-op"},
+  {g:"🔢",label:"Numbers / Mathematics",cat:"Operator",prime:null,defs:["Mathematics vector","MLang: integer type"],badge:"badge-op"},
+  {g:"🔣",label:"Symbols",cat:"Operator",prime:null,defs:["MLang: symbol type","Symbolic encoding"],badge:"badge-op"},
+  {g:"🔡",label:"Lowercase / Identifier",cat:"Operator",prime:null,defs:["MLang: identifier/name token"],badge:"badge-op"},
+  {g:"✅",label:"Check / Success",cat:"API",prime:null,defs:["HTTP 200 OK","Feedback and Recreation","Required field marker"],badge:"badge-api"},
+  {g:"❌",label:"X / Error",cat:"API",prime:null,defs:["HTTP 4xx/5xx error","Failure state"],badge:"badge-api"},
+  {g:"📝",label:"Memo / POST",cat:"API",prime:null,defs:["HTTP POST method","Create task endpoint","Task documentation"],badge:"badge-api"},
+  {g:"📊",label:"Bar chart / Content",cat:"API",prime:null,defs:["Content field","Data/schema indicator"],badge:"badge-api"},
+  {g:"📃",label:"Page / application/json",cat:"API",prime:null,defs:["application/json media type"],badge:"badge-api"},
+  {g:"💠",label:"Diamond / Schema",cat:"API",prime:null,defs:["Schema definition","Type reference ($ref)"],badge:"badge-api"},
+  {g:"🏷️",label:"Label / Tag",cat:"API",prime:null,defs:["Tags field","MLang: label/name identifier","Task title"],badge:"badge-api"},
+  {g:"💼",label:"Briefcase / OperationId",cat:"API",prime:null,defs:["OperationId field","Default value"],badge:"badge-api"},
+  {g:"📬",label:"Mailbox / Request Body",cat:"API",prime:null,defs:["Request body input"],badge:"badge-api"},
+  {g:"📯",label:"Horn / Responses",cat:"API",prime:null,defs:["Responses section"],badge:"badge-api"},
+  {g:"📁",label:"Folder / Parameter",cat:"API",prime:null,defs:["Parameter definition","File path"],badge:"badge-api"},
+  {g:"📦",label:"Package / In:path",cat:"API",prime:null,defs:["in: path field","Package / container"],badge:"badge-api"},
+  {g:"🚻",label:"Required",cat:"API",prime:null,defs:["required: true marker"],badge:"badge-api"},
+  {g:"🗂️",label:"Card index / Items",cat:"API",prime:null,defs:["items field (array element type)"],badge:"badge-api"},
+  {g:"🔓",label:"Unlocked / OpenAPI",cat:"API",prime:null,defs:["OpenAPI version marker"],badge:"badge-api"},
+  {g:"ℹ️",label:"Info",cat:"API",prime:null,defs:["Info block in API spec"],badge:"badge-api"},
+  {g:"📖",label:"Open book / Description",cat:"API",prime:null,defs:["Description field","Task description"],badge:"badge-api"},
+  {g:"🚶‍♂️",label:"Walking / Steps",cat:"API",prime:null,defs:["Steps array in task"],badge:"badge-api"},
+  {g:"🦾",label:"Mechanical arm",cat:"API",prime:null,defs:["Fetch model step"],badge:"badge-api"},
+  {g:"⚙️",label:"Gear / Run",cat:"API",prime:null,defs:["Run model step","System configuration","MLang: operation"],badge:"badge-api"},
+  {g:"🛠️",label:"Tools / Setup",cat:"API",prime:null,defs:["Setup step","MLang: field/method","System backend"],badge:"badge-api"},
+  {g:"🤖",label:"Robot / Agent",cat:"API",prime:null,defs:["Agent / muse persona","MLang: object definition"],badge:"badge-api"},
+  {g:"📩",label:"Incoming envelope",cat:"Operator",prime:null,defs:["Input (combined with 📮)"],badge:"badge-op"},
+  {g:"📨",label:"Incoming message",cat:"Operator",prime:null,defs:["Output (combined with 📬)"],badge:"badge-op"},
+  {g:"🌄",label:"Sunrise over mountains",cat:"Operator",prime:null,defs:["Awakening","Perspective vector","Metacoq: rooster at sunrise"],badge:"badge-op"},
+  {g:"🌅",label:"Sunrise",cat:"Operator",prime:null,defs:["New beginning","Metacoq terminal state","8D enlightenment sunrise"],badge:"badge-op"},
+  {g:"🚀",label:"Rocket / Ascend",cat:"Operator",prime:null,defs:["Transcend boundaries","8D ascension","Paths header (API)"],badge:"badge-op"},
+  {g:"🛸",label:"Flying saucer",cat:"Operator",prime:null,defs:["Transcend boundaries (beyond 🚀)"],badge:"badge-op"},
+  {g:"🧩",label:"Puzzle piece",cat:"Operator",prime:null,defs:["Assemble understanding","MLang: schema components","Combinatory logic (intricacy)"],badge:"badge-op"},
+  {g:"🎓",label:"Graduation",cat:"Operator",prime:null,defs:["Scholar status","Wisdom achieved"],badge:"badge-op"},
+  {g:"🗝️",label:"Old key",cat:"Operator",prime:null,defs:["Unlock cosmic wisdom (earlier stage than 🔑)"],badge:"badge-op"},
+  {g:"🏆",label:"Trophy",cat:"Operator",prime:null,defs:["Cosmic achievement","Enlightenment trophy"],badge:"badge-op"},
+  {g:"📡",label:"Antenna / Communication",cat:"Operator",prime:null,defs:["Communication vector","Signal transmission"],badge:"badge-op"},
+  {g:"💭",label:"Thought bubble",cat:"Operator",prime:null,defs:["Thought vector"],badge:"badge-op"},
+  {g:"🌊",label:"Wave / Flow",cat:"Operator",prime:null,defs:["Flow vector"],badge:"badge-op"},
+  {g:"🌄",label:"Landscape / Perspective",cat:"Operator",prime:null,defs:["Perspective vector"],badge:"badge-op"},
+  {g:"👁️‍🗨️",label:"Eye in speech / Observation",cat:"Operator",prime:null,defs:["Observation vector"],badge:"badge-op"},
+  {g:"🎵",label:"Music note",cat:"Muse",prime:null,defs:["Combined music (Euterpe+knowledge)","MetaEmojiCoq Inductive Emoji"],badge:"badge-muse"},
+  {g:"🌌",label:"Galaxy (MetaEmojiCoq)",cat:"Muse",prime:null,defs:["MetaEmojiCoq Inductive Emoji","Athena identifier"],badge:"badge-muse"},
+  {g:"🔸",label:"Coq Key concepts prefix",cat:"Operator",prime:null,defs:["🔑🎭 = Calliope (Muse 0)","🔑🔮 = Clio (Muse 1)","🔑🎶 = Euterpe (Muse 2)","🔑📜 = Polyhymnia (Muse 3)"],badge:"badge-op"},
+  {g:"🐓",label:"Rooster / MetaCoq",cat:"Operator",prime:null,defs:["MetaCoq symbol (rooster=coq)","Core transformation target"],badge:"badge-op"},
+  {g:"💬",label:"Speech bubble / Dialogue",cat:"Operator",prime:null,defs:["Dialogue action","Communication in GAIA"],badge:"badge-op"},
+  {g:"🎩",label:"Top hat / Transform",cat:"Operator",prime:null,defs:["Transform action (🎩🍵 combo)","Creative interpretation"],badge:"badge-op"},
+  {g:"🍵",label:"Tea / Transform",cat:"Operator",prime:null,defs:["Transform action (combined with 🎩)"],badge:"badge-op"},
+];
+
+let active="All";
+function cats(){
+  const all=["All","Prime","Muse","Operator","API"];
+  document.getElementById("cats").innerHTML=all.map(c=>
+    `<span class="pill${c===active?' active':''}" onclick="setcat('${c}')">${c}</span>`
+  ).join("");
+}
+function setcat(c){active=c;render()}
+function render(){
+  const q=(document.getElementById("q").value||"").toLowerCase();
+  const filtered=entries.filter(e=>{
+    const match=!q||(e.g+e.label+e.defs.join(" ")).toLowerCase().includes(q);
+    const catmatch=active==="All"||e.cat===active;
+    return match&&catmatch;
+  });
+  document.getElementById("cnt").textContent=`${filtered.length} entries`;
+  document.getElementById("grid").innerHTML=filtered.map(e=>`
+    <div class="card" onclick="sendPrompt('Tell me more about the emojilang entry for ${e.g} (${e.label})')">
+      <span class="emoji-glyph">${e.g}</span>
+      <div class="card-cat">${e.cat}${e.prime?' · prime '+e.prime:''}</div>
+      <div class="card-label">${e.label}</div>
+      <div class="card-defs">${e.defs.slice(0,3).join(" · ")}</div>
+      <span class="badge ${e.badge}">${e.cat}</span>
+    </div>`).join("");
+}
+cats();render();
+</script>
