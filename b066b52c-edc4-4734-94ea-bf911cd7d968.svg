@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" width="400" height="460" font-family="Georgia, 'Times New Roman', serif">
+  <title>TWO — The Mirror, first of the ur-memes</title>
+  <desc>Animated meme-portrait of the prime 2: the even one, keeper of parity, the mirror that splits every whole into a pair.</desc>
+
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#123a6b"/>
+      <stop offset="100%" stop-color="#050a1a"/>
+    </radialGradient>
+    <linearGradient id="ink2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7fd4ff"/>
+      <stop offset="100%" stop-color="#2f7bd6"/>
+    </linearGradient>
+    <filter id="glow2" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="460" fill="url(#bg2)"/>
+
+  <!-- pulsing aura -->
+  <circle cx="200" cy="185" r="120" fill="none" stroke="#3f8fe0" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="r" values="118;132;118" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- the twin orbiting dots: two, always two -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 200 185" to="360 200 185" dur="9s" repeatCount="indefinite"/>
+    <circle cx="200" cy="70" r="8" fill="#bfe9ff" filter="url(#glow2)"/>
+    <circle cx="200" cy="300" r="8" fill="#bfe9ff" filter="url(#glow2)"/>
+  </g>
+
+  <!-- the numeral, breathing -->
+  <text x="200" y="255" text-anchor="middle" font-size="230" font-weight="bold" fill="url(#ink2)" filter="url(#glow2)">2
+    <animate attributeName="font-size" values="230;238;230" dur="4s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- mirror line sweeping to show reflection/parity -->
+  <line x1="200" y1="60" x2="200" y2="310" stroke="#eaf6ff" stroke-width="1" opacity="0.0">
+    <animate attributeName="opacity" values="0;0.8;0" dur="4s" repeatCount="indefinite"/>
+  </line>
+
+  <text x="200" y="360" text-anchor="middle" font-size="26" fill="#dff1ff" letter-spacing="3">THE&#160;MIRROR</text>
+  <text x="200" y="392" text-anchor="middle" font-size="14" fill="#9cc4ee" font-style="italic">first ur-meme · the only even prime · keeper of parity</text>
+  <text x="200" y="424" text-anchor="middle" font-size="13" fill="#7fa8d8" font-style="italic">&#8220;Everything divisible splits in me.&#8221;</text>
+</svg>

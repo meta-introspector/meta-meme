@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" width="400" height="460" font-family="Georgia, 'Times New Roman', serif">
+  <title>THREE — The Triangle, the first odd generator</title>
+  <desc>Animated meme-portrait of the prime 3: the first odd prime, the triad, the smallest shape that stands on its own.</desc>
+
+  <defs>
+    <radialGradient id="bg3" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#0f5a3a"/>
+      <stop offset="100%" stop-color="#04140c"/>
+    </radialGradient>
+    <linearGradient id="ink3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8f5c8"/>
+      <stop offset="100%" stop-color="#22b36b"/>
+    </linearGradient>
+    <filter id="glow3" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="460" fill="url(#bg3)"/>
+
+  <!-- rotating triad of vertices + connecting triangle -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 200 185" to="360 200 185" dur="12s" repeatCount="indefinite"/>
+    <polygon points="200,70 300,255 100,255" fill="none" stroke="#39d98a" stroke-width="2" opacity="0.55">
+      <animate attributeName="opacity" values="0.25;0.7;0.25" dur="3s" repeatCount="indefinite"/>
+    </polygon>
+    <circle cx="200" cy="70"  r="9" fill="#d6ffe8" filter="url(#glow3)"/>
+    <circle cx="300" cy="255" r="9" fill="#d6ffe8" filter="url(#glow3)"/>
+    <circle cx="100" cy="255" r="9" fill="#d6ffe8" filter="url(#glow3)"/>
+  </g>
+
+  <text x="200" y="255" text-anchor="middle" font-size="230" font-weight="bold" fill="url(#ink3)" filter="url(#glow3)">3
+    <animate attributeName="font-size" values="230;238;230" dur="3.4s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="200" y="360" text-anchor="middle" font-size="26" fill="#e3ffef" letter-spacing="3">THE&#160;TRIANGLE</text>
+  <text x="200" y="392" text-anchor="middle" font-size="14" fill="#9fe6bf" font-style="italic">first odd prime · the triad · smallest stable shape</text>
+  <text x="200" y="424" text-anchor="middle" font-size="13" fill="#7fc9a1" font-style="italic">&#8220;Two make a line; I make a plane.&#8221;</text>
+</svg>
