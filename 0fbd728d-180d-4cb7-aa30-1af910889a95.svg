@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" width="400" height="460" font-family="Georgia, 'Times New Roman', serif">
+  <title>FIVE — The Star, keeper of the golden ratio</title>
+  <desc>Animated meme-portrait of the prime 5: the pentad, the pentagram, the number that hides the golden ratio in its diagonals.</desc>
+
+  <defs>
+    <radialGradient id="bg5" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#6a4a08"/>
+      <stop offset="100%" stop-color="#170f02"/>
+    </radialGradient>
+    <linearGradient id="ink5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe9a8"/>
+      <stop offset="100%" stop-color="#e0a520"/>
+    </linearGradient>
+    <filter id="glow5" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="460" fill="url(#bg5)"/>
+
+  <!-- five-pointed star drawn as a pentagram, slowly turning -->
+  <g opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 185" to="-360 200 185" dur="20s" repeatCount="indefinite"/>
+    <polygon points="200,60 236,272 66,140 334,140 164,272"
+             fill="none" stroke="#ffcf5a" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.35;0.9;0.35" dur="3.6s" repeatCount="indefinite"/>
+    </polygon>
+    <g fill="#fff2cf" filter="url(#glow5)">
+      <circle cx="200" cy="60"  r="7"/>
+      <circle cx="334" cy="140" r="7"/>
+      <circle cx="236" cy="272" r="7"/>
+      <circle cx="164" cy="272" r="7"/>
+      <circle cx="66"  cy="140" r="7"/>
+    </g>
+  </g>
+
+  <text x="200" y="255" text-anchor="middle" font-size="230" font-weight="bold" fill="url(#ink5)" filter="url(#glow5)">5
+    <animate attributeName="font-size" values="230;238;230" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="200" y="360" text-anchor="middle" font-size="26" fill="#fff4d6" letter-spacing="3">THE&#160;STAR</text>
+  <text x="200" y="392" text-anchor="middle" font-size="14" fill="#e8c884" font-style="italic">the pentad · hides the golden ratio in its diagonals</text>
+  <text x="200" y="424" text-anchor="middle" font-size="13" fill="#cbab68" font-style="italic">&#8220;Draw my five points without lifting your pen.&#8221;</text>
+</svg>

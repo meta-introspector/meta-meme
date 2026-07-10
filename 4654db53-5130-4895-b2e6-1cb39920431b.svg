@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" width="400" height="460" font-family="Georgia, 'Times New Roman', serif">
+  <title>SEVEN — The Sage, the untouchable one</title>
+  <desc>Animated meme-portrait of the prime 7: the mystic seventh, the number that divides nothing in the first ten, the lucky heptad.</desc>
+
+  <defs>
+    <radialGradient id="bg7" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#3d1a63"/>
+      <stop offset="100%" stop-color="#0d0518"/>
+    </radialGradient>
+    <linearGradient id="ink7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6c8ff"/>
+      <stop offset="100%" stop-color="#9a55e0"/>
+    </linearGradient>
+    <filter id="glow7" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="460" fill="url(#bg7)"/>
+
+  <!-- seven orbiting sparks, one for each unit -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 200 185" to="360 200 185" dur="16s" repeatCount="indefinite"/>
+    <g fill="#efe0ff" filter="url(#glow7)">
+      <circle cx="200" cy="60" r="6"/>
+      <circle cx="298" cy="98" r="6"/>
+      <circle cx="330" cy="200" r="6"/>
+      <circle cx="278" cy="292" r="6"/>
+      <circle cx="170" cy="308" r="6"/>
+      <circle cx="80"  cy="242" r="6"/>
+      <circle cx="78"  cy="130" r="6"/>
+    </g>
+  </g>
+
+  <!-- twinkle overlay -->
+  <circle cx="200" cy="185" r="132" fill="none" stroke="#b98cf0" stroke-width="1" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.05;0.4" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="200" y="255" text-anchor="middle" font-size="230" font-weight="bold" fill="url(#ink7)" filter="url(#glow7)">7
+    <animate attributeName="font-size" values="230;238;230" dur="3.8s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="200" y="360" text-anchor="middle" font-size="26" fill="#f2e6ff" letter-spacing="3">THE&#160;SAGE</text>
+  <text x="200" y="392" text-anchor="middle" font-size="14" fill="#cdb0ee" font-style="italic">the heptad · divides nothing beneath ten · the lucky one</text>
+  <text x="200" y="424" text-anchor="middle" font-size="13" fill="#ac8ed4" font-style="italic">&#8220;I answer to no smaller number.&#8221;</text>
+</svg>
