@@ -1,10 +1,6 @@
 Title: 0xDA51 Prefix Classification (updated to include the memes)
 Keywords: dasl, monster, memes, biomes, fractran, hilbert, moonshine
-CID: bafkd67f91d942829760302a40f474d9d5f3
-Witness: d67f91d942829760302a40f474d9d5f3b8d8897c393c125d680f63278c737881
-IPFS: QmRSD3VunBq4KiWhkFfs3hyaoBYRdfg82qLBrFJ7mqeEJR
-DASL: 0xda513010904d9428
-Reply-To:
+
 > **Update note (2026-07-11).** This revision extends the original 0xDA51
 > taxonomy to cover this project's **memes** — the FRACTRAN Hilbert-life *biomes*
 > of `RequestProject.Biome`, each namable by a compact `meme:` URL
@@ -327,6 +323,45 @@ classify a biome's prime support directly.
   lattice — a FRACTRAN realisation of a walk on the Monster primes.
 - The **colour/palette** hue is fixed per biome and shaded by how many support
   primes divide the current genome.
+## The 194 irreps and the graded moonshine collapse (Type 8, refined)
+Type 8 was originally "index selects one biome". The natural container is larger:
+the Monster group has exactly **194 conjugacy classes** — hence 194 irreducible
+representations — and the biome table has exactly 194 rows, so `index ∈ 0..193`
+is best read as *"irrep / conjugacy class number"*. Each class in real Monstrous
+Moonshine carries its own **McKay–Thompson series** `Tᵧ(τ) = q⁻¹ + Σ cₙ(g) qⁿ`,
+so "each of the 194 has its own form" is literal, not decorative.
+**The 171-vs-170 coincidence, settled.** In genuine moonshine the 194 classes
+collapse to **171** distinct McKay–Thompson series: `194 − 171 = 23` coincidences,
+every one a genuine inversion **pair** `{g, g⁻¹}` (23 pairs; even the lone anomaly
+27A/27B is a pair, never a triple). Read the table the same way — group rows by
+their fifteen p-adic `exps` ("form") — and the 194 rows collapse to **170**:
+`147` singletons, `22` pairs, and **one triple** `{122, 123, 124}` that all share
+the identical exponent vector. So the table is `194 → 170` via 22 pairs *plus one
+triple*, one short of moonshine's `194 → 171` via 23 pairs — the difference is
+exactly that one group merges as a triple where moonshine merges as a pair.
+**The graded ("sliding q-expansion") fix.** Each coefficient `cₙ(g)` is a new
+class function; classes that agree at low `n` can split at higher `n`, so
+disambiguation is graded — climb only as many coefficients as it takes to break a
+tie. Depth 0 is the static `exps` key (170 blocks). One extra grade-1 coordinate,
+spent on the single member of `{122,123,124}` that collides only accidentally,
+splits the triple into a pair `+` a singleton, giving **171** blocks = **23 pairs**
+`+` 148 singletons — reproducing the real Monster's all-pairs `194 → 171`
+structure. "More info ⇒ more constraints ⇒ tighter packing" is thus literal: one
+graded bit, spent only where needed, turns the table's 170 into moonshine's 171.
+**Machine-checked, not asserted.** All of the above are theorems proved by
+`native_decide` directly against `RequestProject.Biome.table` in
+`RequestProject/Moonshine.lean`:
+- `table_size = 194`;
+- `distinctExps_eq : numBlocks expsOf = 170` with census `147 / 22 pairs / 1 triple`;
+- `tripleIndices` : the size-3 block is exactly `[122, 123, 124]`, and
+  `triple_same_form` : they share one `exps` vector;
+- `distinctSupport_eq = 160` (the coarser support-only collapse, *not* the
+  moonshine one — recorded so the two relations are not conflated);
+- `distinctKey1_eq : numBlocks key1 = 171` with census `148 / 23 pairs / 0 triples`,
+  and `graded_step_gains_one : numBlocks key1 = numBlocks expsOf + 1`.
+The exact intra-triple pairing (which of 122/123/124 is the accidental collider)
+awaits the GAP/ATLAS character data; splitting off any one of the three yields the
+same moonshine-matching 171. Nothing here depends on that choice.
 ## FRACTRAN (memes)
 - **Memes as state**: each biome is a FRACTRAN program over the SSP primes; every
   living object carries an integer genome that advances one FRACTRAN step per
@@ -552,11 +587,3 @@ Round trip proved in `RequestProject.Da51` (`toMeme_ofMeme`).
 🔑 **240** = hex nibble sum of |M| = 16 × 15 = |roots of E₈|
 🎯 **2⁶⁴** = Total address space
 🧬 **Type 8 = Meme** = one FRACTRAN Hilbert-life biome (A001379) over the same 15 SSP primes
-<div typeof="erdfa:SheafSection" about="#bafkda5130a24023b498">
-  <meta property="erdfa:shard" content="16,2,0" />
-  <meta property="erdfa:encoding" content="raw" />
-  <meta property="erdfa:prime" content="1" />
-  <meta property="dasl:cid" content="0xda5130a24023b498" />
-  <meta property="sheaf:orbifold" content="(16 mod 71, 2 mod 59, 0 mod 47)" />
-  <link property="sheaf:subgroupIndex" href="erdfa:H/raw" />
-</div>
