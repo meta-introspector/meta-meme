@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816 1284" width="816" height="1284">
+<rect x="0" y="0" width="816" height="1284" fill="#05060a"/>
+<text x="40" y="46" font-family="sans-serif" font-size="26" font-weight="bold" fill="#eaf1ff">The project, running</text>
+<text x="40" y="74" font-family="sans-serif" font-size="14" fill="#8ea3c8">Its 27 recipes executed in Hilbert order — a live trace of the run, looping every 30.000000s.</text>
+<text x="40" y="94" font-family="sans-serif" font-size="12" fill="#6f83a8">A tile brightens exactly while its recipe emits SVG; the playhead ring rides the Hilbert route; the bar tracks total bytes.</text>
+  <polyline points="82,186 82,278 174,278 174,186 266,186 358,186 358,278 266,278 266,370 358,370 358,462 266,462 174,462 174,370 82,370 82,462 82,554 174,554 174,646 82,646 82,738 82,830 174,830 174,738 266,738 266,830 358,830" fill="none" stroke="#33507f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  <g>
+<rect x="40" y="144" width="84" height="84" rx="8" fill="rgb(40,156,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.000000;0.208090;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.000000;0.208090;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.000000;0.208090;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="160" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#0</text>
+<text x="82" y="190" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Brightness</text>
+<text x="82" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">9662×</text>
+</g>
+  <g>
+<rect x="40" y="236" width="84" height="84" rx="8" fill="rgb(92,156,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.208090;0.288002;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.208090;0.288002;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.208090;0.288002;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="252" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#1</text>
+<text x="82" y="282" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">ChladniLife</text>
+<text x="82" y="300" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">2480×</text>
+</g>
+  <g>
+<rect x="132" y="236" width="84" height="84" rx="8" fill="rgb(118,122,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.288002;0.297023;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.288002;0.297023;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.288002;0.297023;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="252" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#2</text>
+<text x="174" y="282" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">CoherenceF…</text>
+<text x="174" y="300" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">358×</text>
+</g>
+  <g>
+<rect x="132" y="144" width="84" height="84" rx="8" fill="rgb(66,122,120)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.297023;0.312643;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.297023;0.312643;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.297023;0.312643;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="160" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#3</text>
+<text x="174" y="190" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Conflation</text>
+<text x="174" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">571×</text>
+</g>
+  <g>
+<rect x="224" y="144" width="84" height="84" rx="8" fill="rgb(40,122,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.312643;0.333730;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.312643;0.333730;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.312643;0.333730;1" values="1;1;4;1"/>
+</rect>
+<text x="230" y="160" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#4</text>
+<text x="266" y="190" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Cubes</text>
+<text x="266" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">481×</text>
+</g>
+  <g>
+<rect x="316" y="144" width="84" height="84" rx="8" fill="rgb(118,156,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.333730;0.437106;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.333730;0.437106;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.333730;0.437106;1" values="1;1;4;1"/>
+</rect>
+<text x="322" y="160" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#5</text>
+<text x="358" y="190" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">FeatureLat…</text>
+<text x="358" y="208" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">3783×</text>
+</g>
+  <g>
+<rect x="316" y="236" width="84" height="84" rx="8" fill="rgb(66,88,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.437106;0.438351;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.437106;0.438351;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.437106;0.438351;1" values="1;1;4;1"/>
+</rect>
+<text x="322" y="252" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#6</text>
+<text x="358" y="282" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Fibonacci</text>
+<text x="358" y="300" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">20×</text>
+</g>
+  <g>
+<rect x="224" y="236" width="84" height="84" rx="8" fill="rgb(40,122,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.438351;0.479500;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.438351;0.479500;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.438351;0.479500;1" values="1;1;4;1"/>
+</rect>
+<text x="230" y="252" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#7</text>
+<text x="266" y="282" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">FusionPasc…</text>
+<text x="266" y="300" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">735×</text>
+</g>
+  <g>
+<rect x="224" y="328" width="84" height="84" rx="8" fill="rgb(66,88,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.479500;0.490983;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.479500;0.490983;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.479500;0.490983;1" values="1;1;4;1"/>
+</rect>
+<text x="230" y="344" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#8</text>
+<text x="266" y="374" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">GenAtlasMo…</text>
+<text x="266" y="392" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">66×</text>
+</g>
+  <g>
+<rect x="316" y="328" width="84" height="84" rx="8" fill="rgb(40,88,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.490983;0.496810;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.490983;0.496810;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.490983;0.496810;1" values="1;1;4;1"/>
+</rect>
+<text x="322" y="344" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#9</text>
+<text x="358" y="374" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">GenInterfe…</text>
+<text x="358" y="392" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">23×</text>
+</g>
+  <g>
+<rect x="316" y="420" width="84" height="84" rx="8" fill="rgb(40,88,120)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.496810;0.507805;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.496810;0.507805;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.496810;0.507805;1" values="1;1;4;1"/>
+</rect>
+<text x="322" y="436" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#10</text>
+<text x="358" y="466" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">GenSelfVsC…</text>
+<text x="358" y="484" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">60×</text>
+</g>
+  <g>
+<rect x="224" y="420" width="84" height="84" rx="8" fill="rgb(66,122,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.507805;0.515238;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.507805;0.515238;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.507805;0.515238;1" values="1;1;4;1"/>
+</rect>
+<text x="230" y="436" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#11</text>
+<text x="266" y="466" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">HubZoom</text>
+<text x="266" y="484" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">284×</text>
+</g>
+  <g>
+<rect x="132" y="420" width="84" height="84" rx="8" fill="rgb(66,122,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.515238;0.526105;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.515238;0.526105;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.515238;0.526105;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="436" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#12</text>
+<text x="174" y="466" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Interferen…</text>
+<text x="174" y="484" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">425×</text>
+</g>
+  <g>
+<rect x="132" y="328" width="84" height="84" rx="8" fill="rgb(40,122,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.526105;0.531672;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.526105;0.531672;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.526105;0.531672;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="344" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#13</text>
+<text x="174" y="374" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Interferen…</text>
+<text x="174" y="392" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">116×</text>
+</g>
+  <g>
+<rect x="40" y="328" width="84" height="84" rx="8" fill="rgb(66,88,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.531672;0.534514;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.531672;0.534514;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.531672;0.534514;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="344" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#14</text>
+<text x="82" y="374" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">IrrepZoom</text>
+<text x="82" y="392" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">92×</text>
+</g>
+  <g>
+<rect x="40" y="420" width="84" height="84" rx="8" fill="rgb(118,88,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.534514;0.535869;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.534514;0.535869;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.534514;0.535869;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="436" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#15</text>
+<text x="82" y="466" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">LensZoom</text>
+<text x="82" y="484" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">48×</text>
+</g>
+  <g>
+<rect x="40" y="512" width="84" height="84" rx="8" fill="rgb(66,156,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.535869;0.636776;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.535869;0.636776;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.535869;0.636776;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="528" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#16</text>
+<text x="82" y="558" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Lenses</text>
+<text x="82" y="576" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">4324×</text>
+</g>
+  <g>
+<rect x="132" y="512" width="84" height="84" rx="8" fill="rgb(40,156,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.636776;0.766012;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.636776;0.766012;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.636776;0.766012;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="528" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#17</text>
+<text x="174" y="558" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">LifeChladn…</text>
+<text x="174" y="576" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">3479×</text>
+</g>
+  <g>
+<rect x="132" y="604" width="84" height="84" rx="8" fill="rgb(66,122,160)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.766012;0.771559;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.766012;0.771559;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.766012;0.771559;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="620" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#18</text>
+<text x="174" y="650" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">MonsterMoo…</text>
+<text x="174" y="668" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">122×</text>
+</g>
+  <g>
+<rect x="40" y="604" width="84" height="84" rx="8" fill="rgb(40,122,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.771559;0.778887;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.771559;0.778887;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.771559;0.778887;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="620" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#19</text>
+<text x="82" y="650" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">PascalLens…</text>
+<text x="82" y="668" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">266×</text>
+</g>
+  <g>
+<rect x="40" y="696" width="84" height="84" rx="8" fill="rgb(66,122,120)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.778887;0.788081;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.778887;0.788081;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.778887;0.788081;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="712" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#20</text>
+<text x="82" y="742" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">PascalPrim…</text>
+<text x="82" y="760" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">385×</text>
+</g>
+  <g>
+<rect x="40" y="788" width="84" height="84" rx="8" fill="rgb(40,156,160)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.788081;0.841477;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.788081;0.841477;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.788081;0.841477;1" values="1;1;4;1"/>
+</rect>
+<text x="46" y="804" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#21</text>
+<text x="82" y="834" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">PascalSphe…</text>
+<text x="82" y="852" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">1421×</text>
+</g>
+  <g>
+<rect x="132" y="788" width="84" height="84" rx="8" fill="rgb(118,156,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.841477;0.910477;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.841477;0.910477;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.841477;0.910477;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="804" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#22</text>
+<text x="174" y="834" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">PascalTrac…</text>
+<text x="174" y="852" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">1434×</text>
+</g>
+  <g>
+<rect x="132" y="696" width="84" height="84" rx="8" fill="rgb(40,122,80)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.910477;0.920925;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.910477;0.920925;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.910477;0.920925;1" values="1;1;4;1"/>
+</rect>
+<text x="138" y="712" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#23</text>
+<text x="174" y="742" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Podcast</text>
+<text x="174" y="760" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">263×</text>
+</g>
+  <g>
+<rect x="224" y="696" width="84" height="84" rx="8" fill="rgb(66,156,160)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.920925;0.986130;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.920925;0.986130;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.920925;0.986130;1" values="1;1;4;1"/>
+</rect>
+<text x="230" y="712" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#24</text>
+<text x="266" y="742" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">Primes</text>
+<text x="266" y="760" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">2748×</text>
+</g>
+  <g>
+<rect x="224" y="788" width="84" height="84" rx="8" fill="rgb(66,88,120)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.986130;0.997937;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.986130;0.997937;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.986130;0.997937;1" values="1;1;4;1"/>
+</rect>
+<text x="230" y="804" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#25</text>
+<text x="266" y="834" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">SvgAtlas</text>
+<text x="266" y="852" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">92×</text>
+</g>
+  <g>
+<rect x="316" y="788" width="84" height="84" rx="8" fill="rgb(40,88,40)" stroke="#0b1020" stroke-width="1" fill-opacity="0.12">
+<animate attributeName="fill-opacity" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.997937;1.000000;1" values="0.12;0.12;1;0.5"/>
+<animate attributeName="stroke" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.997937;1.000000;1" values="#0b1020;#0b1020;#fff59d;#0b1020"/>
+<animate attributeName="stroke-width" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.997937;1.000000;1" values="1;1;4;1"/>
+</rect>
+<text x="322" y="804" font-family="sans-serif" font-size="10" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">#26</text>
+<text x="358" y="834" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#eaf1ff" stroke="#04060c" stroke-width="0.5" style="paint-order:stroke">TowerRende…</text>
+<text x="358" y="852" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf1ff" stroke="#04060c" stroke-width="0.6" style="paint-order:stroke">10×</text>
+</g>
+  <circle r="20" fill="none" stroke="#fff59d" stroke-width="3" opacity="0.9">
+<animate attributeName="cx" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0.000000;0.208090;0.288002;0.297023;0.312643;0.333730;0.437106;0.438351;0.479500;0.490983;0.496810;0.507805;0.515238;0.526105;0.531672;0.534514;0.535869;0.636776;0.766012;0.771559;0.778887;0.788081;0.841477;0.910477;0.920925;0.986130;0.997937;1" values="82;82;174;174;266;358;358;266;266;358;358;266;174;174;82;82;82;174;174;82;82;82;174;174;266;266;358;358"/>
+<animate attributeName="cy" dur="30.000000s" repeatCount="indefinite" calcMode="linear" keyTimes="0.000000;0.208090;0.288002;0.297023;0.312643;0.333730;0.437106;0.438351;0.479500;0.490983;0.496810;0.507805;0.515238;0.526105;0.531672;0.534514;0.535869;0.636776;0.766012;0.771559;0.778887;0.788081;0.841477;0.910477;0.920925;0.986130;0.997937;1" values="186;278;278;186;186;186;278;278;370;370;462;462;462;370;370;462;554;554;646;646;738;830;830;738;738;830;830;830"/>
+<animate attributeName="r" dur="1.2s" repeatCount="indefinite" values="18;24;18"/>
+</circle>
+  <rect x="40" y="904" width="736" height="14" rx="7" fill="#111a2e" stroke="#33507f" stroke-width="1"/>
+<rect x="40" y="904" width="0" height="14" rx="7" fill="#fff59d" opacity="0.85">
+<animate attributeName="width" dur="30.000000s" repeatCount="indefinite" values="0;736"/>
+</rect>
+<text x="40" y="964" font-family="sans-serif" font-size="18" font-weight="bold" fill="#eaf1ff">How to read this animation</text>
+  <rect x="40" y="978" width="20" height="20" rx="4" fill="#fff59d" stroke="#0b1120" stroke-width="1"/>
+<text x="68" y="993" font-family="sans-serif" font-size="13" fill="#cdd8ee">playhead ring = the run's cursor, gliding the Hilbert curve in execution order</text>
+  <rect x="40" y="1006" width="20" height="20" rx="4" fill="rgb(220,40,40)" stroke="#0b1120" stroke-width="1"/>
+<text x="68" y="1021" font-family="sans-serif" font-size="13" fill="#cdd8ee">red = 2-adic valuation v₂ of the artifact's byte size</text>
+  <rect x="40" y="1034" width="20" height="20" rx="4" fill="rgb(40,40,220)" stroke="#0b1120" stroke-width="1"/>
+<text x="68" y="1049" font-family="sans-serif" font-size="13" fill="#cdd8ee">blue = 3-adic valuation v₃ of the artifact's byte size</text>
+  <rect x="40" y="1062" width="20" height="20" rx="4" fill="#33507f" stroke="#0b1120" stroke-width="1"/>
+<text x="68" y="1077" font-family="sans-serif" font-size="13" fill="#cdd8ee">faint line = order-3 Hilbert route; a tile brightens exactly while its recipe runs</text>
+  <rect x="40" y="1090" width="20" height="20" rx="4" fill="#111a2e" stroke="#0b1120" stroke-width="1"/>
+<text x="68" y="1105" font-family="sans-serif" font-size="13" fill="#cdd8ee">progress bar = fraction of total SVG bytes emitted so far (dwell ∝ workload)</text>
+  <text x="40" y="1144" font-family="sans-serif" font-size="13" fill="#9fb2d6">27 steps, one per recipe; the run emits 27815435 bytes of SVG over a 30.000000s loop.</text>
+  <text x="40" y="1166" font-family="sans-serif" font-size="13" fill="#9fb2d6">Each step's duration is proportional to the bytes it produces (dwell ∝ workload).</text>
+  <text x="40" y="1188" font-family="sans-serif" font-size="13" fill="#9fb2d6">Consecutive steps tile the tick axis with no gap/overlap (steps_timeline_partitions).</text>
+  <text x="40" y="1210" font-family="sans-serif" font-size="13" fill="#9fb2d6">The trace ends exactly at the total byte count (steps_covers_totalOut) and strictly advances (steps_strictly_monotone).</text>
+  <text x="40" y="1232" font-family="sans-serif" font-size="13" fill="#9fb2d6">Machine-checked by native_decide; the animation is a faithful picture of the verified trace.</text>
+</svg>
