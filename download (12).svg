@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="660" viewBox="0 0 1180 660">
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <text x="300" y="40" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" fill="#f0f6fc">A mind thinking: OODA · glue · reflect</text>
+  <text x="300" y="628" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-style="italic" fill="#6e7681">the observer inside the observed · the graph rewires itself</text>
+  <line x1="300" y1="130" x2="300" y2="330" stroke="#58a6ff" stroke-width="2" stroke-dasharray="6 6" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="24;0" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="500" y1="330" x2="300" y2="330" stroke="#39d353" stroke-width="2" stroke-dasharray="6 6" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="24;0" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="300" y1="530" x2="300" y2="330" stroke="#f0b429" stroke-width="2" stroke-dasharray="6 6" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="24;0" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="100" y1="330" x2="300" y2="330" stroke="#f0883e" stroke-width="2" stroke-dasharray="6 6" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="24;0" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+  <g>
+    <ellipse cx="300" cy="330" rx="80" ry="54" fill="#0d1117" stroke="#f0b429" stroke-width="3">
+      <animate attributeName="rx" values="80;86;80" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.85" begin="0ms" dur="1.2s" fill="freeze"/>
+    <g transform="translate(300,330) scale(0.70)">
+      <ellipse cx="0" cy="0" rx="70" ry="46" fill="#0d1117" stroke="#39d353" stroke-width="3"/>
+      <circle cx="0" cy="0" r="26" fill="#58a6ff"/>
+      <circle cx="0" cy="0" r="11" fill="#0d1117">
+        <animate attributeName="r" values="11;8;11" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.85" begin="1200ms" dur="1.2s" fill="freeze"/>
+    <g transform="translate(300,330) scale(0.52)">
+      <ellipse cx="0" cy="0" rx="70" ry="46" fill="#0d1117" stroke="#39d353" stroke-width="3"/>
+      <circle cx="0" cy="0" r="26" fill="#58a6ff"/>
+      <circle cx="0" cy="0" r="11" fill="#0d1117">
+        <animate attributeName="r" values="11;8;11" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.85" begin="2400ms" dur="1.2s" fill="freeze"/>
+    <g transform="translate(300,330) scale(0.34)">
+      <ellipse cx="0" cy="0" rx="70" ry="46" fill="#0d1117" stroke="#39d353" stroke-width="3"/>
+      <circle cx="0" cy="0" r="26" fill="#58a6ff"/>
+      <circle cx="0" cy="0" r="11" fill="#0d1117">
+        <animate attributeName="r" values="11;8;11" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="26s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+  </g>
+  <circle cx="240" cy="330" r="5" fill="#a371f7" opacity="0">
+    <animate attributeName="cy" values="330;210" dur="3s" begin="0ms" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="0ms" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="330" r="5" fill="#a371f7" opacity="0">
+    <animate attributeName="cy" values="330;210" dur="3s" begin="700ms" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="700ms" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="320" cy="330" r="5" fill="#a371f7" opacity="0">
+    <animate attributeName="cy" values="330;210" dur="3s" begin="1400ms" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="1400ms" repeatCount="indefinite"/>
+  </circle>
+  <g>
+    <circle cx="300" cy="130" r="40" fill="#0f141b" stroke="#58a6ff" stroke-width="3">
+      <animate attributeName="fill-opacity" values="0.1;1;0.1;0.1;0.1" keyTimes="0;0.250;0.500;0.750;1" begin="0ms" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="300" y="135" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" fill="#58a6ff">Observe</text>
+  </g>
+  <g>
+    <circle cx="500" cy="330" r="40" fill="#0f141b" stroke="#39d353" stroke-width="3">
+      <animate attributeName="fill-opacity" values="0.1;1;0.1;0.1;0.1" keyTimes="0;0.250;0.500;0.750;1" begin="900ms" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="500" y="335" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" fill="#39d353">Orient</text>
+  </g>
+  <g>
+    <circle cx="300" cy="530" r="40" fill="#0f141b" stroke="#f0b429" stroke-width="3">
+      <animate attributeName="fill-opacity" values="0.1;1;0.1;0.1;0.1" keyTimes="0;0.250;0.500;0.750;1" begin="1800ms" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="300" y="535" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" fill="#f0b429">Decide</text>
+  </g>
+  <g>
+    <circle cx="100" cy="330" r="40" fill="#0f141b" stroke="#f0883e" stroke-width="3">
+      <animate attributeName="fill-opacity" values="0.1;1;0.1;0.1;0.1" keyTimes="0;0.250;0.500;0.750;1" begin="2700ms" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="100" y="335" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" fill="#f0883e">Act</text>
+  </g>
+  <circle r="9" fill="#ff7bce">
+    <animateMotion dur="3.6s" repeatCount="indefinite" rotate="auto" path="M 300 130 L 500 330 L 300 530 L 100 330 Z"/>
+    <animate attributeName="r" values="9;13;9" dur="0.9s" repeatCount="indefinite"/>
+  </circle>
+  <text x="636" y="60" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" fill="#f0f6fc">self-model · live trace</text>
+  <text x="636" y="96" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#58a6ff" opacity="0.25">step 0:  Observe  glue=0  depth=0  edges=1
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="0ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="126" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#39d353" opacity="0.25">step 1:  Orient  glue=1  depth=0  edges=1
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="300ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="156" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#f0b429" opacity="0.25">step 2:  Decide  glue=3  depth=0  edges=1
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="600ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="186" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#f0883e" opacity="0.25">step 3:  Act  glue=6  depth=0  edges=1
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="900ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="216" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#58a6ff" opacity="0.25">step 4:  Observe  glue=10  depth=1  edges=2
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="1200ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="246" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#39d353" opacity="0.25">step 5:  Orient  glue=11  depth=1  edges=2
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="1500ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="276" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#f0b429" opacity="0.25">step 6:  Decide  glue=13  depth=1  edges=2
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="1800ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="306" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#f0883e" opacity="0.25">step 7:  Act  glue=16  depth=1  edges=2
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="2100ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="336" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#58a6ff" opacity="0.25">step 8:  Observe  glue=20  depth=2  edges=3
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="2400ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="366" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#39d353" opacity="0.25">step 9:  Orient  glue=21  depth=2  edges=3
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="2700ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="396" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#f0b429" opacity="0.25">step 10:  Decide  glue=23  depth=2  edges=3
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="3000ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="426" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#f0883e" opacity="0.25">step 11:  Act  glue=26  depth=2  edges=3
+    <animate attributeName="opacity" values="0.25;1;0.25" keyTimes="0;0.500;1" begin="3300ms" dur="3.6s" repeatCount="indefinite"/>
+  </text>
+  <text x="636" y="470" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" fill="#8b949e">generating rule (this diagram, reflected):</text>
+  <text x="636" y="496" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" fill="#6bcB77">think t = { phase := t.phase + 1, glue := t.glue + t.phase + 1, depth := t.depth + (if t.phase = 3 then 1 else 0) }</text>
+</svg>
