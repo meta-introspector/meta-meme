@@ -1,0 +1,493 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1363" height="2624" viewBox="0 0 1363 2624">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 z" fill="#7a869a"/></marker></defs>
+<rect x="0" y="0" width="1363" height="2624" fill="#fbfcff" rx="0"/>
+<text x="24" y="42" font-size="26" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">A visual introduction to information theory — recorded as a DL knowledge base</text>
+<text x="24" y="66" font-size="13" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">Pinkard &amp; Waller, arXiv:2206.07867v3, reflected into Lean 4 as DL.IT.itKB (proved consistent by an explicit model).</text>
+<text x="24" y="84" font-size="13" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">Colours = semantic families · emoji = icons · DL notation = symbols · glosses = words — rows are generated from the reflected base and universal TBox/ABox data.</text>
+<rect x="24" y="96" width="1315" height="1" fill="#d9d9d9" rx="0"/>
+<text x="24" y="124" font-size="16" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">A.  Concept subsumption (TBox)</text>
+<text x="320" y="124" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">arrow C → D  reads  "C ⊑ D"  (every C is a D);  dashed = disjoint</text>
+<line x1="110" y1="240" x2="110" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="296" y1="240" x2="374" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="636" y1="240" x2="714" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="792" y1="240" x2="714" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="1004" y1="240" x2="1004" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="1194" y1="240" x2="1194" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="452" y1="240" x2="374" y2="182" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="710" y1="256" x2="718" y2="256" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="700" y="290" font-size="11" fill="#c0392b" font-weight="italic" font-family="Helvetica,Arial,sans-serif">NoiselessChannel ⊓ NoisyChannel ⊑ ⊥</text>
+<rect x="36" y="150" width="148" height="32" fill="#e8eafd" stroke="#4f46e5" stroke-width="2" rx="6"/>
+<text x="44" y="172" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎲❔</text>
+<text x="94" y="171" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">RandomVariable</text>
+<rect x="36" y="240" width="148" height="32" fill="#e8eafd" stroke="#4f46e5" stroke-width="2" rx="6"/>
+<text x="44" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌊📣</text>
+<text x="94" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Source</text>
+<rect x="300" y="150" width="148" height="32" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="6"/>
+<text x="308" y="172" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎯📍</text>
+<text x="358" y="171" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Outcome</text>
+<rect x="222" y="240" width="148" height="32" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="6"/>
+<text x="230" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✉️💬</text>
+<text x="280" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Message</text>
+<rect x="378" y="240" width="148" height="32" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="6"/>
+<text x="386" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🧬✅</text>
+<text x="436" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">TypicalSequence</text>
+<rect x="640" y="150" width="148" height="32" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" rx="6"/>
+<text x="648" y="172" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📡↔️</text>
+<text x="698" y="171" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Channel</text>
+<rect x="562" y="240" width="148" height="32" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" rx="6"/>
+<text x="570" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔇✨</text>
+<text x="620" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">NoiselessChannel</text>
+<rect x="718" y="240" width="148" height="32" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" rx="6"/>
+<text x="726" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📶⚡</text>
+<text x="776" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">NoisyChannel</text>
+<rect x="930" y="150" width="148" height="32" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="6"/>
+<text x="938" y="172" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔡🧾</text>
+<text x="988" y="171" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Code</text>
+<rect x="930" y="240" width="148" height="32" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="6"/>
+<text x="938" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌲0️⃣</text>
+<text x="988" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">PrefixCode</text>
+<rect x="1120" y="150" width="148" height="32" fill="#ffe4e6" stroke="#e11d48" stroke-width="2" rx="6"/>
+<text x="1128" y="172" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔗↔️</text>
+<text x="1178" y="171" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">MutualInformation</text>
+<rect x="1120" y="240" width="148" height="32" fill="#ffe4e6" stroke="#e11d48" stroke-width="2" rx="6"/>
+<text x="1128" y="262" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🚰📶</text>
+<text x="1178" y="261" font-size="11" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">ChannelCapacity</text>
+<rect x="24" y="300" width="1315" height="1" fill="#d9d9d9" rx="0"/>
+<text x="24" y="328" font-size="16" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">B.  Terminological axioms (TBox) — the paper's definitional relationships</text>
+<rect x="30" y="339" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="350" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎲❔</text>
+<text x="94" y="350" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">RandomVariable  ⊑  ∃hasDistribution.ProbDistribution</text>
+<text x="538" y="350" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="350" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every random variable has a probability distribution over its outcomes.</text>
+<rect x="30" y="361" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="372" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎲❔</text>
+<text x="94" y="372" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">RandomVariable  ⊑  ∃hasOutcome.Outcome</text>
+<text x="538" y="372" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="372" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every random variable has outcomes drawn from a discrete outcome space.</text>
+<rect x="30" y="383" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="394" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎲❔</text>
+<text x="94" y="394" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">RandomVariable  ⊑  ∃hasEntropy.Entropy</text>
+<text x="538" y="394" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="394" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every random variable has an entropy measuring its average uncertainty.</text>
+<rect x="30" y="405" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="416" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">⛓️🎲</text>
+<text x="94" y="416" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">StochasticProcess  ⊑  ∃hasComponent.RandomVariable</text>
+<text x="538" y="416" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.8</text>
+<text x="712" y="416" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A stochastic process is an ordered sequence of random variables.</text>
+<rect x="30" y="427" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="438" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌊📣</text>
+<text x="94" y="438" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Source  ⊑  RandomVariable</text>
+<text x="538" y="438" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§4</text>
+<text x="712" y="438" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A source of random events is a random variable.</text>
+<rect x="30" y="449" width="5" height="15" fill="#e11d48" rx="2"/>
+<text x="42" y="460" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔥📐</text>
+<text x="94" y="460" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Entropy  ⊑  ∃measuredIn.Bit</text>
+<text x="538" y="460" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="460" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Entropy is measured in bits.</text>
+<rect x="30" y="471" width="5" height="15" fill="#e11d48" rx="2"/>
+<text x="42" y="482" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🚰📶</text>
+<text x="94" y="482" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">ChannelCapacity  ⊑  MutualInformation</text>
+<text x="538" y="482" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§3.4</text>
+<text x="712" y="482" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The channel capacity is the maximal mutual information, hence a mutual information.</text>
+<rect x="30" y="493" width="5" height="15" fill="#d97706" rx="2"/>
+<text x="42" y="504" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🧬✅</text>
+<text x="94" y="504" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">TypicalSequence  ⊑  Outcome</text>
+<text x="538" y="504" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.4.1</text>
+<text x="712" y="504" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A typical sequence is an outcome (of a length-N sequence of events).</text>
+<rect x="30" y="515" width="5" height="15" fill="#d97706" rx="2"/>
+<text x="42" y="526" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✉️💬</text>
+<text x="94" y="526" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Message  ⊑  Outcome</text>
+<text x="538" y="526" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§4</text>
+<text x="712" y="526" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The messages of a source are its outcomes.</text>
+<rect x="30" y="537" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="548" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔇✨</text>
+<text x="94" y="548" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">NoiselessChannel  ⊑  Channel</text>
+<text x="538" y="548" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§3</text>
+<text x="712" y="548" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A noiseless channel is a channel (its conditional distribution is deterministic).</text>
+<rect x="30" y="559" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="570" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📶⚡</text>
+<text x="94" y="570" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">NoisyChannel  ⊑  Channel</text>
+<text x="538" y="570" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§3</text>
+<text x="712" y="570" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A noisy channel is a channel.</text>
+<rect x="30" y="581" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="592" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔇✨</text>
+<text x="94" y="592" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(NoiselessChannel ⊓ NoisyChannel)  ⊑  ⊥</text>
+<text x="538" y="592" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§3</text>
+<text x="712" y="592" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Noiseless and noisy channels are disjoint: a channel is one or the other.</text>
+<rect x="30" y="603" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="614" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📡↔️</text>
+<text x="94" y="614" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Channel  ⊑  ∃hasInput.RandomVariable</text>
+<text x="538" y="614" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§3.1</text>
+<text x="712" y="614" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A channel maps inputs (a random variable) to outputs.</text>
+<rect x="30" y="625" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="636" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📡↔️</text>
+<text x="94" y="636" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Channel  ⊑  ∃hasOutput.RandomVariable</text>
+<text x="538" y="636" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§3.1</text>
+<text x="712" y="636" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A channel produces outputs (a random variable) from its inputs.</text>
+<rect x="30" y="647" width="5" height="15" fill="#2563eb" rx="2"/>
+<text x="42" y="658" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌲0️⃣</text>
+<text x="94" y="658" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">PrefixCode  ⊑  Code</text>
+<text x="538" y="658" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.2</text>
+<text x="712" y="658" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A prefix code is a code in which no codeword is a prefix of another.</text>
+<rect x="30" y="669" width="5" height="15" fill="#2563eb" rx="2"/>
+<text x="42" y="680" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔒➡️</text>
+<text x="94" y="680" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Encoder  ⊑  ∃mapsTo.RandomVariable</text>
+<text x="538" y="680" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§4.1</text>
+<text x="712" y="680" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">An encoder maps messages to channel inputs (a random variable).</text>
+<rect x="24" y="732" width="1315" height="1" fill="#d9d9d9" rx="0"/>
+<text x="24" y="754" font-size="16" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">C.  Assertional axioms (ABox) — the running colored-marble (§2.1–2.2) and colour/shape (§2.5) examples</text>
+<rect x="30" y="761" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="772" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🏺🎲</text>
+<text x="94" y="772" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">urn : RandomVariable</text>
+<text x="538" y="772" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="772" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The urn draw is a random variable X.</text>
+<rect x="30" y="783" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="794" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📊⚖️</text>
+<text x="94" y="794" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(urn, marbleDist) : hasDistribution</text>
+<text x="538" y="794" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="794" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">X has the marble colour distribution.</text>
+<rect x="30" y="805" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="816" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎯📍</text>
+<text x="94" y="816" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(urn, blueMarble) : hasOutcome</text>
+<text x="538" y="816" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="816" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Blue is an outcome of X.</text>
+<rect x="30" y="827" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="838" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔥📐</text>
+<text x="94" y="838" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(urn, marbleEntropy) : hasEntropy</text>
+<text x="538" y="838" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.2</text>
+<text x="712" y="838" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The marble source's entropy is that of X.</text>
+<rect x="30" y="849" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="860" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎨🎲</text>
+<text x="94" y="860" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">colorRV : RandomVariable</text>
+<text x="538" y="860" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.5</text>
+<text x="712" y="860" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Colour X is a random variable.</text>
+<rect x="30" y="871" width="5" height="15" fill="#4f46e5" rx="2"/>
+<text x="42" y="882" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔺🎲</text>
+<text x="94" y="882" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">shapeRV : RandomVariable</text>
+<text x="538" y="882" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.5</text>
+<text x="712" y="882" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Shape Y is a random variable.</text>
+<rect x="30" y="893" width="5" height="15" fill="#0d9488" rx="2"/>
+<text x="42" y="904" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📊⚖️</text>
+<text x="94" y="904" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">marbleDist : ProbDistribution</text>
+<text x="538" y="904" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="904" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The marble colours follow a probability distribution.</text>
+<rect x="30" y="915" width="5" height="15" fill="#e11d48" rx="2"/>
+<text x="42" y="926" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔥📐</text>
+<text x="94" y="926" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">marbleEntropy : Entropy</text>
+<text x="538" y="926" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.2</text>
+<text x="712" y="926" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The marble source has an entropy (e.g. 1.75 or 2 bits).</text>
+<rect x="30" y="937" width="5" height="15" fill="#e11d48" rx="2"/>
+<text x="42" y="948" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔗↔️</text>
+<text x="94" y="948" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">colorShapeMI : MutualInformation</text>
+<text x="538" y="948" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.5</text>
+<text x="712" y="948" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Colour and shape share a mutual information I(X;Y).</text>
+<rect x="30" y="959" width="5" height="15" fill="#d97706" rx="2"/>
+<text x="42" y="970" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔵⚪</text>
+<text x="94" y="970" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">blueMarble : Outcome</text>
+<text x="538" y="970" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="970" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Blue is a possible outcome.</text>
+<rect x="30" y="981" width="5" height="15" fill="#d97706" rx="2"/>
+<text x="42" y="992" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🟢⚪</text>
+<text x="94" y="992" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">greenMarble : Outcome</text>
+<text x="538" y="992" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="992" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Green is a possible outcome.</text>
+<rect x="30" y="1003" width="5" height="15" fill="#d97706" rx="2"/>
+<text x="42" y="1014" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🟡⚪</text>
+<text x="94" y="1014" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">yellowMarble : Outcome</text>
+<text x="538" y="1014" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="1014" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Yellow is a possible outcome.</text>
+<rect x="30" y="1025" width="5" height="15" fill="#d97706" rx="2"/>
+<text x="42" y="1036" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">⚪⚫</text>
+<text x="94" y="1036" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">grayMarble : Outcome</text>
+<text x="538" y="1036" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§2.1</text>
+<text x="712" y="1036" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Gray is a possible outcome.</text>
+<rect x="24" y="1074" width="1315" height="1" fill="#d9d9d9" rx="0"/>
+<text x="24" y="1098" font-size="16" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">D.  Legend — colour families &amp; the many-minds reading guide</text>
+<rect x="36" y="1109" width="22" height="18" fill="#e8eafd" stroke="#4f46e5" stroke-width="2" rx="6"/>
+<text x="68" y="1122" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎲 Variables &amp; sources</text>
+<rect x="336" y="1109" width="22" height="18" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="6"/>
+<text x="368" y="1122" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎯 Outcomes, messages, bits</text>
+<rect x="636" y="1109" width="22" height="18" fill="#ccfbf1" stroke="#0d9488" stroke-width="2" rx="6"/>
+<text x="668" y="1122" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📊 Distributions</text>
+<rect x="36" y="1137" width="22" height="18" fill="#ffe4e6" stroke="#e11d48" stroke-width="2" rx="6"/>
+<text x="68" y="1150" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔥 Information measures</text>
+<rect x="336" y="1137" width="22" height="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" rx="6"/>
+<text x="368" y="1150" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📡 Channels</text>
+<rect x="636" y="1137" width="22" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="6"/>
+<text x="668" y="1150" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔡 Codes &amp; codecs</text>
+<text x="936" y="1102" font-size="13" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Built for different minds:</text>
+<text x="936" y="1124" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🗺️ spatial (graph)   🎨 colour (families)</text>
+<text x="936" y="1142" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🖼️ iconic (emoji)   🔤 symbolic (DL notation)</text>
+<text x="936" y="1160" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">💬 verbal (plain-language glosses)</text>
+<text x="24" y="1198" font-size="16" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">E.  Information prism — moonshine or shadow</text>
+<text x="24" y="1222" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">Some information carries the Monster ↔ modular-form correspondence and becomes moonshine.</text>
+<text x="24" y="1241" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">Every non-moonshine information item becomes shadow:  Information ⊓ ¬MoonshineInformation ⊑ ShadowInformation.</text>
+<rect x="48" y="1248" width="260" height="38" fill="#f5f7fb" stroke="#68758a" stroke-width="2" rx="6"/>
+<text x="62" y="1272" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">𝑗  j-coefficient 196884</text>
+<line x1="308" y1="1267" x2="468" y2="1267" stroke="#d4a017" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="480" y="1248" width="220" height="38" fill="#fff7cc" stroke="#d4a017" stroke-width="2" rx="6"/>
+<text x="506" y="1272" font-size="15" fill="#d4a017" font-weight="bold" font-family="Helvetica,Arial,sans-serif">☾✨  MOONSHINE</text>
+<rect x="48" y="1296" width="260" height="38" fill="#f5f7fb" stroke="#68758a" stroke-width="2" rx="6"/>
+<text x="62" y="1320" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">𝕄  Monster character</text>
+<line x1="308" y1="1315" x2="468" y2="1315" stroke="#d4a017" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="480" y="1296" width="220" height="38" fill="#fff7cc" stroke="#d4a017" stroke-width="2" rx="6"/>
+<text x="506" y="1320" font-size="15" fill="#d4a017" font-weight="bold" font-family="Helvetica,Arial,sans-serif">☾✨  MOONSHINE</text>
+<rect x="48" y="1344" width="260" height="38" fill="#f5f7fb" stroke="#68758a" stroke-width="2" rx="6"/>
+<text x="62" y="1368" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔥📐  source entropy</text>
+<line x1="308" y1="1363" x2="468" y2="1363" stroke="#596275" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="480" y="1344" width="220" height="38" fill="#e7e9f2" stroke="#596275" stroke-width="2" rx="6"/>
+<text x="506" y="1368" font-size="15" fill="#596275" font-weight="bold" font-family="Helvetica,Arial,sans-serif">◐  SHADOW</text>
+<rect x="48" y="1392" width="260" height="38" fill="#f5f7fb" stroke="#68758a" stroke-width="2" rx="6"/>
+<text x="62" y="1416" font-size="15" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📶⚡  channel noise</text>
+<line x1="308" y1="1411" x2="468" y2="1411" stroke="#596275" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="480" y="1392" width="220" height="38" fill="#e7e9f2" stroke="#596275" stroke-width="2" rx="6"/>
+<text x="506" y="1416" font-size="15" fill="#596275" font-weight="bold" font-family="Helvetica,Arial,sans-serif">◐  SHADOW</text>
+<text x="760" y="1289" font-size="14" fill="#d4a017" font-weight="bold" font-family="Helvetica,Arial,sans-serif">☾✨ MOONSHINE</text>
+<text x="760" y="1313" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">j-coefficients + Monster characters</text>
+<text x="760" y="1353" font-size="14" fill="#596275" font-weight="bold" font-family="Helvetica,Arial,sans-serif">◐ SHADOW</text>
+<text x="760" y="1377" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">all information outside moonshine</text>
+<text x="760" y="1417" font-size="11" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">‘Shadow’ here is the classifier complement, not the analytic shadow of a mock modular form.</text>
+<text x="24" y="1498" font-size="18" fill="#1a1a1a" font-weight="bold" font-family="Helvetica,Arial,sans-serif">F.  Universal ontology — everything discussed, inside one reflected TBox/ABox</text>
+<text x="24" y="1523" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">Thing ≡ ⊤ includes every object semantically; the finite ABox below inventories every major project stratum without claiming to enumerate mathematics.</text>
+<rect x="36" y="1541" width="224" height="42" fill="#ecfdf5" stroke="#0f766e" stroke-width="2" rx="6"/>
+<text x="54" y="1567" font-size="15" fill="#0f766e" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Thing  ≡  ⊤</text>
+<line x1="260" y1="1562" x2="350" y2="1562" stroke="#7a869a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="362" y="1541" width="260" height="42" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" rx="6"/>
+<text x="380" y="1567" font-size="14" fill="#6d28d9" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Ontology + meta-ontology</text>
+<text x="680" y="1556" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✅ universalKB_consistent</text>
+<text x="680" y="1576" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✅ all_things_included    ✅ meta_is_ontology</text>
+<text x="24" y="1596" font-size="15" fill="#0f766e" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Universal TBox — all 16 annotated axioms</text>
+<rect x="30" y="1609" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1620" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌐✨</text>
+<text x="94" y="1620" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Thing  ≡  ⊤</text>
+<text x="538" y="1620" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project meta-ontology</text>
+<text x="712" y="1620" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every domain object is a Thing.</text>
+<rect x="30" y="1629" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1640" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🏗️📦</text>
+<text x="94" y="1640" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">ProjectArtifact  ⊑  Thing</text>
+<text x="538" y="1640" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1640" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every project artifact is a thing.</text>
+<rect x="30" y="1649" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1660" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📐📜</text>
+<text x="94" y="1660" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">FormalArtifact  ⊑  ProjectArtifact</text>
+<text x="538" y="1660" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1660" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every formal artifact is a project artifact.</text>
+<rect x="30" y="1669" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1680" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔷⚙️</text>
+<text x="94" y="1680" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">LeanModule  ⊑  FormalArtifact</text>
+<text x="538" y="1680" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1680" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every Lean module is a formal artifact.</text>
+<rect x="30" y="1689" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1700" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✅📜</text>
+<text x="94" y="1700" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">ProofCertificate  ⊑  FormalArtifact</text>
+<text x="538" y="1700" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1700" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A proof certificate is a formal artifact.</text>
+<rect x="30" y="1709" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1720" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">👁️🖼️</text>
+<text x="94" y="1720" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Visualization  ⊑  ProjectArtifact</text>
+<text x="538" y="1720" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1720" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every generated visualization is a project artifact.</text>
+<rect x="30" y="1729" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1740" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">💻⚙️</text>
+<text x="94" y="1740" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">SoftwareObject  ⊑  Thing</text>
+<text x="538" y="1740" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1740" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every represented software object is a thing.</text>
+<rect x="30" y="1749" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1760" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🧠🗃️</text>
+<text x="94" y="1760" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">KnowledgeBase  ⊑  (LeanModule ⊓ OntologyEntity)</text>
+<text x="538" y="1760" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1760" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A knowledge base is both a Lean module and an ontology entity.</text>
+<rect x="30" y="1769" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1780" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🕸️🏷️</text>
+<text x="94" y="1780" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">OntologyEntity  ⊑  FormalArtifact</text>
+<text x="538" y="1780" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1780" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every ontology entity is formalized.</text>
+<rect x="30" y="1789" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1800" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🪞🕸️</text>
+<text x="94" y="1800" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">MetaOntologyEntity  ⊑  OntologyEntity</text>
+<text x="538" y="1800" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1800" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every meta-ontology entity is itself an ontology entity.</text>
+<rect x="30" y="1809" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1820" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔢🧩</text>
+<text x="94" y="1820" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">MathematicalObject  ⊑  Thing</text>
+<text x="538" y="1820" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1820" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every represented mathematical object is a thing.</text>
+<rect x="30" y="1829" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1840" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔥📡</text>
+<text x="94" y="1840" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">InformationTheoryObject  ⊑  MathematicalObject</text>
+<text x="538" y="1840" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1840" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Information-theory objects are mathematical objects.</text>
+<rect x="30" y="1849" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1860" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌙✨</text>
+<text x="94" y="1860" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">MoonshineObject  ⊑  MathematicalObject</text>
+<text x="538" y="1860" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1860" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Moonshine objects are mathematical objects.</text>
+<rect x="30" y="1869" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1880" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">⚛️🌌</text>
+<text x="94" y="1880" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">PhysicsObject  ⊑  MathematicalObject</text>
+<text x="538" y="1880" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1880" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Represented mathematical-physics objects are mathematical objects.</text>
+<rect x="30" y="1889" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1900" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📄📝</text>
+<text x="94" y="1900" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">Document  ⊑  Thing</text>
+<text x="538" y="1900" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1900" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Every document is a thing.</text>
+<rect x="30" y="1909" width="5" height="15" fill="#0f766e" rx="2"/>
+<text x="42" y="1920" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📑🔬</text>
+<text x="94" y="1920" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">SourcePaper  ⊑  Document</text>
+<text x="538" y="1920" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project ontology</text>
+<text x="712" y="1920" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The source paper is a document.</text>
+<rect x="24" y="1954" width="1312" height="1" fill="#d9d9d9" rx="0"/>
+<text x="24" y="1972" font-size="15" fill="#7c3aed" font-weight="bold" font-family="Helvetica,Arial,sans-serif">Universal ABox — all 30 inventory assertions and links</text>
+<rect x="30" y="1971" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="1982" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🏛️💻</text>
+<text x="94" y="1982" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">project : SoftwareObject</text>
+<text x="538" y="1982" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="1982" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The complete Lean project is a software object.</text>
+<rect x="30" y="1991" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2002" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📑🔬</text>
+<text x="94" y="2002" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">sourcePaper : SourcePaper</text>
+<text x="538" y="2002" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2002" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The uploaded information-theory paper is the source document.</text>
+<rect x="30" y="2011" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2022" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🧱🔤</text>
+<text x="94" y="2022" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">dlCore : LeanModule</text>
+<text x="538" y="2022" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2022" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The Description Logic core is a Lean module.</text>
+<rect x="30" y="2031" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2042" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌱🕸️</text>
+<text x="94" y="2042" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">baseOntology : KnowledgeBase</text>
+<text x="538" y="2042" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2042" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The paper's base TBox/ABox is a knowledge base.</text>
+<rect x="30" y="2051" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2062" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📚✅</text>
+<text x="94" y="2062" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">paperCoverage : KnowledgeBase</text>
+<text x="538" y="2062" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2062" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The full-paper extension is a knowledge base.</text>
+<rect x="30" y="2071" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2082" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔀🕸️</text>
+<text x="94" y="2082" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">mergedOntology : KnowledgeBase</text>
+<text x="538" y="2082" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2082" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The cross-domain merged ontology is a knowledge base.</text>
+<rect x="30" y="2091" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2102" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🧶🔗</text>
+<text x="94" y="2102" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">ontologyWeave : OntologyEntity</text>
+<text x="538" y="2102" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2102" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The derived cross-domain weave is an ontology entity.</text>
+<rect x="30" y="2111" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2122" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🪞🕸️</text>
+<text x="94" y="2122" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">metaOntology : MetaOntologyEntity</text>
+<text x="538" y="2122" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2122" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The carried-higher-level ontology is a meta-ontology entity.</text>
+<rect x="30" y="2131" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2142" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌐🕸️</text>
+<text x="94" y="2142" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">universalOntology : MetaOntologyEntity</text>
+<text x="538" y="2142" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2142" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">This scope-complete ontology is itself represented at the meta level.</text>
+<rect x="30" y="2151" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2162" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📊🔥</text>
+<text x="94" y="2162" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">quantitativeTheory : InformationTheoryObject</text>
+<text x="538" y="2162" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2162" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Entropy and mutual-information results are information-theory objects.</text>
+<rect x="30" y="2171" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2182" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔡📦</text>
+<text x="94" y="2182" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">codingTheory : InformationTheoryObject</text>
+<text x="538" y="2182" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2182" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Coding and Reed–Solomon results are information-theory objects.</text>
+<rect x="30" y="2191" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2202" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🪞⚙️</text>
+<text x="94" y="2202" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">reflectionEngine : LeanModule</text>
+<text x="538" y="2202" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2202" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The reflection and reconstruction machinery is a Lean module.</text>
+<rect x="30" y="2211" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2222" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌙✨</text>
+<text x="94" y="2222" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">moonshineTheory : MoonshineObject</text>
+<text x="538" y="2222" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2222" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Monster, umbral, and modular-form material is represented as moonshine mathematics.</text>
+<rect x="30" y="2231" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2242" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">⚛️🌌</text>
+<text x="94" y="2242" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">physicsTheory : PhysicsObject</text>
+<text x="538" y="2242" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2242" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Lagrangian and CFT material is represented as mathematical physics.</text>
+<rect x="30" y="2251" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2262" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🌊🎼</text>
+<text x="94" y="2262" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">spectralTheory : PhysicsObject</text>
+<text x="538" y="2262" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2262" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">PDE, Maass-form, and spectral-complexity material is represented as mathematical physics.</text>
+<rect x="30" y="2271" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2282" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✅🛡️</text>
+<text x="94" y="2282" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">consistencyProof : ProofCertificate</text>
+<text x="538" y="2282" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2282" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">A model-checking theorem certifies this ontology's consistency.</text>
+<rect x="30" y="2291" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2302" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🖼️🌱</text>
+<text x="94" y="2302" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">ontologyGraphic : Visualization</text>
+<text x="538" y="2302" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2302" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">ONTOLOGY.svg visualizes the base ontology.</text>
+<rect x="30" y="2311" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2322" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🖼️🪞</text>
+<text x="94" y="2322" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">metaOntologyGraphic : Visualization</text>
+<text x="538" y="2322" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2322" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">META_ONTOLOGY.svg visualizes the meta ontology.</text>
+<rect x="30" y="2331" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2342" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📚📝</text>
+<text x="94" y="2342" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">documentation : Document</text>
+<text x="538" y="2342" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2342" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">README and supporting reports document the project.</text>
+<rect x="30" y="2351" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2362" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🔤❓</text>
+<text x="94" y="2362" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">fnordLexicon : LeanModule</text>
+<text x="538" y="2362" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2362" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The bounded FNORD lexicon is included as a formal module.</text>
+<rect x="30" y="2371" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2382" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">♾️🪞</text>
+<text x="94" y="2382" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">selfModel : LeanModule</text>
+<text x="538" y="2382" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2382" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">Self-description, self-import, and self-image are included as formal modules.</text>
+<rect x="30" y="2391" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2402" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🧩⊂</text>
+<text x="94" y="2402" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(project, universalOntology) : hasPart</text>
+<text x="538" y="2402" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2402" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The universal ontology is part of the project.</text>
+<rect x="30" y="2411" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2422" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📝➡️</text>
+<text x="94" y="2422" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(universalOntology, baseOntology) : describes</text>
+<text x="538" y="2422" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2422" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The universal ontology describes the base ontology.</text>
+<rect x="30" y="2431" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2442" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📝➡️</text>
+<text x="94" y="2442" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(universalOntology, mergedOntology) : describes</text>
+<text x="538" y="2442" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2442" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The universal ontology describes the merged ontology.</text>
+<rect x="30" y="2451" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2462" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📝➡️</text>
+<text x="94" y="2462" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(universalOntology, metaOntology) : describes</text>
+<text x="538" y="2462" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2462" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The universal ontology describes the prior meta ontology.</text>
+<rect x="30" y="2471" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2482" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">📝➡️</text>
+<text x="94" y="2482" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(universalOntology, universalOntology) : describes</text>
+<text x="538" y="2482" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2482" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The universal ontology records itself without leaving the logic.</text>
+<rect x="30" y="2491" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2502" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">✅🔍</text>
+<text x="94" y="2502" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(consistencyProof, universalOntology) : verifies</text>
+<text x="538" y="2502" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2502" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The certificate verifies the reflected universal ontology.</text>
+<rect x="30" y="2511" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2522" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">👁️🖼️</text>
+<text x="94" y="2522" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(ontologyGraphic, baseOntology) : visualizes</text>
+<text x="538" y="2522" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2522" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The base graphic visualizes the base ontology.</text>
+<rect x="30" y="2531" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2542" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">👁️🖼️</text>
+<text x="94" y="2542" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(metaOntologyGraphic, metaOntology) : visualizes</text>
+<text x="538" y="2542" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2542" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The meta graphic visualizes the meta ontology.</text>
+<rect x="30" y="2551" width="5" height="15" fill="#7c3aed" rx="2"/>
+<text x="42" y="2562" font-size="14" fill="#1a1a1a" font-weight="normal" font-family="Helvetica,Arial,sans-serif">🎯💬</text>
+<text x="94" y="2562" font-size="13" fill="#1a1a1a" font-weight="normal" font-family="Menlo,Consolas,monospace">(documentation, project) : isAbout</text>
+<text x="538" y="2562" font-size="12" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">§project inventory</text>
+<text x="712" y="2562" font-size="12" fill="#5f6368" font-weight="italic" font-family="Helvetica,Arial,sans-serif">The documentation is about the complete project.</text>
+<text x="24" y="2608" font-size="11" fill="#5f6368" font-weight="normal" font-family="Helvetica,Arial,sans-serif">Generated by RequestProject/Visualize.lean from DL.IT.itKB and DL.Universal.universalKB.  Both have explicit consistency models; annotations reflect into Lean semantics.</text>
+</svg>
