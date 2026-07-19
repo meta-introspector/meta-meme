@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title description">
+  <title id="title">Euler phase cancellation — SMIL animation</title>
+  <desc id="description">A continuously rotating unit phasor demonstrates that exp(i(pi plus theta)) plus one equals one minus exp(i theta), with exact cancellation once per complete turn.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#061225"/>
+      <stop offset="1" stop-color="#21113a"/>
+    </linearGradient>
+    <radialGradient id="zeroGlow">
+      <stop stop-color="#65f4c2" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#65f4c2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <marker id="goldArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#ffd166"/>
+    </marker>
+    <marker id="pinkArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#ff70ae"/>
+    </marker>
+    <style>
+      text { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+      .math { font-family: Georgia, "Times New Roman", serif; }
+      .muted { fill: #aabbd3; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" rx="28" fill="url(#background)"/>
+  <path d="M0 590C230 500 360 680 590 592S960 520 1200 610V700H0Z" fill="#5ce1e6" opacity=".035"/>
+
+  <text x="60" y="65" fill="#65f4c2" font-size="16" font-weight="750" letter-spacing="2">DECLARATIVE SVG • SMIL • NO JAVASCRIPT</text>
+  <text x="60" y="112" fill="#f7f9ff" font-size="38" font-weight="760">Euler cancellation as a rotating phase</text>
+  <text x="60" y="148" class="muted" font-size="19">The phasor completes one turn every 10 seconds; the residual vanishes at each full turn.</text>
+
+  <!-- Complex plane -->
+  <g aria-label="Animated complex plane">
+    <circle cx="330" cy="390" r="170" fill="#081a31" stroke="#7994b7" stroke-opacity=".35" stroke-width="2"/>
+    <circle cx="330" cy="390" r="85" fill="none" stroke="#7994b7" stroke-opacity=".14" stroke-dasharray="5 8"/>
+    <path d="M125 390H535M330 185V595" stroke="#9db1cd" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M500 385L510 390L500 395M325 205L330 195L335 205" fill="none" stroke="#9db1cd" stroke-width="2"/>
+    <text x="515" y="382" class="muted" font-size="17">Re</text>
+    <text x="340" y="205" class="muted" font-size="17">Im</text>
+    <text x="493" y="416" fill="#65f4c2" font-size="15">1</text>
+
+    <!-- A stationary target at 1. The pink vector is 1 − exp(iθ). -->
+    <circle cx="500" cy="390" r="5" fill="#65f4c2"/>
+    <path d="M500 390L500 390" fill="none" stroke="#ff70ae" stroke-width="5" stroke-linecap="round" marker-end="url(#pinkArrow)">
+      <animate attributeName="d" begin="0s" dur="10s" repeatCount="indefinite" calcMode="linear"
+        values="M500 390L500 390;M487.1 325.0L500 390;M450.2 269.8L500 390;M395.1 232.9L500 390;M330 220L500 390;M264.9 232.9L500 390;M209.8 269.8L500 390;M172.9 325.0L500 390;M160 390L500 390;M172.9 455.1L500 390;M209.8 510.2L500 390;M264.9 547.1L500 390;M330 560L500 390;M395.1 547.1L500 390;M450.2 510.2L500 390;M487.1 455.1L500 390;M500 390L500 390"/>
+    </path>
+
+    <!-- Rotation is performed entirely by SMIL. -->
+    <g transform="translate(330 390)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" begin="0s" dur="10s" repeatCount="indefinite" from="0" to="-360"/>
+        <line x1="0" y1="0" x2="170" y2="0" stroke="#ffd166" stroke-width="5" stroke-linecap="round" marker-end="url(#goldArrow)"/>
+        <circle cx="170" cy="0" r="8" fill="#ffd166" stroke="#fff7d2" stroke-width="2"/>
+        <text x="93" y="-14" fill="#ffd166" font-size="20" class="math">e<tspan baseline-shift="super" font-size="13">iθ</tspan></text>
+      </g>
+    </g>
+
+    <!-- Green flash marks θ = 2πn and exact zero residual. -->
+    <circle cx="500" cy="390" r="10" fill="url(#zeroGlow)" filter="url(#softGlow)" opacity="1">
+      <animate attributeName="r" begin="0s" dur="10s" repeatCount="indefinite" values="10;42;10;10;10" keyTimes="0;.035;.08;.96;1"/>
+      <animate attributeName="opacity" begin="0s" dur="10s" repeatCount="indefinite" values="1;.75;0;0;1" keyTimes="0;.035;.08;.96;1"/>
+    </circle>
+    <circle cx="500" cy="390" r="10" fill="none" stroke="#65f4c2" stroke-width="3" opacity="1">
+      <animate attributeName="r" begin="0s" dur="10s" repeatCount="indefinite" values="10;35;55;10" keyTimes="0;.04;.09;1"/>
+      <animate attributeName="opacity" begin="0s" dur="10s" repeatCount="indefinite" values="1;.8;0;0" keyTimes="0;.04;.09;1"/>
+    </circle>
+  </g>
+
+  <!-- Explanatory panel -->
+  <g transform="translate(600 205)">
+    <rect width="540" height="390" rx="24" fill="#0b1a32" fill-opacity=".9" stroke="#9ab1d0" stroke-opacity=".22"/>
+    <text x="34" y="54" fill="#9fb4d0" font-size="15" font-weight="730" letter-spacing="1.5">THE ANIMATED IDENTITY</text>
+    <text x="34" y="112" fill="#f7f9ff" font-size="29" class="math">e<tspan baseline-shift="super" font-size="18">i(π + θ)</tspan> + 1 = 1 − e<tspan baseline-shift="super" font-size="18">iθ</tspan></text>
+    <line x1="34" y1="139" x2="506" y2="139" stroke="#9ab1d0" stroke-opacity=".2"/>
+
+    <circle cx="47" cy="184" r="7" fill="#ffd166"/>
+    <text x="70" y="191" fill="#e7edf8" font-size="19">Gold: the rotating unit phasor e<tspan baseline-shift="super" font-size="12">iθ</tspan></text>
+    <circle cx="47" cy="229" r="7" fill="#ff70ae"/>
+    <text x="70" y="236" fill="#e7edf8" font-size="19">Pink: the residual vector 1 − e<tspan baseline-shift="super" font-size="12">iθ</tspan></text>
+    <circle cx="47" cy="274" r="7" fill="#65f4c2"/>
+    <text x="70" y="281" fill="#e7edf8" font-size="19">Green: exact cancellation</text>
+
+    <rect x="30" y="310" width="480" height="52" rx="13" fill="#65f4c2" fill-opacity=".09" stroke="#65f4c2" stroke-opacity=".35"/>
+    <text x="270" y="344" fill="#65f4c2" font-size="22" text-anchor="middle" class="math">residual = 0  ⇔  θ = 2πn,  n ∈ ℤ</text>
+  </g>
+
+  <text x="60" y="657" class="muted" font-size="15">If motion is disabled in an image preview, open this SVG directly in Firefox, Chrome, Edge, or Safari.</text>
+</svg>
